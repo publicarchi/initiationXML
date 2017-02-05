@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>01 – eXtensible Markup Language</title>
+        <author>Emmanuel Château-Dutier</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Université de Montréal (UdeM)</publisher>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Ce document est nativement numérique.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2017-01-05"><name>Emmanuel Château-Dutier</name>, révision
+      </change>
+      <change when="2016-04-28"><name>Emmanuel Château-Dutier</name>, création</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <titlePage xml:lang="fr">
+        <titlePart>02 – eXtensible Markup Language</titlePart>
+        <docImprint>Introduction à XML | Édition numérique, 25-29 avril 2016</docImprint>
+        <note><ref target="https://github.com/tei-fr/formUdem2016-04">Répertoire GitHub</ref> | <ref
+            target="00-programme.html">Programme</ref></note>
+      </titlePage>
+    </front>
+    <body>
+      <div type="part">
+        <div rend="title" xml:lang="fr">
+          <div>
+            <head>Introduction sur <hi>XML</hi></head>
+          </div>
+          <div>
+            <div>
+              <p>On vient de voir qu’un balisage descriptif permettait de <hi rend="bold"
+                  >se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document</hi>.</p>
+              <p>Dans une démarche qui privilégie avant tout l’édition du texte, il convient en premier lieu de <hi
+                  rend="bold"
+                  >rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles</hi>. La présence du balisage détermine par la suite la possibilité de traiter les éléments pour une transformation.</p>
+              <p>Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.</p>
+              <bibl>cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau, François, Extensible Markup Language (XML) 1.0, Recommandation du W3C, 2008. <ref
+                  target="https://www.w3.org/TR/REC-xml/"
+                >https://www.w3.org/TR/REC-xml/</ref></bibl>
+            </div>
+            <div>
+              <head>Un modèle de contenu arborescent</head>
+              <p>Son <hi rend="bold"
+                >modèle de contenu arborescent</hi> est précisément conforme au modèle OHCO.</p>
+              <p>S’il offre une grammaire lisible par la machine, il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.</p>
+              <p>XML propose simplement <hi rend="bold"
+                  >une solution rigoureuse, compréhensible par les machines, pour définir un langage de balisage descriptif</hi>.</p>
+            </div>
+            <div>
+              <head>Une large utilisation dans le domaine culturel</head>
+              <p>La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML. « La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées. »</p>
+              <bibl>Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947. <ref
+                  target="http://xml.coverpages.org/coombs.html"
+                  >http://xml.coverpages.org/coombs.html</ref></bibl>
+            </div>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>e<hi rend="bold">X</hi>tensible <hi rend="bold">M</hi>arkup <hi rend="bold"
+              >L</hi>anguage – historique</head>
+            <div>
+              <head>héritier de SGML (Standard Generalized Markup Language)</head>
+              <list>
+                <item>métalangage informatique pour le balisage du texte</item>
+                <item><ref target="http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=16387"
+                    >norme ISO (ISO 8879:1986)</ref></item>
+              </list>
+            </div>
+            <div>
+              <head>publication par le W3C en février 1998</head>
+              <list>
+                <item>des spécifications du métalangage XML 1.0</item>
+                <item>maîtres mots : simplicité, clarté, universalité</item>
+                <item><ref target="http://www.w3.org/TR/xml11">version 1.1</ref> en 2004</item>
+              </list>
+            </div>
+          </div>
+          <div type="comments">
+            <div>
+              <head>Un héritier de SGML</head>
+              <p>SGML lui-même héritier d’un langage descriptif conçu en 1969 par des ingénieurs de la société IBM : DCF (Document Composition Facility).</p>
+              <p>SGML : puissant et générique mais aussi trop souple et complexe en même temps → surtout utilisé dans le cadre d’applications lourdes. Utilisation la plus notable : langage HTML, dérivé du SGML => langage de publication pour le web.Né en 1989 et depuis 2011, HTML 5.</p>
+            </div>
+            <div>
+              <head>Publication de XML</head>
+              <p>En février 1998 : publication en février 1998 par le W3C Consortium des spécifications du métalangage XML 1.0 => maîtres mots : simplicité, clarté, universalité.</p>
+              <p>Dans son Référentiel général d’interopérabilité publié en 2009, la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (Extensible Markup Language) à des fins d’interopérabilité et de pérennisation de l’information.</p>
+              <p>Depuis 1998, la norme XML a peu évolué → dernière édition en date : 5e édition, mise à jour en 2008. Version 1.0 => véritable témoignage de sa stabilité.</p>
+              <p><ref target="http://www.w3.org/TR/xml11"
+                >Version 1.1</ref> publiée en février 2004 et mise à jour en 2006, notamment pour intégrer les évolution d’Unicode, mais XML 1.1 reste très peu utilisé.</p>
+            </div>
+            <div>
+              <head>Un succès immédiat</head>
+              <p>Les langages et outils permettant de produire, contrôler, échanger, transformer et exploiter des fichiers XML se sont multipliés, souvent associés à des normes du W3C : modèles de documents et de (méta)données, langages de modélisation, de présentation, de programmation, protocoles, …</p>
+              <p>Métalangage désormais utilisé partout en informatique qu’il s’agisse de structurer des informations dont la durée de vie est importante ou d’échanger des informations entre applications, qu’on ait à s’occuper essentiellement de données, de documents ou d’une combinaison des deux.</p>
+              <bibl>cf. Ministre du Budget, des Comptes publics, Référentiel Général d’Interopérabilité (RGI), 2009. <ref
+                  target="http://references.modernisation.gouv.fr/rgi-interoperabilite"
+                  >http://references.modernisation.gouv.fr/rgi-interoperabilite</ref></bibl>
+            </div>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Principes de conception de <hi>XML</hi></head>
+            <list>
+              <item>applicable à tout type de texte</item>
+              <item>extensible</item>
+              <item>définition par un schéma</item>
+              <item>hypertextualité</item>
+              <item>simple, universel</item>
+              <item>modèle hiérarchique</item>
+            </list>
+          </div>
+          <div type="comments">
+            <head>Principes de conception de XML</head>
+            <list>
+              <item>XML s’applique à tout type de texte : fondé sur le principe du balisage → càd : sur l’isolement d’une portion de texte et l’identification explicite de son rôle ou nature particulière. Autorise l’imbrication des balises et une granularité aussi fine que nécessaire.</item>
+              <item>Un schéma est un modèle (=la liste des balises utilisables, leurs noms, les contraintes de leur emploi : position, cardinalité, type de contenu) peut être défini sous la forme d’une DTD (Document Type Definition) ou d’un schéma (écrit en RelaxNG ou directement XML).</item>
+              <item>XML permet d’identifier la structure d’un texte et d’informer sur la sémantique des informations qu’il contient, ou d’en isoler les données => notion de structuration absolument primordiale : permet de rendre l’information exploitable par la machine (moteurs de recherche) et par l’utilisateur ; permet également à l’information d’être réutilisée, échangée, pérennisée. + bonne structure seule condition pour ensuite une transformation automatique.</item>
+              <item>XML conçu à l’ère de l’hypermédia : liens peuvent être établis entre des sections du même document XML ou entre un document XML et d’autres ressources électroniques, qui peuvent ne pas être du texte.</item>
+              <item>norme simple, sans ambiguïté, permettant à un humain de lire l’information produite.</item>
+              <item>fichiers XML sont des fichiers texte (peuvent être lus par grand nombre de logiciels donc) et supportent surtout un grand nombre de systèmes d’écriture → utilise le standard Unicode et le codage par défaut de XML est UTF-8 (codage de caractères conçu pour coder l’ensemble des caractères Unicode).</item>
+              <item>norme universelle, concentrée sur le contenu informationnel, ne traitant pas de son utilisation, indépendante des plates-formes informatiques (≠.odt, .doc, …).</item>
+              <item>utiliser XML pour structurer et échanger l’information est considéré comme une bonne pratique → les documents XML sont de bons candidats pour l’archivage pérenne.</item>
+              <item>grâce à leur structure réutilisation : l’accès, l’indexation et la recherche de l’information sont améliorées → on peut avec certains outils informatiques indexer un (ou un ensemble de) documents XML en exploitant leur marquage structurel, ce qui permet des recherches fines multicritères et améliore considérablement la qualité des réponses par rapport à une recherche plein texte dans un document non structuré.</item>
+              <item>on peut aussi explorer un document XML en tant qu’arbre, en utilisant notamment le langage XPath. => XML : format de stockage pour autant de formats de diffusion qu’on souhaite. Après transformation par programmes dans un ou plusieurs formats dédiés, le contenu structuré d’un document XML peut être consulté sous forme imprimée (transformation directement en PDF ou vers LateX), sous forme électronique (HTML) => XML : format pivot pour les nouvelles chaînes éditoriales.</item>
+            </list>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head><hi>XML</hi> en 4 points</head>
+            <list type="ordered">
+              <item><hi rend="bold"
+                >XML ne sert pas à afficher les données mais à les décrire</hi>. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure</item>
+              <item><hi rend="bold"
+                >Le nom des balises n’est pas prédéfini</hi> : on peut librement créer son propre vocabulaire</item>
+              <item><hi rend="bold"
+                >On peut utiliser une "grammaire" de balises</hi>, pour définir des contraintes ou s’assurer de la consistance de l’encodage</item>
+              <item><hi rend="bold"
+                >XML est auto-descriptif et lisible par l’homme</hi>. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel</item>
+            </list>
+          </div>
+          <div>
+            <head><hi>XML</hi> en 4 points</head>
+            <list type="ordered">
+              <item><hi rend="bold"
+                >XML ne sert pas à afficher les données mais à les décrire</hi>. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure (livre, chapitre, paragraphe, phrase, mot, etc.)</item>
+              <item><hi rend="bold"
+                >Le nom des balises n’est pas prédéfini</hi> : on peut librement créer son propre vocabulaire</item>
+              <item><hi rend="bold"
+                >On peut utiliser une "grammaire" de balises</hi>, pour définir des contraintes ou s’assurer de la consistance de l’encodage</item>
+              <item><hi rend="bold"
+                >XML est auto-descriptif et lisible par l’homme</hi>. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel</item>
+            </list>
+          </div>
+        </div>
+      </div>
+      <div type="part">
+        <div type="title" xml:lang="fr">
+          <div>
+            <head>La syntaxe <hi>XML</hi></head>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Élément <hi>XML</hi></head>
+            <figure>
+              <graphic url="../images/xml01.svg"/>
+              <desc>Élément XML</desc>
+            </figure>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Attribut <hi>XML</hi></head>
+            <figure>
+              <graphic url="../images/xml02.svg"/>
+              <desc>Attribut XML</desc>
+            </figure>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Exemple de balisage <hi>XML</hi></head>
+            <figure>
+              <graphic url="../images/xml00.svg"/>
+              <desc>Exemple de balisage XML</desc>
+            </figure>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Exemple de document <hi>XML</hi></head>
+            <!-- @todo traiter l’exemple correctement -->
+            <egXML>
+              <![CDATA[<?xml version="1.0"?>
+       <doc xmlns="http://example.org/​namespace">
+        <p n="1">This is a paragraph.</p>
+        <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+       </doc>]]>
+            </egXML>
+          </div>
+          <div type="comments">
+            <p>Un document XML prend toujours la forme suivante.</p>
+            <p>Un document XML consiste en une séquence de caractères lisibles par l’homme. C’est <hi
+                rend="bold"
+              >un simple fichier texte</hi> qui ne contient pas de code additionnel ou de données binaires.</p>
+            <p>Seulement, vous pouvez constater que ce document comporte certaines séquences de caractères régulières (ici mises en valeur par la coloration).</p>
+            <p>La première ligne de ce documents s’appelle une <soCalled>déclaration XML</soCalled> elle appartient au <soCalled>prologue</soCalled> du document. C’est une instruction qui permet d’indiquer qu’il s’agit d’un document XML et la version du langage.</p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Spécification de l’<hi>encodage</hi></head>
+            <!-- @todo traiter l’exemple correctement -->
+            <egXML>
+              <![CDATA[<?xml version="1.0" encoding="UTF-8?>
+       <doc xmlns="http://example.org/​namespace">
+        <p n="1">This is a paragraph.</p>
+        <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+       </doc>]]>
+            </egXML>
+          </div>
+          <div type="comments">
+            <p>On peut également préciser l’encodage des caractères (par défaut en XML mais une bonne pratique).</p>
+            <p>Ici on déclare l’utilisation de l’encodage de caractère UTF-8 (pour Universal Character Set) qui permet de représenter la plupart des caractères du « répertoire universel de caractères codés » initialement développé par l’<ref
+                target="http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=51273"
+                >ISO (ISO/CEI 10646)</ref>, aujourd’hui entièrement compatible avec le standard Unicode.</p>
+            <p>Le répertoire Unicode peut contenir plus d’un million de caractères.<list>
+                <item>cf. <ref target="https://fr.wikipedia.org/wiki/UTF-8"
+                    >https://fr.wikipedia.org/wiki/UTF-8</ref></item>
+                <item>cf. <ref target="http://www.cs.tut.fi/~jkorpela/unicode/guide.html"
+                    >Jukka Korpela. "Guide to the Unicode standard"</ref></item>
+              </list></p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Spécification de l’<hi>encodage</hi></head>
+            <!-- @todo traiter l’exemple correctement -->
+            <egXML>
+              <![CDATA[<?xml version="1.0" encoding="UTF-8?>
+       <doc xmlns="http://example.org/​namespace">
+        <p n="1">This is a paragraph.</p>
+        <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+       </doc>]]>
+            </egXML>
+            <p>Les séquences <code>&lt;</code>, <code>&gt;</code> et <code>&lt;/</code> délimitent les balises : <code>&lt;div&gt;&lt;/div&gt;</code></p>
+            <p>Les paires nom-valeur des attributs ont la forme <code>nom='valeur'</code> équivalente à <code>nom="valeur"</code></p>
+            <p>Syntaxte des éléments vides : <code>&lt;div&gt;&lt;/div&gt;</code> = &lt;div/&gt;</p>
+          </div>
+          <div type="comments">
+            <p>Les caractères <code>&lt;</code> et <code>&gt;</code> sont utilisés pour marquer le début et la fin de <soCalled>balises</soCalled> à l’intérieur de ce flux textuel. Ces éléments possèdent un nom.</p>
+            <p>Vous remarquez que ces <soCalled>balises</soCalled>, ou <soCalled>markup</soCalled>, ou encore <soCalled>étiquettes (tag)</soCalled>, sont appariées : à chaque balise ouvrante correspond une balise fermante qui se distingue en débutant par la séquence <code>&lt;/</code>.</p>
+            <p>Les balises et leur contenu forment un <soCalled>élement XML</soCalled>.</p>
+            <p>Ici, le document présente également des <soCalled>attributs</soCalled>. Ce sont des paires nom-valeurs qui se rattachent aux <soCalled>éléments</soCalled>.</p>
+            <p>Notez la syntaxe particulière des <soCalled>éléments vides</soCalled>.</p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Le corps du document XML : un <hi>arbre d’éléments</hi></head>
+            <list>
+              <item>le nom de l’élément obéit aux contraintes syntaxiques des noms XML</item>
+              <item>Les <soCalled>éléments</soCalled> décomposent le texte en unités d’information</item>
+              <item><hi rend="bold"
+                  >Tout élément a un nom</hi> (parfois appelé <soCalled>identificateur générique</soCalled>), ici c’est « p ».</item>
+              <item>Un élément peut contenir du texte et/ou d’autres éléments (<soCalled>contenu mixte</soCalled>), ou être vide.</item>
+              <item>Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est l’<soCalled>élément racine</soCalled>.</item>
+            </list>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <p>Exemple de contenu mixte avec une <name>entité-nommée</name><pb/></p>
+            </egXML>
+          </div>
+          <div type="comments">
+            <head>Le corps du document XML consiste en un arbre d’éléments</head>
+            <p>Les <soCalled>éléments</soCalled> permettent de décomposer le texte en unités d’information</p>
+            <p>La portion de texte ainsi isolée est marquée par une balise de début (<soCalled>balise ouvrante</soCalled>) et par une balise de fin (<soCalled>balise fermante</soCalled>)</p>
+            <p>Tout élément a un nom (parfois appelé <soCalled>identificateur générique</soCalled>), ici c’est titre.</p>
+            <p>Un élément peut contenir du texte et/ou d’autres éléments (<soCalled>contenu mixte</soCalled>), ou être vide.</p>
+            <p>Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est l’<soCalled>élément racine</soCalled>.</p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Les <hi>attributs</hi></head>
+            <p>Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <date when="2011-03-09">9 mars 2011</date>
+            </egXML>
+            <list>
+              <item>toujours saisis à l’intérieur de la balise ouvrante de l’élément</item>
+              <item>syntaxe : <code>nomAttribut="valeur"</code></item>
+              <item>le nom de l’attribut obéit aux contraintes syntaxiques des noms XML</item>
+              <item>la valeur est encadrée par des guillemets simples ou doubles</item>
+              <item>L’ordre des attributs n’est pas prescrit pour un élément donné</item>
+              <item>Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle <code>attribut=""</code></item>
+              <item>Pour un même élément, il ne peut y avoir deux attributs de même nom <code>rend="bold center"</code></item>
+            </list>
+          </div>
+          <div type="comments">
+            <p>Les attributs ne contiennent que du texte, ils ne peuvent donc pas servir pour stocker de l’information structurée.</p>
+            <p>En principe ne sont pas destinés à ajouter du contenu à l’élément, donc leur valeur n’est pas destinée à être affichée telle quelle dans un format de sortie. Mais ils pourront être exploités par des applications informatiques pour faire par exemple des index, ils peuvent servir à identifier les éléments (attributs de type ID), à établir des renvois (attributs de type IDREF).</p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head><hi>Contraintes syntaxiques</hi> des noms XML</head>
+            <p>Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques) :</p>
+            <list>
+              <item>la chaîne de caractères formant le nom peut contenir les caractères alphanumériques (lettres de <code>a</code> à <code>z</code>, et de <code>A</code> à <code>Z</code>, chiffres de <code>0</code> à <code>9</code>, caractères non latins), le trait sous la ligne <code>_</code>, le trait d’union <code>-</code> et le point <code>.</code> (à l’exclusion de tout autre signe de ponctuation ou espace) ;</item>
+              <item>un nom ne peut pas commencer par un nombre, ni par un point, ni par un trait d’union ;</item>
+              <item>le nom ne peut pas commencer par <code>xml</code> (quelle que soit la casse utilisée).</item>
+              <item>Attention, XML est sensible à la casse !</item>
+            </list>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Les <hi>entités</hi></head>
+            <div>
+              <head>Entités internes</head>
+              <p><soCalled>entités caractères prédéfinies</soCalled> pour saisir certains caractères que l’on doit obligatoirement coder ( <![CDATA[<]]>, <![CDATA[>]]>, <![CDATA[&]]>, <![CDATA["]]>, <![CDATA[']]> : caractères codés au moyen des entités <code>lt</code>, <code>gt</code>, <code>amp</code>, <code>quot</code>, <code>apos</code>)</p>
+            </div>
+            <div>
+              <head>Entités externes</head>
+              <p>XML propose des mécanismes pour donner un nom à des expressions ou phrases souvent répétées ou pour taper des caractères difficiles à composer au clavier.</p>
+              <list>
+                <item>texte : fragments XML formant chacun un fichier</item>
+                <item>non parsées (fichiers non XML tels qu’images, enregistrements sonores…)</item>
+              </list>
+            </div>
+            <div>
+              <head>Appel d’entité</head>
+              <p>Un <soCalled>appel d’entité</soCalled> dans le corps du document XML se fait en utilisant l’esperluette (<![CDATA[&]]>), suivi du nom donné à l’entité, suivi du signe <![CDATA[;]]>.</p>
+              <list>
+                <head>exemples</head>
+                <item><![CDATA[&amp;]]> : &amp;</item>
+                <item><![CDATA[&gt;]]> : ></item>
+                <item>…</item>
+              </list>
+            </div>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <div>
+              <head>Les commentaires</head>
+              <p>Commencent par <code>&lt;!--</code> et se terminent par <code>--&gt;</code></p>
+              <p>Le double trait d’union « -- » ne doit pas apparaître au sein d’un commentaire</p>
+              <p>Servent à… commenter, utiles pour documenter ce qu’on fait ou consigner des notes. Ne sont pas destinés aux programmes informatiques, qui les ignorent par défaut.</p>
+            </div>
+            <div>
+              <head>Les instructions de traitement</head>
+              <p>Commencent par <code>&lt;?</code> et se terminent par <code>?&gt;</code>.</p>
+              <p>Définissent une cible (fournissent le nom de l’application à qui elles sont destinées, par ex.), et des arguments</p>
+            </div>
+            <div>
+              <head>Sections CDATA</head>
+              <p>sections de caractères non parsées. Commencent par <code>&lt;![CDATA[</code> et se terminent par <code>]]&gt;</code>.</p>
+            </div>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Notion d’<hi>Espace de nom</hi></head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <TEI>
+                <teiHeader><!-- autres éléments --></teiHeader>
+                <text><!-- autres éléments --></text>
+              </TEI>
+            </egXML>
+            <list>
+              <item/>
+            </list>
+          </div>
+          <div type="comments">
+            <head>Notion d’<soCalled>espace de nom</soCalled></head>
+            <p>De plus en plus souvent, afin de faciliter les échanges en évitant toute ambiguité, les noms des éléments et attributs sont rattachés à un namespace (espace de noms).</p>
+            <list>
+              <item>Formellement un espace de noms est défini par son URI (namespace-uri).</item>
+              <item>Si on utilise un ou plusieurs espaces de noms, l’espace de noms (ou les espaces de noms) utilisé(s) doivent être déclarés dans le fichier XML. On le fait le plus souvent en ajoutant un (ou plusieurs) attribut(s) xmlns à l’élément racine du fichier. Un attribut xmlns a pour valeur l’URI d’un espace de noms.</item>
+              <item>L’espace de noms peut être déclaré comme l’espace de noms par défaut, dans ce cas l’URI n’est pas associée à un code donné et les noms des attributs et éléments ne sont pas préfixés.</item>
+              <item>Un code peut en effet représenter l’espace de noms, il est alors utilisé à la place de l’URI pour préfixer attributs et éléments ; ce code est appelé préfixe (namespace- prefix).</item>
+            </list>
+            <p><label>exemple</label> Ici l’espace de noms par défaut est défini par l’URI http://www.tei-c.org/ns/1.0, c’est l’espace de noms TEI. Tous les éléments du fichier XML qui sont descendants de l’élément racine et qui ne sont pas préfixés sont dans cet espace de noms.</p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Document <hi>bien formé</hi></head>
+            <p>On dit d’un document XML qu’il est <soCalled>bien formé</soCalled> quand celui-ci répond à un certain nombre de contraintes</p>
+            <list>
+              <item>concordance entre l’encodage du document et sa déclaration XML ;</item>
+              <item>existence des fichiers déclarés (déclaration de DTD, déclaration d’entités externes) et concordance entre l’encodage des fichiers entités externes et leur déclaration XML ;</item>
+              <item>forme des appels d’entités ;</item>
+              <item>présence de balises ouvrantes et fermantes appariées, imbrication des balises sans chevauchement ;</item>
+              <item>respect des spécifications relatives aux noms XML (noms d’éléments et d’attributs) ;</item>
+              <item>unicité des attributs dans un même élément, aucun attribut sans valeur ;</item>
+              <item>forme des commentaires.</item>
+            </list>
+            <p>Le contrôle se fait par <soCalled>analyse syntaxique</soCalled> ou <soCalled>parsing</soCalled> (avec des outils appelés <soCalled>parsers</soCalled>).</p>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Bien formé, oui ou non ?</head>
+            <list>
+              <item><![CDATA[<segment>du texte</segment>]]></item>
+              <item><![CDATA[<segment><article>du</article><nom>texte</nom></segment>]]></item>
+              <item><![CDATA[<segment><article>du <nom></article> texte</nom></segment>]]></item>
+              <item><![CDATA[<segment type="text">du texte</segment>]]></item>
+              <item><![CDATA[<segment type='text'>du texte</segment>]]></item>
+              <item><![CDATA[<segment type=text>du texte</segment>]]></item>
+              <item><![CDATA[<segment type="text">du texte<segment/>]]></item>
+              <item><![CDATA[<segment type="text">du texte<lacune/></segment>]]></item>
+              <item><![CDATA[<segment type="text">du texte< /segment>]]></item>
+              <item><![CDATA[<segment type="text">du texte</Segment>]]></item>
+              <item><![CDATA[<segment type="text" type="toto">du texte</segment>]]></item>
+            </list>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head><hi>Modèles de documents</hi> ou schéma</head>
+            <p>Rappel : définissent les contraintes que doit respecter une certaine classe de documents Diverses syntaxes peuvent être utilisées pour écrire de tels modèles :<list>
+                <item>celle des DTD (partie intégrante de la norme XML 1.0), la plus utilisée encore aujourd’hui ;</item>
+                <item>celle, exprimée en XML, des schémas XML (norme du W3C publiée en mai 2001 ; 2<hi
+                    rend="superscript">e</hi> édition octobre 2004 ; voir <ref
+                    target="http://www.w3.org/XML/Schema"
+                  >http://www.w3.org/XML/Schema</ref>) ;</item>
+                <item>celle des schémas RelaxNG (norme ISO/IEC 19757-2 depuis 2003, amendée en 2008 ; voir <ref
+                    target="http://www.relaxng.org/">http://www.relaxng.org/</ref>).</item>
+              </list>
+            </p>
+            <p>Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.</p>
+          </div>
+          <div type="comments">
+            <p>Les schémas, qui peuvent s’écrire en XML quelle que soit la syntaxe choisie, permettent de contraindre plus fortement que les DTD le contenu des attributs et des éléments, et gèrent les espaces de noms. Un parseur sachant interpréter la syntaxe utilisée pourra vérifier qu’un document est conforme à un modèle donné (est valide).</p>
+            <p>Exemples de parseurs : ceux intégrés aux éditeurs XML, aux navigateurs Web ; xmllint dans la librairie libxml, etc.</p>
+            <p>Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.</p>
+          </div>
+        </div>
+      </div>
+    </body>
+    <back>
+      <div type="part">
+      <div type="title" xml:lang="fr">
+        <div>
+          <head>Sources et bibliographie</head>
+        </div>
+      </div>
+      <div type="slide" xml:lang="fr">
+        <div>
+          <head>Orientations bibliographiques</head>
+          <list>
+            <item>A gentle introduction to XML : <ref
+                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html"
+                >http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html</ref></item>
+            <item>XML en concentré : manuel de référence / Elliotte Rusty Harold &amp; W. Scott Means ; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris : O'Reilly, 2005. ISBN 2-84177-353-1 EAN 9782841773534 ;</item>
+            <item>L’espace XML francophone : actualités, discussions, articles et billets, sur le site Web <ref
+                target="http://xmlfr.org/">http://xmlfr.org/</ref></item>
+          </list>
+        </div>
+      </div>
+      </div>
+    </back>
+  </text>
+</TEI>
