@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Initiation à XML</title>
+            <title type="sub">Programme de la formation du CRIHN, 17 février 2017</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>CRIHN</publisher>
+            <date when="2017-02">février 2017</date>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Document nativement numérique</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div>
+            <head>Programme de la formation</head>
+            <list>
+               <head>Mâtinée</head>
+               <label>10h–10h30</label>
+               <item>Introduction de la formation</item>
+               <label>10h30–11h00</label>
+               <item>Présentation du langage</item>
+               <label>11h00–11h30</label>
+               <item>TP : modélisation d’un carnet d’adresse avec XML</item>
+               <label>11h30–12h00</label>
+               <item>Pause</item>
+               <label>12h00–12h30</label>
+               <item>Notion de schéma</item>
+            </list>
+            <list>
+               <head>Après-midi</head>
+               <label>13h–13h30</label>
+               <item>XML et les technologies associées</item>
+               <label>13h30–14h</label>
+               <item>Introduction XPath</item>
+               <label>14h–14h30</label>
+               <item>TP : XPath01</item>
+               <label>14h30–15h00</label>
+               <item>Pause</item>
+               <label>15h00–15h30</label>
+               <item>XPath avancé</item>
+               <label>15h30–16h</label>
+               <item>Présentation d’outils et d’application dans le monde universitaire</item>
+            </list>
+         </div>
+      </body>
+  </text>
+</TEI>
