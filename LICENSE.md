@@ -9,8 +9,9 @@ Pour accéder à une copie de cette licence, merci de vous rendre à l’adresse
 ### Vous êtes autorisé à :
 
 *Partager* — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
-*Adapter* — remixer, transformer et créer à partir du matériel
-pour toute utilisation, y compris commerciale.
+
+*Adapter* — remixer, transformer et créer à partir du matériel pour toute utilisation, y compris commerciale.
+
 L’Offrant ne peux retirer les autorisations concédées par la licence tant que vous appliquez les termes de cette licence.
 
 ### Selon les conditions suivantes :
