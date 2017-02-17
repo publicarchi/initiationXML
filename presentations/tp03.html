@@ -7,7 +7,7 @@
    </head>
    <body><textarea id="source">
 title: Initiation à XML du CRIHNTP03 – Éditer un document d’après un schéma
-description: Lou Burnard Consulting, 
+description: Lou Burnard Consulting,
 theme: theme/remark-dark-em.css
 name: inverse
 layout: true
@@ -23,14 +23,14 @@ class: center middle
 ## Introduction à XML | CRIHN, 17 février 2017
 
 .footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
-![test](images/logo-ecole-nationale-des-chartes.png)
+
 
 ---
 
 
 # Introduction
 
-Dans ce premier exercice, nous allons nous servir d’oXygen pour&nbsp;: 
+Dans ce premier exercice, nous allons nous servir d’oXygen pour&nbsp;:
 * la création d’un nouveau document XML
 
 * le balisage progressif d’un document
@@ -59,7 +59,7 @@ La [Text Encoding Initiative (TEI)](http://tei-c.org) propose un vocabulaire et 
 
 oXygen ouvre un document TEI que vous allez pouvoir compléter.
 
-Le schéma TEI Bare que vous avez choisi contient un minimum de balises, mais il permet quand-même de décrire un document TEI complet. 
+Le schéma TEI Bare que vous avez choisi contient un minimum de balises, mais il permet quand-même de décrire un document TEI complet.
 
 On est maintenant dans l’espace de travail typique d’oXygen. Par défaut, il y a plusieurs fenêtre, autour de la fenêtre principale où nous allons pouvoir éditer notre document. Sur le côté gauche, dans la vue `Sommaire` s’affiche la structure hiérarchique de votre document.
 
@@ -69,13 +69,13 @@ Remarquez qu’un document TEI se compose de deux parties&nbsp;: En tête du fic
 
 Remarques que vous pouvez modifier l’affichage du document en cliquant sur les boutons Texte, Grille, ou Auteur en bas de la fenêtre principale. Le mode auteur permet d’afficher votre document dans un éditeur WYSIWIG. Comme nous n’avons pas peur des balises, nous allons commencer à éditer le document en mode Texte&nbsp;!
 
-On va d’abord fournir les métadonnées minimales nécessaires pour tout nouveau document TEI&nbsp;: le titre du fichier, des informations sur sa publication, et sa source. oXygen vous propose des éléments pré-remplis que nous allons modifier et compléter. 
+On va d’abord fournir les métadonnées minimales nécessaires pour tout nouveau document TEI&nbsp;: le titre du fichier, des informations sur sa publication, et sa source. oXygen vous propose des éléments pré-remplis que nous allons modifier et compléter.
 * À l’intérieur de la balise `&lt;title&gt;`, donnez un titre à votre document. À vous de choisir&nbsp;! Cela peut être Mon premier document TEI&nbsp;! .
 
 * Remplacez les deux autres contenus textuels proposés par défaut par des mentions plus appropriées. Par exemple, pour publication, on pourrait mettre Brouillon inédit ou Distribué sur mon blog&nbsp;; dans `&lt;sourceDesc&gt;`, on vous propose Œuvre originale, guidée par une formation TEI.
 
 
-Par défaut, oXygen cherche à maintenir votre document dans un état valide. Qu’arrive-t-il si vous endommagez la structure hiérarchique de votre document&nbsp;? 
+Par défaut, oXygen cherche à maintenir votre document dans un état valide. Qu’arrive-t-il si vous endommagez la structure hiérarchique de votre document&nbsp;?
 * Effacez quelques lettres à l’intérieur de n’importe quelle balise&nbsp;: par exemple changez `&lt;publicationStmt&gt;` en `&lt;publicat&gt;`.
 
 * Observez ce que fiat oXygen&nbsp;:&nbsp;le logiciel a changé la balise fermante correspondante pour lui faire correspondre le nouveau nom que vous lui avez donnée afin que le document reste bien formé. Mais celui-ci n’est plus valide contre le schéma TEI bare (qui ne définit aucune balise publicat). Par conséquent, les balises qui ne sont pas définies dans le schéma sont désormais soulignées en rouge&nbsp;et un message d’erreur s’affiche en bas de l’écran. Remarquez aussi l’indicateur rouge sur le côté droit de votre fenêtre principale.
@@ -85,7 +85,7 @@ Par défaut, oXygen cherche à maintenir votre document dans un état valide. Qu
 * Tapez `Ctrl` + `Z` (ou sélectionnez `Annuler` dans le menu `Édition`) pour revenir dans un état de grâce… L’indicateur rouge, en haut à droite de la fenêtre principale, reprend sa couleur verte après correction de toutes les erreurs.
 
 
-Puisque votre document XML est associé à un schéma, oXygen va vous permettre d’ajouter facilement les balises définies dans le modèle de document. 
+Puisque votre document XML est associé à un schéma, oXygen va vous permettre d’ajouter facilement les balises définies dans le modèle de document.
 * Placez le curseur après la balise fermante `&lt;/title&gt;` et juste avant la balise fermante `&lt;/titleSmt&gt;`;
 
 * Tapez `&lt;` et arrêtez-vous un instant ;
@@ -116,7 +116,7 @@ Identifiez d’abord, les composants disponibles pour dans votre document pour b
 * des paragraphes… à baliser avec la balise `&lt;p&gt;`
 Allons-y&nbsp;!
 
-Dans la suite de ce petit tutoriel, nous allons vous présenter quelques fonctionnalités utiles offertes par ce logiciel. 
+Dans la suite de ce petit tutoriel, nous allons vous présenter quelques fonctionnalités utiles offertes par ce logiciel.
 
 D’abord, une question importante&nbsp;: Pour le contenu, OK, il faut le créer —&nbsp;mais est-ce qu’il faut toujours taper soi-même les balises&nbsp;? Non&nbsp;: oXygen est là pour vous aider. Vous avez déjà vu comment il peut vous proposer la liste des balises disponibles à un certain emplacement du document. Il peut aussi vous suggérer comment baliser un morceau de texte sélectionné.
 
@@ -146,7 +146,7 @@ Sans doute aurez-vous besoin de plus d’un seul paragraphe. Comment faire pour 
 
 Supposons que vous avez maintenant quelques centaines de mots dans votre seul paragraphe, et que vous voulez le diviser en plusieurs.
 
-* Placez le curseur au point de chaque division souhaitée 
+* Placez le curseur au point de chaque division souhaitée
 
 * Tapez `Alt` + `Maj` + `D` ou sélectionnez `Refactorisation` dans le menu contextuel puis `Élément de division` dans le menu `Document`.
 
@@ -159,7 +159,7 @@ Dans un de vos chapitres, n’omettez pas d’ajouter une liste, balisée avec u
 
 # L’affichage du texte balisé
 
-Est-ce que la quantité de balises dans votre document commence à vous inquiéter un peu&nbsp;? 
+Est-ce que la quantité de balises dans votre document commence à vous inquiéter un peu&nbsp;?
 
 On peut mettre en ordre le balisage que l’on a fait, en cliquant sur le bouton d’indentation, ou en tapant `Ctrl` + `Maj` + `P`, ou en sélectionnant `Source` → `Indenter le document` dans le menu `Document`. Mais peut être préféreriez-vous voir disparaître les balises&nbsp;?
 
@@ -167,7 +167,7 @@ On peut mettre en ordre le balisage que l’on a fait, en cliquant sur le bouton
 
 * L’option `Toutes les balises` affiche les balises en icônes&nbsp;; l’option `Aucune balise` les fait disparaître totalement.
 
-* Notez en plus que votre document est maintenant stylé&nbsp;; il y a des changements de police&nbsp;; les retours de ligne sont traités comme des blancs&nbsp;; etc. 
+* Notez en plus que votre document est maintenant stylé&nbsp;; il y a des changements de police&nbsp;; les retours de ligne sont traités comme des blancs&nbsp;; etc.
 
 * Dans le mode auteur, on peut diviser un élément simplement en tapant ENTRÉE deux fois. Vous pouvez essayez.
 
@@ -178,7 +178,7 @@ Sachez que vous pourrez contrôler ici l’affichage de votre document avec une 
 
 # Importation d’un document bureautique
 
-La plupart des documents numériques que vous rencontrer le plus souvent vous paraissent sans doute indemnes de toute balise XML. Par exemple, les documents préparés à l’aide des outils bureautiques tels Microsoft Word ou avec Open Office se présentent en apparence comme du texte brut. Ce n’est qu’une apparence&nbsp;: En réalité derrière tout cela il existe un format XML, que l’on peut manipuler, et donc qu’on peut transformer dans un autre format XML comme celui de la TEI. 
+La plupart des documents numériques que vous rencontrer le plus souvent vous paraissent sans doute indemnes de toute balise XML. Par exemple, les documents préparés à l’aide des outils bureautiques tels Microsoft Word ou avec Open Office se présentent en apparence comme du texte brut. Ce n’est qu’une apparence&nbsp;: En réalité derrière tout cela il existe un format XML, que l’on peut manipuler, et donc qu’on peut transformer dans un autre format XML comme celui de la TEI.
 
 Vous trouverez dans votre dossier `exercices` un fichier intitulé `acteRoyal-s.docx` et un autre intitulé `acteRoyal.jpg`. Prenez connaissance de ces documents. Il s’agit d’un document manuscrit numérisé en mode image qui a ensuite été rapidement retranscrit avec Microsoft Word. On va se servir d’oXygen pour transformer automatiquement cette transcription en XML TEI.
 
@@ -200,7 +200,7 @@ En réalité, un fichier Microsoft Word au format docx est une archive compress�
 
 * Avec ce fichier `document.xml` ouvert dans l’écran principal, sélectionnez `Transformation -&gt; Configurer les Scénario(s) de Transformation` du menu `Document`. Ou tapez `Ctrl` + `Maj` + `C`. Ou cliquez sur la petite icône en forme de clef à molette (celui-ci : )
 
-* oXygen vous présente les options de transformation disponibles pour ce document, parmi lesquelles devrait figurer une transformation nommée DOCX TEI P5. 
+* oXygen vous présente les options de transformation disponibles pour ce document, parmi lesquelles devrait figurer une transformation nommée DOCX TEI P5.
 
 ![](../images/configurer-1.png)
 
