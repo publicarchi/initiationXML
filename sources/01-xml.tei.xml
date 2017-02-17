@@ -28,22 +28,43 @@
   <text>
     <front>
       <titlePage xml:lang="fr">
-        <titlePart>02 – eXtensible Markup Language</titlePart>
-        <docImprint>Introduction à XML | Édition numérique, 25-29 avril 2016</docImprint>
-        <note><ref target="https://github.com/tei-fr/formUdem2016-04">Répertoire GitHub</ref> | <ref
-            target="00-programme.html">Programme</ref></note>
+        <titlePart>01 – eXtensible Markup Language</titlePart>
+        <docImprint>Introduction à XML | CRIHN, 17 février 2017</docImprint>
+        <note><ref target="https://github.com/publicarchitectura/initiationXML">Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref></note>
       </titlePage>
     </front>
     <body>
       <div type="part">
         <div rend="title" xml:lang="fr">
           <div>
-            <head>Introduction sur <hi>XML</hi></head>
+            <head>La notion d’encodage</head>
+          </div>
+          <div>
+            <head>La vogue de XML</head>
+            <p>Vogue de XML dans les années 2000, en particulier dans le milieu culturel.</p>
+            <p>Très employé pour les métadonnées culturelles, et dans l’industrie.</p>
+            <p>Important stock de données encodées en XML, sans doute encore aujourd’hui, en terme de masse le format informatique le plus courant.</p>
+            <p>Le texte comme principal cas d’application de XML. Domaine dans lequel XML n’a toujours pas été remplacé. Modèle de contenu qui permet notamment de prendre en charge de manière efficace ce qu’on appelle du Contenu mixte.</p>
+          </div>
+        </div>
+        <div type="slide">
+          <div>
+            <head>La notion d’encodage descriptif</head>
+          </div>
+          <div>
+            <head>L’héritier d’une longue histoire</head>
+            <p>Très tôt dans l’histoire de l’informatique, on s’est intéressé au problème de la représentation du texte sous forme numérique.</p>
+          </div>
+        </div>
+      </div>
+      <div type="part">
+        <div rend="title" xml:lang="fr">
+          <div>
+            <head>Le métalangage <hi>XML</hi></head>
           </div>
           <div>
             <div>
-              <p>On vient de voir qu’un balisage descriptif permettait de <hi rend="bold"
-                  >se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document</hi>.</p>
+              <p>On vient de voir qu’un balisage descriptif permettait de <hi rend="bold">se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document</hi>.</p>
               <p>Dans une démarche qui privilégie avant tout l’édition du texte, il convient en premier lieu de <hi rend="bold">rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles</hi>. La présence du balisage détermine par la suite la possibilité de traiter les éléments pour une transformation.</p>
               <p>Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.</p>
               <bibl>cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau, François, Extensible Markup Language (XML) 1.0, Recommandation du W3C, 2008. <ref
@@ -55,8 +76,7 @@
               <p>Son <hi rend="bold"
                 >modèle de contenu arborescent</hi> est précisément conforme au modèle OHCO.</p>
               <p>S’il offre une grammaire lisible par la machine, il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.</p>
-              <p>XML propose simplement <hi rend="bold"
-                  >une solution rigoureuse, compréhensible par les machines, pour définir un langage de balisage descriptif</hi>.</p>
+              <p>XML propose simplement <hi rend="bold">une solution rigoureuse, compréhensible par les machines, pour définir un langage de balisage descriptif</hi>.</p>
             </div>
             <div>
               <head>Une large utilisation dans le domaine culturel</head>

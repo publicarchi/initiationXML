@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/teiSlides.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Initiation à XML du CRIHN</title>
+                <title type="sub">TP01 – À la découverte de oXygen</title>
+                <author>Emmanuel Château-Dutier</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Université de Montréal</publisher>
+                <date when="2017-02">février 2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Document est nativement numérique.</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change> <date when="2017-02">février 2016</date>
+                <name>Emmanuel Château-Dutier</name>, création</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage xml:lang="fr">
+                <titlePart>TP01 – À la découverte de oXygen</titlePart>
+                <docImprint>Introduction à XML | CRIHN, 17 février 2017</docImprint>
+                <note><ref target="https://github.com/publicarchitectura/initiationXML"
+                    >Répertoire GitHub</ref> | <ref target="00-programme.html"
+                    >Programme</ref></note>
+            </titlePage>
+        </front>
+        <body>
+            <div type="part">
+                <div type="title">
+                    <head>Le Choix d’un éditeur</head>
+                </div>
+                <div type="slide">
+                    <div>
+                        <head>Pourquoi utiliser un éditeur ?</head>
+                        <list>
+                            <item>faciliter la saisie (auto-complétion)</item>
+                            <item>limitation les erreurs</item>
+                            <item>coloration syntaxique</item>
+                            <item>contrôle de conformité</item>
+                            <item>validation contre un schéma</item>
+                        </list>
+                    </div>
+                    <div>
+                        <head>Pourquoi utiliser un éditeur ?</head>
+                        <p>La sérialisation textuelle du métalangage XML peut parfois à juste titre paraître relativement verbeuse avec la redondance de ses balises et sa syntaxe. En employant un éditeur XML, vous disposerez d’un environnement d’édition qui facilite la production de documents XML en vous offrant des dispositifs commodes tels que l’auto-complétion, la coloration syntaxique ou encore une vue sommaire de la hiérarchie de vos documents.</p>
+                        <p>La plupart des éditeurs XML offrent également des outils qui vont vous permettre de contrôler la conformité de vos documents à la syntaxe XML, mais encore appliquer un schéma de validation.</p>
+                    </div>
+                </div>
+                <div type="slide">
+                    <div>
+                        <head>Quel éditeur choisir ?</head>
+                        <list>
+                            <item><ref target="https://www.oxygenxml.com">oXygen</ref></item>
+                            <item><ref target="https://www.emacswiki.org/emacs/RELAX_NG)"
+                                >Emacs</ref></item>
+                            <item><ref target="http://xml-copy-editor.sourceforge.net"
+                                >XML copy-editor</ref></item>
+                        </list>
+                    </div>
+                    <div>
+                        <head>Quel éditeur choisir ?</head>
+                        <p>De nombreux éditeurs XML sont actuellement disponibles sur le marché . Dans le domaine des humanités numériques, la communauté de la Text Encoding Initiative a souvent tendance à privilégier l’éditeur XML <ref
+                            target="https://www.oxygenxml.com"
+                            >oXygen</ref> en raison de sa grande flexibilité, mais surtout de sa conformité à <ref
+                            target="http://relaxng.org"
+                            >RelaxNG</ref>, ainsi que du prix relativement modique de ses licences.</p>
+                        <p>Du côté des éditeurs XML libres on est un peu à la peine. Mis à part <ref
+                            target="https://www.emacswiki.org/emacs/RELAX_NG)"
+                            >Emacs</ref> qui dispose d’un package compatible avec les dernières technologies de <ref
+                            target="https://www.w3.org/XML/Schema">schema XML</ref> (notamment <ref
+                            target="http://relaxng.org">RelaxNG</ref>), sur <ref
+                            target="http://www.vim.org/scripts/script.php?script_id=1397"
+                            >Vim</ref> on ne dispose d’aucun outil correct pour éditer des fichiers XML d’après un schéma, et ne parlons même pas de ce qui est pour le moment disponible sur <ref
+                            target="https://atom.io/search?&amp;q=xml"
+                            >Atom</ref> qui est pour le moins rudimentaire. Le seul projet entièrement libre et open source qui semble actuellement proposer une comptabilité avec les technologies de schéma est <ref
+                            target="http://xml-copy-editor.sourceforge.net"
+                            >XML copy-editor</ref> mais qui n’est plus un projet très actif. Il y a quelques années, une tentatives avait été conduite par Mith avec <ref
+                            target="http://mith.us/angles/"
+                            >Angles</ref> mais il ne semble pas que celle-ci ait vraiment prospéré.</p>
+                    </div>
+                </div>
+                <div type="slide">
+                    <div>
+                        <head>Choisir un logiciel WYSIWYG ou pas ?</head>
+                        <p>WYSIWIG (What You See Is What You Get)</p>
+                        <list>
+                            <item><ref target="http://www.xmlmind.com/xmleditor/"
+                                >XMLmind XML Editor</ref></item>
+                            <item><ref target="http://www.xeditor.com/portal">Xeditor</ref></item>
+                            <item><ref target="https://fontoxml.com">FontoXML</ref></item>
+                            <item><ref
+                                target="http://www.sdl.com/solution/knowledge-delivery/xml-publishing-xopus/"
+                                >SDL Xopus</ref></item>
+                            <item><ref target="https://www.oxygenxml.com/xml_web_author.html"
+                                >oXygen</ref></item>
+                        </list>
+                    </div>
+                    <div>
+                        <head>Choisir un logiciel WYSIWYG ou pas ?</head>
+                        <p>Pour les non-informaticiens, la visualisation de l’encodage constitue parfois un fort inconvénient à l’utilisation de XML. Pourtant, la visualisation des balises présente dans bien des cas une interface commode pour travailler sur l’encodage d’un texte. Cependant, ce genre de vues n’est pas tout à fait une fatalité. Ces dernières années, plusieurs éditeurs XML de type WYSIWIG (What You See Is What You Get) ont été développées qui offrent des interfaces dont la simplicité n’a rien à envier à des logiciels de traitement de textes en ligne comme <ref
+                            target="https://docs.google.com">GoogleDocs</ref> ou <ref
+                            target="https://products.office.com/fr-ca/office-online/documents-spreadsheets-presentations-office-online"
+                            >Microsoft Office Online</ref>. D’ailleurs leurs interfaces sont en grande partie conçues d’après leur modèle.</p>
+                        <p>Toutefois, ces solutions sont pour le moment généralement des solutions propriétaires. La réalisation d’un tel éditeur avait un moment fait partie des tâches que se proposait de réaliser en France le projet d’équipement de recherche <ref
+                            target="http://www.biblissima-condorcet.fr/en/news/survey-xml-editors-teiead"
+                            >Biblissima</ref>, mais l’équipe y a renoncé au profit de l’utilisation d’une solution commerciale déjà existante (<ref
+                            target="http://www.xmlmind.com/xmleditor/"
+                            >XMLmind XML Editor</ref>). Pour ne citer que quelques uns d’entre eux, mentionnons par exemple la très belle interface de <ref
+                            target="http://www.xeditor.com/portal">Xeditor</ref>, de <ref
+                            target="https://fontoxml.com">FontoXML</ref>, de <ref
+                            target="http://www.sdl.com/solution/knowledge-delivery/xml-publishing-xopus/"
+                            >SDL Xopus</ref> ou celle proposée par <ref
+                            target="https://www.oxygenxml.com/xml_web_author.html"
+                            >oXygen web author</ref>. Ces applications démontrent aujourd’hui (s’il le fallait encore) qu’il est possible de concevoir des interfaces graphiques faciles d’utilisation sans renoncer en rien à la richesse sémantique et contextuelle offerte par les technologies XML.</p>
+                    </div>
+                </div>
+            </div>
+            <div type="part">
+                <div type="title">
+                    <head>Installation d’oXygen</head>
+                </div>
+                <div type="slide">
+                    <head>Téléchargement du logiciel</head>
+                    <p><ref target="https://www.oxygenxml.com/xml_editor.html">Présentation du logiciel oXygen XML Editor</ref></p>
+                    <p><ref target="https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html">Téléchargement du logiciel oXygen XML Editor</ref></p>
+                    <list>
+                        <item>Demandez une <ref target="https://www.oxygenxml.com/register.html">licence d’essai</ref></item>
+                        <item>Téléchargez la version compatible avec votre ordinateur</item>
+                        <item>Exécutez le programme d’installation</item>
+                        <item>Sur mac, déplacez le programme dans le dossier des Applications</item>
+                        <item>Sur mac, vous aurez peut-être besoin d’installer Java pour exécuter le logiciel</item>
+                        <item>Lancez le logiciel et renseignez votre licence d’essai (les 9 lignes de texte entre START LICENCE KEY et END LICENCE KEY</item>
+                        <item>Vous y êtes !</item>
+                    </list>
+                    
+                </div>
+            </div>
+            <div type="part"/>
+        </body>
+    </text>
+</TEI>

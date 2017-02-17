@@ -25,7 +25,7 @@
       <body>
          <head>TEI Slides</head>
          <p>A simple ODD for encoding slides, reflecting 20 or so years of inconsistencies.</p>
-         <schemaSpec ident="teislides">
+         <schemaSpec ident="teiSlides">
             <moduleRef key="tei"/>
         <!-- limited number of header elements -->
             <moduleRef key="header" include="teiHeader fileDesc titleStmt 
