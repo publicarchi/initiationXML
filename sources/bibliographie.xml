@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/teiSlides.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Initiation à XML du CRIHN</title>
+            <title type="sub">Bibliographie</title>
+            <author>Emmanuel Château-Dutier</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Université de Montréal</publisher>
+            <date when="2017-02">février 2017</date>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Document nativement numérique</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <bibl>
+            <title>Transforming Data for Reuse and Re-publication with XML and XSL</title>
+            <date></date>
+            <author>By M. H. Beals</author>
+            <date>July 7, 2016</date>
+            <title>The Programming Historian</title>
+            <idno>http://programminghistorian.org/lessons/transforming-xml-with-xsl</idno>
+         </bibl>
+      </body>
+  </text>
+</TEI>

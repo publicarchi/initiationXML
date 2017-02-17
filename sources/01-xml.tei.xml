@@ -4,21 +4,25 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>02 – eXtensible Markup Language</title>
+        <title type="main">Initiation à XML du CRIHN</title>
+        <title type="sub">Présentation du Langage</title>
         <author>Emmanuel Château-Dutier</author>
       </titleStmt>
       <publicationStmt>
-        <publisher>Université de Montréal (UdeM)</publisher>
+        <publisher>Université de Montréal</publisher>
+        <date when="2017-02">février 2017</date>
       </publicationStmt>
       <sourceDesc>
-        <p>Ce document est nativement numérique.</p>
+        <p>Document est nativement numérique.</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
       <change>
+        <date when="2017-02">février 2017</date>
+        <name>Emmanuel Château-Dutier</name>, révision pour l’initiation du CRIHN 2017</change>
+      <change>
         <date when="2016-04-28">28 avril 2016</date>
-        <name>Emmanuel Château-Dutier, création</name>
-      </change>
+        <name>Emmanuel Château-Dutier</name>, création</change>
     </revisionDesc>
   </teiHeader>
   <text>

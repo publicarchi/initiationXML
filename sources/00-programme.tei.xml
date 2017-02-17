@@ -4,11 +4,12 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Initiation à XML</title>
-                <title type="sub">Programme de la formation du CRIHN, 17 février 2017</title>
+                <title type="main">Initiation à XML du CRIHN</title>
+                <title type="sub">Programme de la formation</title>
+                <author>Emmanuel Château-Dutier</author>
             </titleStmt>
             <publicationStmt>
-                <publisher>CRIHN</publisher>
+                <publisher>Université de Montréal</publisher>
                 <date when="2017-02">février 2017</date>
             </publicationStmt>
             <sourceDesc>
@@ -76,6 +77,7 @@
                             <head>Approche pédagogique</head>
                             <p>Aucun pré-requis informatique</p>
                             <p>Plusieurs travaux pratiques</p>
+                            <p>Une perspective humaniste</p>
                         </div>
                         <div>
                             <head>Objectifs</head>
@@ -90,7 +92,7 @@
                             <p>Aucun pré-requis informatique</p>
                             <p>On part du principe que vous êtes novices en informatique.</p>
                             <p>Une démarche progressive, adossée à des Travaux pratiques.</p>
-                            <p>Comme vous allez</p>
+                            <p>Une perspective humaniste</p>
                         </div>
                         <div>
                             <head>Objectifs</head>
@@ -133,6 +135,23 @@
                         <label>15h30–16h00</label>
                         <item>Discussion</item>
                     </list>
+                </div>
+                <div type="slide">
+                    <div>
+                        <figure>
+                            <graphic url="../images/hello.svg"/>
+                            <desc xml:lang="en">"Hello my name is" name badge resembling the Avery ones, using the ITC Avant Garde Gothic Pro font, <ref target="https://commons.wikimedia.org/wiki/File:Hello_my_name_is_sticker.svg">Public domain</ref></desc>
+                        </figure>
+                    </div>
+                    <div>
+                        <head>Présentations</head>
+                        <p>Commencer à se connaître et éventuellement pouvoir échanger pendant les pauses.</p>
+                        <list>
+                            <item>Qui êtes-vous ?</item>
+                            <item>Sur quoi portent vos recherches ?</item>
+                            <item>Ce qui vous intéresse avec cette formation.</item>
+                        </list>
+                    </div>
                 </div>
             </div>
         </body>
