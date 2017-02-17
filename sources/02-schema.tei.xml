@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/teiSlides.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Initiation à XML du CRIHN</title>
+                <title type="sub">Notion de Schéma</title>
+                <author>Emmanuel Château-Dutier</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Université de Montréal</publisher>
+                <date when="2017-02">février 2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Document est nativement numérique.</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change>
+                <date when="2017-02">février 2017</date>
+                <name>Emmanuel Château-Dutier</name>, révision pour l’initiation du CRIHN 2017</change>
+            <change>
+                <date when="2016-04-28">28 avril 2016</date>
+                <name>Emmanuel Château-Dutier</name>, création</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="fr">
+        <front>
+            <titlePage>
+                <titlePart>02 – Notion de Schéma</titlePart>
+                <docImprint>Introduction à XML | CRIHN, 17 février 2017</docImprint>
+                <note><ref target="https://github.com/publicarchitectura/initiationXML">Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref></note>
+            </titlePage>
+        </front>
+        <body>
+            <div type="part">
+                <div type="title">
+                    <head>Le modèle de données de XML</head>
+                </div>
+                <div type="slide"></div>
+            </div>
+            <div type="part">
+                <div type="title">
+                    <head>Notion de schéma</head>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

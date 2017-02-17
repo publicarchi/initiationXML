@@ -31,14 +31,14 @@
                     >Programme</ref></note>
             </titlePage>
         </front>
-        <body>
+        <body xml:lang="fr">
             <div type="part">
                 <div type="title">
-                    <head>Le Choix d’un éditeur</head>
+                    <head>Choix d’un éditeur XML</head>
                 </div>
                 <div type="slide">
                     <div>
-                        <head>Pourquoi utiliser un éditeur ?</head>
+                        <head>Pourquoi utiliser un éditeur XML ?</head>
                         <list>
                             <item>faciliter la saisie (auto-complétion)</item>
                             <item>limitation les erreurs</item>
@@ -143,7 +143,6 @@
                         <item>Lancez le logiciel et renseignez votre licence d’essai (les 9 lignes de texte entre START LICENCE KEY et END LICENCE KEY</item>
                         <item>Vous y êtes !</item>
                     </list>
-
                 </div>
             </div>
             <div type="part">

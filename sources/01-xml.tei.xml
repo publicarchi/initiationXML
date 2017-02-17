@@ -25,9 +25,9 @@
         <name>Emmanuel Château-Dutier</name>, création</change>
     </revisionDesc>
   </teiHeader>
-  <text>
+  <text xml:lang="fr">
     <front>
-      <titlePage xml:lang="fr">
+      <titlePage>
         <titlePart>01 – eXtensible Markup Language</titlePart>
         <docImprint>Introduction à XML | CRIHN, 17 février 2017</docImprint>
         <note><ref target="https://github.com/publicarchitectura/initiationXML">Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref></note>
@@ -35,7 +35,7 @@
     </front>
     <body>
       <div type="part">
-        <div rend="title" xml:lang="fr">
+        <div type="title">
           <div>
             <head>La notion d’encodage</head>
           </div>
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div type="part">
-        <div rend="title" xml:lang="fr">
+        <div type="title">
           <div>
             <head>Le métalangage <hi>XML</hi></head>
           </div>
@@ -87,7 +87,7 @@
             </div>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>e<hi rend="bold">X</hi>tensible <hi rend="bold">M</hi>arkup <hi rend="bold"
               >L</hi>anguage – historique</head>
@@ -132,7 +132,7 @@
             </div>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Principes de conception de <hi>XML</hi></head>
             <list>
@@ -160,7 +160,7 @@
             </list>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head><hi>XML</hi> en 4 points</head>
             <list type="ordered">
@@ -190,12 +190,12 @@
         </div>
       </div>
       <div type="part">
-        <div type="title" xml:lang="fr">
+        <div type="title">
           <div>
             <head>La syntaxe <hi>XML</hi></head>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Élément <hi>XML</hi></head>
             <figure>
@@ -204,7 +204,7 @@
             </figure>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Attribut <hi>XML</hi></head>
             <figure>
@@ -213,7 +213,7 @@
             </figure>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Exemple de balisage <hi>XML</hi></head>
             <figure>
@@ -222,7 +222,7 @@
             </figure>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Exemple de document <hi>XML</hi></head>
             <!-- @todo traiter l’exemple correctement -->
@@ -243,7 +243,7 @@
             <p>La première ligne de ce documents s’appelle une <soCalled>déclaration XML</soCalled> elle appartient au <soCalled>prologue</soCalled> du document. C’est une instruction qui permet d’indiquer qu’il s’agit d’un document XML et la version du langage.</p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Spécification de l’<hi>encodage</hi></head>
             <!-- @todo traiter l’exemple correctement -->
@@ -268,7 +268,7 @@
               </list></p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Spécification de l’<hi>encodage</hi></head>
             <!-- @todo traiter l’exemple correctement -->
@@ -291,7 +291,7 @@
             <p>Notez la syntaxe particulière des <soCalled>éléments vides</soCalled>.</p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Le corps du document XML : un <hi>arbre d’éléments</hi></head>
             <list>
@@ -315,7 +315,7 @@
             <p>Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est l’<soCalled>élément racine</soCalled>.</p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Les <hi>attributs</hi></head>
             <p>Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques.</p>
@@ -337,7 +337,7 @@
             <p>En principe ne sont pas destinés à ajouter du contenu à l’élément, donc leur valeur n’est pas destinée à être affichée telle quelle dans un format de sortie. Mais ils pourront être exploités par des applications informatiques pour faire par exemple des index, ils peuvent servir à identifier les éléments (attributs de type ID), à établir des renvois (attributs de type IDREF).</p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head><hi>Contraintes syntaxiques</hi> des noms XML</head>
             <p>Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques) :</p>
@@ -349,7 +349,7 @@
             </list>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Les <hi>entités</hi></head>
             <div>
@@ -376,7 +376,7 @@
             </div>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <div>
               <head>Les commentaires</head>
@@ -395,7 +395,7 @@
             </div>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Notion d’<hi>Espace de nom</hi></head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -420,7 +420,7 @@
             <p><label>exemple</label> Ici l’espace de noms par défaut est défini par l’URI http://www.tei-c.org/ns/1.0, c’est l’espace de noms TEI. Tous les éléments du fichier XML qui sont descendants de l’élément racine et qui ne sont pas préfixés sont dans cet espace de noms.</p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Document <hi>bien formé</hi></head>
             <p>On dit d’un document XML qu’il est <soCalled>bien formé</soCalled> quand celui-ci répond à un certain nombre de contraintes</p>
@@ -436,7 +436,7 @@
             <p>Le contrôle se fait par <soCalled>analyse syntaxique</soCalled> ou <soCalled>parsing</soCalled> (avec des outils appelés <soCalled>parsers</soCalled>).</p>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head>Bien formé, oui ou non ?</head>
             <list>
@@ -454,7 +454,7 @@
             </list>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide">
           <div>
             <head><hi>Modèles de documents</hi> ou schéma</head>
             <p>Rappel : définissent les contraintes que doit respecter une certaine classe de documents Diverses syntaxes peuvent être utilisées pour écrire de tels modèles :<list>
@@ -479,12 +479,12 @@
     </body>
     <back>
       <div type="part">
-      <div type="title" xml:lang="fr">
+      <div type="title">
         <div>
           <head>Sources et bibliographie</head>
         </div>
       </div>
-      <div type="slide" xml:lang="fr">
+      <div type="slide">
         <div>
           <head>Orientations bibliographiques</head>
           <list>
