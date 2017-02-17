@@ -1,56 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schemas/teiSlides.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title type="main">Initiation à XML</title>
-            <title type="sub">Programme de la formation du CRIHN, 17 février 2017</title>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>CRIHN</publisher>
-            <date when="2017-02">février 2017</date>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Document nativement numérique</p>
-         </sourceDesc>
-      </fileDesc>
-  </teiHeader>
-  <text>
-      <body>
-         <div>
-            <head>Programme de la formation</head>
-            <list>
-               <head>Mâtinée</head>
-               <label>10h–10h30</label>
-               <item>Introduction de la formation</item>
-               <label>10h30–11h00</label>
-               <item>Présentation du langage</item>
-               <label>11h00–11h30</label>
-               <item>TP : modélisation d’un carnet d’adresse avec XML</item>
-               <label>11h30–12h00</label>
-               <item>Pause</item>
-               <label>12h00–12h30</label>
-               <item>Notion de schéma</item>
-            </list>
-            <list>
-               <head>Après-midi</head>
-               <label>13h–13h30</label>
-               <item>XML et les technologies associées</item>
-               <label>13h30–14h</label>
-               <item>Introduction XPath</item>
-               <label>14h–14h30</label>
-               <item>TP : XPath01</item>
-               <label>14h30–15h00</label>
-               <item>Pause</item>
-               <label>15h00–15h30</label>
-               <item>XPath avancé</item>
-               <label>15h30–16h</label>
-               <item>Présentation d’outils et d’application dans le monde universitaire</item>
-            </list>
-         </div>
-      </body>
-  </text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Initiation à XML</title>
+                <title type="sub">Programme de la formation du CRIHN, 17 février 2017</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>CRIHN</publisher>
+                <date when="2017-02">février 2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Document nativement numérique</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change>
+                <date when="2017-02">février 2017</date>
+                <name>Emmanuel Château-Dutier, création</name>
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage>
+                <titlePart>Programme de la formation</titlePart>
+                <docImprint>Initiation à XML | CRIHN, 17 février 2017</docImprint>
+            </titlePage>
+        </front>
+        <body xml:lang="fr">
+            <div type="part">
+                <div type="title">
+                    <div>
+                        <head>Introduction</head>
+                    </div>
+                    <div>
+                        <head>Introduction</head>
+                        <p>Bonjour, </p>
+                        <p>J’ai le plaisir de vous accueillir au nom du Centre de recherche inter-universitaire des humanités numériques (CRIHN) dans cette formation d’Initiation à XML.  Michael Sinatra le directeur du centre m’a chargé de vous souhaiter la bienvenue à cette première formation d’un nouveau cycle que plusieurs collègues proposent afin d’accompagner nos activités. Cette première formation courte est une initiation à XML qui sera par la suite complétée par une autre formation courte d’introduction à la Text Encoding Initiative.</p>
+                        <p>Je m’appelle Emmanuel Château-Dutier, je suis professeur-adjoint en muséologie numérique à l’Université de Montréal. Je suis engagé depuis plusieurs années sur divers projets d’édition structurées. Et j’assure avec Lou Burnard à l’École nationale des chartes à Paris la formation continue de l’École des chartes sur la Text Encoding Initiative qui offre un cadre de travail pour l’édition électronique et qui se trouve notamment exprimée en XML.</p>
+                    </div>
+                </div>
+                <div type="slide">
+                    <div>
+                        <head>Contenu de la formation</head>
+                        <list>
+                            <item>Historique et application de XML</item>
+                            <item>Principes de conception du langage</item>
+                            <item>La syntaxe XML</item>
+                            <item>Notions de document bien formé et de document valide</item>
+                            <item>Les technologies de schémas (modéliser des sources avec XML)</item>
+                            <item>Langages associés et exploitation des documents</item>
+                        </list>
+                    </div>
+                    <div>
+                        <head>Contenu de la formation</head>
+                        <p>Cette formation est une initiation à XML. Après un rapide présentation du langage et de ses applications, les participants se familiariseront avec la syntaxe XML par l’intermédiaire de travaux pratiques.</p>
+                        <p>Les thématiques abordées au cours de la formation sont les suivantes :
+                        <list>
+                            <item>Historique et application de XML</item>
+                            <item>Principes de conception du langage</item>
+                            <item>La syntaxe XML</item>
+                            <item>Notions de document bien formé et de document valide</item>
+                            <item>Les technologies de schémas (modéliser des sources avec XML)</item>
+                            <item>Langages associés et exploitation des documents</item>
+                        </list>
+                        </p>
+                        <p>Le CRIHN propose une seconde formation, le 10 mars 2017, qui sera consacrée à la Text Encoding Initiative, un standard de fait pour l’encodage de sources littéraires ou historiques en XML.</p>
+                    </div>
+                </div>
+                <div type="slide">
+                    <div>
+                        <div>
+                            <head>Approche pédagogique</head>
+                            <p>Aucun pré-requis informatique</p>
+                            <p>Plusieurs travaux pratiques</p>
+                        </div>
+                        <div>
+                            <head>Objectifs</head>
+                            <p>Connaître les grandes lignes du langage</p>
+                            <p>Se familiariser avec la syntaxe</p>
+                            <p>Identifier les applications</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <head>Approche pédagogique</head>
+                            <p>Aucun pré-requis informatique</p>
+                            <p>On part du principe que vous êtes novices en informatique.</p>
+                            <p>Une démarche progressive, adossée à des Travaux pratiques.</p>
+                            <p>Comme vous allez</p>
+                        </div>
+                        <div>
+                            <head>Objectifs</head>
+                            <p>Connaître les grandes lignes du langage</p>
+                            <p>Se familiariser avec la syntaxe</p>
+                            <p>Identifier les applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div type="part">
+                <head>Programme de la formation</head>
+                <div type="slide">
+                    <head>Programme de la formation</head>
+                    <list>
+                        <head>Mâtinée</head>
+                        <label>10h–10h30</label>
+                        <item>Introduction de la formation</item>
+                        <label>10h30–11h00</label>
+                        <item>Présentation du langage</item>
+                        <label>11h00–11h30</label>
+                        <item>TP : Installation d’Oxygen et prise en main</item>
+                        <label>11h30–12h</label>
+                        <item>Pause</item>
+                        <label>12h00–12h30</label>
+                        <item>TP : modélisation d’un carnet d’adresse avec XML</item>
+                    </list>
+                    <list>
+                        <head>Après-midi</head>
+                        <label>13h–13h30</label>
+                        <item>Notion de Schéma</item>
+                        <label>13h30–14h</label>
+                        <item>TP : Schéma</item>
+                        <label>14h00–14h30</label>
+                        <item>XML et les technologies associées</item>
+                        <label>14h30–15h</label>
+                        <item>Pause</item>
+                        <label>15h–15h30</label>
+                        <item>Présentations d’outils et d’application</item>
+                        <label>15h30–16h00</label>
+                        <item>Discussion</item>
+                    </list>
+                </div>
+            </div>
+        </body>
+    </text>
 </TEI>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Bibliographie</title>
+            <title type="sub">Initiation à XML – CRIHN, 17 février 2017</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication information</p>        
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <bibl>
+            <title>Transforming Data for Reuse and Re-publication with XML and XSL</title>
+            <date></date>
+            <author>By M. H. Beals</author>
+            <date>July 7, 2016</date>
+            <title>The Programming Historian</title>
+            <idno>http://programminghistorian.org/lessons/transforming-xml-with-xsl</idno>
+         </bibl>
+      </body>
+  </text>
+</TEI>
