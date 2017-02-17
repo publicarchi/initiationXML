@@ -1,0 +1,615 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Programme</title>
+      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
+   </head>
+   <body><textarea id="source">
+title: Initiation à XML du CRIHNPrésentation du Langage
+description: Emmanuel Château-Dutier, février 2017
+theme: theme/remark-dark-em.css
+name: inverse
+layout: true
+class: inverse
+
+---
+class: center middle
+
+# 01 – eXtensible Markup Language
+
+## Introduction à XML | CRIHN, 17 février 2017
+
+.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
+
+---
+template: inverse
+class: center middle
+
+
+# La notion d’encodage
+
+???
+
+### La vogue de XML
+
+Vogue de XML dans les années 2000, en particulier dans le milieu culturel.
+
+Très employé pour les métadonnées culturelles, et dans l’industrie.
+
+Important stock de données encodées en XML, sans doute encore aujourd’hui, en terme de masse le format informatique le plus courant.
+
+Le texte comme principal cas d’application de XML. Domaine dans lequel XML n’a toujours pas été remplacé. Modèle de contenu qui permet notamment de prendre en charge de manière efficace ce qu’on appelle du Contenu mixte.
+
+---
+layout: false
+
+# La notion d’encodage descriptif
+
+???
+
+### L’héritier d’une longue histoire
+
+Très tôt dans l’histoire de l’informatique, on s’est intéressé au problème de la représentation du texte sous forme numérique.
+
+Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages&nbsp;: procédural, présentationnel, ou encore descriptif.
+cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, [« Markup Systems and the Future of Scholarly Text Processing »](http://xml.coverpages.org/coombs.html), Communications of the ACM, n° 11, t. 30, 1987, p.933-947.
+La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.
+
+
+---
+template: inverse
+class: center middle
+
+
+# Le métalangage .red[XML]
+
+???
+
+
+On vient de voir qu’un balisage descriptif permettait de .red[se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document].
+
+Dans une démarche qui privilégie avant tout l’édition du texte, il convient en premier lieu de .red[rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles]. La présence du balisage détermine par la suite la possibilité de traiter les éléments pour une transformation.
+
+Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.
+cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau, François, Extensible Markup Language (XML) 1.0, Recommandation du W3C, 2008. [https://www.w3.org/TR/REC-xml/](https://www.w3.org/TR/REC-xml/)
+
+---
+
+# La production d’un .red[balisage descriptif]
+
+Identifier explicitement la structure sémantique sous-jacente d’un document, indépendamment de tout traitement déterminé à l’avance.
+
+* Distinguer à l'intérieur du texte différents objets éditoriaux
+
+* Fournir une information sémantique
+
+* Possibilité de produire des vues distinctes
+
+???
+
+## La production d’un .red[balisage descriptif]
+
+La production d’un .red[balisage descriptif] consiste à identifier explicitement la structure sémantique sous-jacente d’un document, cela indépendamment de tout traitement déterminé à l’avance.
+cf. Renear, Allen, Dubin, David, Sperberg-McQueen, C. Michael, et Huitfeldt, Claus, [«&nbsp;XML semantics and digital libraries&nbsp;»](http://dl.acm.org/citation.cfm?id=827140.827192), Proceedings of the 3rd ACM/IEEE-CS joint conference on Digital libraries, p. 303-305, 2003.
+Il s’agit de .red[distinguer explicitement à l’intérieur du texte différents objets éditoriaux] en les encadrant par des balises dont le nom peut être arbitraire.
+
+Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.
+
+---
+
+
+## Procédure mise en œuvre lors du .red[balisage]
+
+* Reconnaissance des éléments
+
+* Sélection des balises
+
+* Réalisation du balisage, marquage de l'élément
+
+???
+
+## Procédure mise en œuvre lors du .red[balisage]
+
+Les trois opérations qui interviennent au cours du balisage sont donc les suivantes&nbsp;:
+* la reconnaissance des éléments,
+* reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
+
+* reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
+* la sélection des balises,
+* déterminer le balisage qui s’applique au type d’élément reconnu
+
+* déterminer le balisage qui s’applique au type d’élément reconnu
+* la réalisation du balisage,
+* marquage de l’élément à l'intérieur du flux textuel
+
+* marquage de l’élément à l'intérieur du flux textuel
+cf. Coombs, James, et al., .red[op. cit.]
+---
+
+
+## .red[OHCO], Ordered Hierarchical Content Objects
+
+L’idée d’un balisage descriptif suggère une représentation du texte qui correspond à un modèle d’.red[éléments contenus hiérarchiquement imbriqués] (OHCO, .red[Ordered Hierarchical Content Objects, en anglais]).
+
+* structure hiérarchique
+
+* relations linéaires
+
+???
+
+## .red[OHCO], Ordered Hierarchical Content Objects
+
+L’idée d’un balisage descriptif qui repose sur le fait de marquer le contenu d’un texte par des éléments suggère une représentation du texte qui correspond à ce qu’on a appelé un modèle d’.red[]éléments contenus hiérarchiquement imbriqués.red[] (OHCO, Ordered Hierarchical Content Objects, en anglais).
+
+Dans une telle représentation du texte, les éléments contenus (paragraphes, citations, phrases, notes, etc.) sont présentés à l’intérieur d’une structure hiérarchique. La structure du texte est hiérarchique parce qu’ils résident les uns à l’intérieur des autres. Les objets reçoivent donc des relations linéaires.
+
+
+---
+
+# Une large utilisation dans le domaine culturel
+
+### Grammaire lisible par la machine
+
+### Pas de réelle sémantique
+
+
+???
+
+# Un modèle de contenu arborescent
+
+Son .red[modèle de contenu arborescent] est précisément conforme au modèle OHCO.
+
+S’il offre une grammaire lisible par la machine, il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.
+
+XML propose simplement .red[une solution rigoureuse, compréhensible par les machines, pour définir un langage de balisage descriptif].
+
+La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML. « La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées. »
+Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947. [http://xml.coverpages.org/coombs.html](http://xml.coverpages.org/coombs.html)
+
+---
+
+
+# e.red[X]tensible .red[M]arkup .red[L]anguage – historique
+
+---
+
+
+# héritier de SGML (Standard Generalized Markup Language)
+
+#### métalangage informatique pour le balisage du texte
+
+#### [norme ISO (ISO 8879:1986)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=16387)
+
+#### publication par le W3C en février 1998
+
+#### des spécifications du métalangage XML 1.0
+
+* maîtres mots : simplicité, clarté, universalité
+
+* [version 1.1](http://www.w3.org/TR/xml11) en 2004
+
+???
+
+#### Un héritier de SGML
+
+SGML lui-même héritier d’un langage descriptif conçu en 1969 par des ingénieurs de la société IBM : DCF (Document Composition Facility).
+
+SGML : puissant et générique mais aussi trop souple et complexe en même temps → surtout utilisé dans le cadre d’applications lourdes. Utilisation la plus notable : langage HTML, dérivé du SGML =&gt; langage de publication pour le web.Né en 1989 et depuis 2011, HTML 5.
+
+
+#### Publication de XML
+
+En février 1998 : publication en février 1998 par le W3C Consortium des spécifications du métalangage XML 1.0 =&gt; maîtres mots : simplicité, clarté, universalité.
+
+Dans son Référentiel général d’interopérabilité publié en 2009, la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (Extensible Markup Language) à des fins d’interopérabilité et de pérennisation de l’information.
+
+Depuis 1998, la norme XML a peu évolué → dernière édition en date : 5e édition, mise à jour en 2008. Version 1.0 =&gt; véritable témoignage de sa stabilité.
+
+[Version 1.1](http://www.w3.org/TR/xml11) publiée en février 2004 et mise à jour en 2006, notamment pour intégrer les évolution d’Unicode, mais XML 1.1 reste très peu utilisé.
+
+
+#### Un succès immédiat
+
+Les langages et outils permettant de produire, contrôler, échanger, transformer et exploiter des fichiers XML se sont multipliés, souvent associés à des normes du W3C : modèles de documents et de (méta)données, langages de modélisation, de présentation, de programmation, protocoles, …
+
+Métalangage désormais utilisé partout en informatique qu’il s’agisse de structurer des informations dont la durée de vie est importante ou d’échanger des informations entre applications, qu’on ait à s’occuper essentiellement de données, de documents ou d’une combinaison des deux.
+cf. Ministre du Budget, des Comptes publics, Référentiel Général d’Interopérabilité (RGI), 2009. [http://references.modernisation.gouv.fr/rgi-interoperabilite](http://references.modernisation.gouv.fr/rgi-interoperabilite)
+
+---
+
+
+# Principes de conception de .red[XML]
+
+* applicable à tout type de texte
+
+* extensible
+
+* définition par un schéma
+
+* hypertextualité
+
+* simple, universel
+
+* modèle hiérarchique
+
+???
+
+### Principes de conception de XML
+
+* XML s’applique à tout type de texte&nbsp;: fondé sur le principe du balisage → càd : sur l’isolement d’une portion de texte et l’identification explicite de son rôle ou nature particulière. Autorise l’imbrication des balises et une granularité aussi fine que nécessaire.
+
+* Un schéma est un modèle (=la liste des balises utilisables, leurs noms, les contraintes de leur emploi : position, cardinalité, type de contenu) peut être défini sous la forme d’une DTD (Document Type Definition) ou d’un schéma (écrit en RelaxNG ou directement XML).
+
+* XML permet d’identifier la structure d’un texte et d’informer sur la sémantique des informations qu’il contient, ou d’en isoler les données =&gt; notion de structuration absolument primordiale : permet de rendre l’information exploitable par la machine (moteurs de recherche) et par l’utilisateur ; permet également à l’information d’être réutilisée, échangée, pérennisée. + bonne structure seule condition pour ensuite une transformation automatique.
+
+* XML conçu à l’ère de l’hypermédia : liens peuvent être établis entre des sections du même document XML ou entre un document XML et d’autres ressources électroniques, qui peuvent ne pas être du texte.
+
+* norme simple, sans ambiguïté, permettant à un humain de lire l’information produite.
+
+* fichiers XML sont des fichiers texte (peuvent être lus par grand nombre de logiciels donc) et supportent surtout un grand nombre de systèmes d’écriture → utilise le standard Unicode et le codage par défaut de XML est UTF-8 (codage de caractères conçu pour coder l’ensemble des caractères Unicode).
+
+* norme universelle, concentrée sur le contenu informationnel, ne traitant pas de son utilisation, indépendante des plates-formes informatiques (≠.odt, .doc, …).
+
+* utiliser XML pour structurer et échanger l’information est considéré comme une bonne pratique → les documents XML sont de bons candidats pour l’archivage pérenne.
+
+* grâce à leur structure réutilisation : l’accès, l’indexation et la recherche de l’information sont améliorées → on peut avec certains outils informatiques indexer un (ou un ensemble de) documents XML en exploitant leur marquage structurel, ce qui permet des recherches fines multicritères et améliore considérablement la qualité des réponses par rapport à une recherche plein texte dans un document non structuré.
+
+* on peut aussi explorer un document XML en tant qu’arbre, en utilisant notamment le langage XPath. =&gt; XML : format de stockage pour autant de formats de diffusion qu’on souhaite. Après transformation par programmes dans un ou plusieurs formats dédiés, le contenu structuré d’un document XML peut être consulté sous forme imprimée (transformation directement en PDF ou vers LateX), sous forme électronique (HTML) =&gt; XML : format pivot pour les nouvelles chaînes éditoriales.
+
+---
+
+### .red[XML] en 4 points
+
+1. .red[XML ne sert pas à afficher les données mais à les décrire]. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure
+
+1. .red[Le nom des balises n’est pas prédéfini] : on peut librement créer son propre vocabulaire
+
+1. .red[On peut utiliser une "grammaire" de balises], pour définir des contraintes ou s’assurer de la consistance de l’encodage
+
+1. .red[XML est auto-descriptif et lisible par l’homme]. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
+
+???
+
+### .red[XML] en 4 points
+
+1. .red[XML ne sert pas à afficher les données mais à les décrire]. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure (livre, chapitre, paragraphe, phrase, mot, etc.)
+
+1. .red[Le nom des balises n’est pas prédéfini] : on peut librement créer son propre vocabulaire
+
+1. .red[On peut utiliser une "grammaire" de balises], pour définir des contraintes ou s’assurer de la consistance de l’encodage
+
+1. .red[XML est auto-descriptif et lisible par l’homme]. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
+
+---
+template: inverse
+class: center middle
+
+
+# La syntaxe .red[XML]
+
+---
+
+# Élément .red[XML]
+![](../images/xml01.svg)
+
+---
+
+
+# Attribut .red[XML]
+![](../images/xml02.svg)
+---
+
+# Exemple de balisage .red[XML]
+![](../images/xml00.svg)
+
+---
+
+# Exemple de document XML
+
+```xml
+<?xml version="1.0"?>
+<doc xmlns="http://example.org/​namespace">
+  <p n="1">This is a paragraph.</p>
+  <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+</doc>
+```
+
+???
+
+Un document XML prend toujours la forme suivante.
+
+Un document XML consiste en une séquence de caractères lisibles par l’homme. C’est .red[un simple fichier texte] qui ne contient pas de code additionnel ou de données binaires.
+
+Seulement, vous pouvez constater que ce document comporte certaines séquences de caractères régulières (ici mises en valeur par la coloration).
+
+La première ligne de ce documents s’appelle une déclaration XML elle appartient au prologue du document. C’est une instruction qui permet d’indiquer qu’il s’agit d’un document XML et la version du langage.
+
+---
+
+# Exemple de document XML
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xmlns="http://example.org/​namespace">
+  <p n="1">This is a paragraph.</p>
+  <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+</doc>
+```
+
+???
+
+On peut également préciser l’encodage des caractères (par défaut en XML mais une bonne pratique).
+
+Ici on déclare l’utilisation de l’encodage de caractère UTF-8 (pour Universal Character Set) qui permet de représenter la plupart des caractères du «&nbsp;répertoire universel de caractères codés&nbsp;» initialement développé par l’[ISO (ISO/CEI 10646)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=51273), aujourd’hui entièrement compatible avec le standard Unicode.
+
+Le répertoire Unicode peut contenir plus d’un million de caractères.
+* cf. [https://fr.wikipedia.org/wiki/UTF-8](https://fr.wikipedia.org/wiki/UTF-8)
+
+* cf. [Jukka Korpela. "Guide to the Unicode standard"](http://www.cs.tut.fi/~jkorpela/unicode/guide.html)
+
+---
+
+### Les séquences `<`, `>` et `</` délimitent les balises : `<div></div>`
+
+### Les paires nom-valeur des attributs ont la forme `nom='valeur'` équivalente à `nom="valeur"`
+
+### Syntaxte des éléments vides : `<div></div>` = `<div/>`
+
+
+???
+
+Les caractères `&lt;` et `&gt;` sont utilisés pour marquer le début et la fin de balises à l’intérieur de ce flux textuel. Ces éléments possèdent un nom.
+
+Vous remarquez que ces balises, ou markup, ou encore étiquettes (tag), sont appariées&nbsp;: à chaque balise ouvrante correspond une balise fermante qui se distingue en débutant par la séquence `&lt;/`.
+
+Les balises et leur contenu forment un élement XML.
+
+Ici, le document présente également des attributs. Ce sont des paires nom-valeurs qui se rattachent aux éléments.
+
+Notez la syntaxe particulière des éléments vides.
+
+---
+
+# Le corps du document XML : un .red[arbre d’éléments]
+
+- Les éléments : permettent de décomposer le texte en unités d’information
+
+```xml
+ <titre>Le corps du document XML : un arbre d’éléments</titre>
+```
+
+- **Tout élément a un nom** (parfois appelé identificateur générique), ici c’est titre.
+
+- **Un élément peut contenir du texte et/ou d’autres éléments, ou être vide**.
+
+- Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est **l’élément racine**.
+
+
+???
+
+### Le corps du document XML consiste en un arbre d’éléments
+
+Les éléments permettent de décomposer le texte en unités d’information
+
+La portion de texte ainsi isolée est marquée par une balise de début (balise ouvrante) et par une balise de fin (balise fermante)
+
+Tout élément a un nom (parfois appelé identificateur générique), ici c’est titre.
+
+Un élément peut contenir du texte et/ou d’autres éléments (contenu mixte), ou être vide.
+
+Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est l’élément racine.
+
+---
+
+# Les .red[attributs]
+
+Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques.
+
+```xml
+<date when="2011-03-09">9 mars 2011</date>
+```
+
+* toujours saisis à l’intérieur de la balise ouvrante de l’élément
+
+* syntaxe&nbsp;: `nomAttribut="valeur"`
+
+* le nom de l’attribut obéit aux contraintes syntaxiques des noms XML
+
+* la valeur est encadrée par des guillemets simples ou doubles
+
+* L’ordre des attributs n’est pas prescrit pour un élément donné
+
+* Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle `attribut=""`
+
+* Pour un même élément, il ne peut y avoir deux attributs de même nom `rend="bold center"`
+
+???
+
+Les attributs ne contiennent que du texte, ils ne peuvent donc pas servir pour stocker de l’information structurée.
+
+En principe ne sont pas destinés à ajouter du contenu à l’élément, donc leur valeur n’est pas destinée à être affichée telle quelle dans un format de sortie. Mais ils pourront être exploités par des applications informatiques pour faire par exemple des index, ils peuvent servir à identifier les éléments (attributs de type ID), à établir des renvois (attributs de type IDREF).
+
+---
+
+
+# .red[Contraintes syntaxiques] des noms XML
+
+Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques)&nbsp;:
+
+* la chaîne de caractères formant le nom peut contenir les caractères alphanumériques (lettres de `a` à `z`, et de `A` à `Z`, chiffres de `0` à `9`, caractères non latins), le trait sous la ligne `_`, le trait d’union `-` et le point `.` (à l’exclusion de tout autre signe de ponctuation ou espace)&nbsp;;
+
+* un nom ne peut pas commencer par un nombre, ni par un point, ni par un trait d’union&nbsp;;
+
+* le nom ne peut pas commencer par `xml` (quelle que soit la casse utilisée).
+
+* Attention, XML est sensible à la casse&nbsp;!
+
+---
+
+# Les entités
+
+## Entités internes :
+
+- entités caractères prédéfinies ou non, pour saisir certains caractères que l’on doit obligatoirement coder ( <, >, &, ", ’ : caractères codés au moyen des entités lt, gt, amp, quot, apos) ou difficiles à composer au clavier
+
+## Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (.red[&]), suivi du nom donné à l’entité, suivi du signe .red[;]
+
+???
+Les entités : des réserves de contenu, la plupart du temps à déclarer (dans la DTD) et utilisables n’importe où dans le document
+
+
+## entités texte,
+
+servant à donner un nom à des expressions ou phrases souvent répétées
+
+## Entités externes :
+
+- texte : fragments XML formant chacun un fichier
+
+- non parsées (fichiers non XML tels qu’images, enregistrements sonores...)
+
+
+---
+
+# Appel d’entité
+
+Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (&amp;), suivi du nom donné à l’entité, suivi du signe ;.
+
+* &amp;amp;&nbsp;: &amp;
+
+* &amp;gt;&nbsp;: &gt;
+
+* …
+
+---
+
+# Les commentaires
+
+Commencent par `&lt;!--` et se terminent par `--&gt;`
+
+Le double trait d’union «&nbsp;--&nbsp;» ne doit pas apparaître au sein d’un commentaire
+
+Servent à… commenter, utiles pour documenter ce qu’on fait ou consigner des notes. Ne sont pas destinés aux programmes informatiques, qui les ignorent par défaut.
+
+---
+
+# Les instructions de traitement
+
+Commencent par `&lt;?` et se terminent par `?&gt;`.
+
+Définissent une cible (fournissent le nom de l’application à qui elles sont destinées, par ex.), et des arguments
+
+---
+
+# Sections CDATA
+
+sections de caractères non parsées. Commencent par `&lt;![CDATA[` et se terminent par `]]&gt;`.
+
+---
+
+# Espaces de nom
+
+```xml
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader><!-- autres éléments --></teiHeader>
+  <text><!-- autres éléments --></text>
+</TEI>
+```
+
+- formellement défini par son namespace-uri
+- déclaré avec l’attribut .red[xmlns]
+- déclaration par défaut
+
+
+???
+
+### Notion d’espace de nom
+
+De plus en plus souvent, afin de faciliter les échanges en évitant toute ambiguité, les noms des éléments et attributs sont rattachés à un namespace (espace de noms).
+
+* Formellement un espace de noms est défini par son URI (namespace-uri).
+
+* Si on utilise un ou plusieurs espaces de noms, l’espace de noms (ou les espaces de noms) utilisé(s) doivent être déclarés dans le fichier XML. On le fait le plus souvent en ajoutant un (ou plusieurs) attribut(s) xmlns à l’élément racine du fichier. Un attribut xmlns a pour valeur l’URI d’un espace de noms.
+
+* L’espace de noms peut être déclaré comme l’espace de noms par défaut, dans ce cas l’URI n’est pas associée à un code donné et les noms des attributs et éléments ne sont pas préfixés.
+
+* Un code peut en effet représenter l’espace de noms, il est alors utilisé à la place de l’URI pour préfixer attributs et éléments&nbsp;; ce code est appelé préfixe (namespace- prefix).
+
+exemple Ici l’espace de noms par défaut est défini par l’URI http://www.tei-c.org/ns/1.0, c’est l’espace de noms TEI. Tous les éléments du fichier XML qui sont descendants de l’élément racine et qui ne sont pas préfixés sont dans cet espace de noms.
+
+---
+
+## Document .red[bien formé]
+
+On dit d’un document XML qu’il est bien formé quand celui-ci répond à un certain nombre de contraintes
+
+* concordance entre l’encodage du document et sa déclaration XML&nbsp;;
+
+* existence des fichiers déclarés (déclaration de DTD, déclaration d’entités externes) et concordance entre l’encodage des fichiers entités externes et leur déclaration XML&nbsp;;
+
+* forme des appels d’entités&nbsp;;
+
+* présence de balises ouvrantes et fermantes appariées, imbrication des balises sans chevauchement&nbsp;;
+
+* respect des spécifications relatives aux noms XML (noms d’éléments et d’attributs)&nbsp;;
+
+* unicité des attributs dans un même élément, aucun attribut sans valeur&nbsp;;
+
+* forme des commentaires.
+
+Le contrôle se fait par analyse syntaxique ou parsing (avec des outils appelés parsers).
+
+---
+
+# Bien formé, oui ou non ?
+
+- `<segment>du texte</segment>`
+
+- `<segment><article>du</article><nom>texte</nom></segment>`
+
+- `<segment><article>du <nom></article> texte</nom></segment>`
+
+- `<segment type="text">du texte</segment>`
+
+- `<segment type='text'>du texte</segment>`
+
+- `<segment type=text>du texte</segment>`
+
+- `<segment type="text">du texte<segment/>`
+
+- `<segment type="text">du texte<lacune/></segment>`
+
+- `<segment type="text">du texte< /segment>`
+
+- `<segment type="text">du texte</Segment>`
+
+- `<segment type="text" type="toto">du texte</segment>`
+
+
+---
+template: inverse
+class: center middle
+
+
+### Sources et bibliographie
+
+---
+
+
+### Orientations bibliographiques
+
+* A gentle introduction to XML&nbsp;: [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html)
+
+* XML en concentré&nbsp;: manuel de référence / Elliotte Rusty Harold &amp; W. Scott Means&nbsp;; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris&nbsp;: O'Reilly, 2005. ISBN 2-84177-353-1 EAN 9782841773534&nbsp;;
+
+* L’espace XML francophone&nbsp;: actualités, discussions, articles et billets, sur le site Web [http://xmlfr.org/](http://xmlfr.org/)
+</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+        var hljs = remark.highlighter.engine;
+      </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
+        var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+        }) ;
+      </script></body>
+</html>
