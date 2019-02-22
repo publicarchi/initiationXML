@@ -18,7 +18,7 @@ class: center middle
 
 # 01 – eXtensible Markup Language
 
-## Introduction à XML | CRIHN, 17 février 2017
+## Introduction à XML&nbsp;| 24 février 2019
 
 .footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
 
@@ -37,7 +37,7 @@ Vogue de XML dans les années 2000, en particulier dans le milieu culturel.
 
 Très employé pour les métadonnées culturelles, et dans l’industrie.
 
-Important stock de données encodées en XML, sans doute encore aujourd’hui, en terme de masse le format informatique le plus courant.
+Important stock de données encodées en XML, sans doute encore aujourd’hui, le format informatique le plus courant en terme de masse.
 
 Le texte comme principal cas d’application de XML. Domaine dans lequel XML n’a toujours pas été remplacé. Modèle de contenu qui permet notamment de prendre en charge de manière efficace ce qu’on appelle du Contenu mixte.
 
@@ -45,6 +45,14 @@ Le texte comme principal cas d’application de XML. Domaine dans lequel XML n�
 layout: false
 
 # La notion d’encodage descriptif
+
+&nbsp;
+
+- distinction entre le contenu et la forme
+
+- maintenance du texte encodé
+
+- portabilité du document
 
 ???
 
@@ -101,6 +109,8 @@ Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] 
 
 ## Procédure mise en œuvre lors du .red[balisage]
 
+&nbsp;
+
 * Reconnaissance des éléments
 
 * Sélection des balises
@@ -112,25 +122,27 @@ Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] 
 ## Procédure mise en œuvre lors du .red[balisage]
 
 Les trois opérations qui interviennent au cours du balisage sont donc les suivantes&nbsp;:
-* la reconnaissance des éléments,
-* reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
 
-* reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
-* la sélection des balises,
-* déterminer le balisage qui s’applique au type d’élément reconnu
+1. la reconnaissance des éléments,
+  - reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
+  - reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
+2. la sélection des balises,
+  - déterminer le balisage qui s’applique au type d’élément reconnu
+  - déterminer le balisage qui s’applique au type d’élément reconnu
+3. la réalisation du balisage,
+  - marquage de l’élément à l'intérieur du flux textuel
+  - marquage de l’élément à l'intérieur du flux textuel
 
-* déterminer le balisage qui s’applique au type d’élément reconnu
-* la réalisation du balisage,
-* marquage de l’élément à l'intérieur du flux textuel
-
-* marquage de l’élément à l'intérieur du flux textuel
 cf. Coombs, James, et al., .red[op. cit.]
 ---
 
 
 ## .red[OHCO], Ordered Hierarchical Content Objects
 
-L’idée d’un balisage descriptif suggère une représentation du texte qui correspond à un modèle d’.red[éléments contenus hiérarchiquement imbriqués] (OHCO, .red[Ordered Hierarchical Content Objects, en anglais]).
+Une certaine modélisation du texte :
+
+  - .red[éléments de contenus hiérarchiquement imbriqués]
+    (OHCO, _Ordered Hierarchical Content Objects_, en anglais).
 
 * structure hiérarchique
 
@@ -160,34 +172,37 @@ Dans une telle représentation du texte, les éléments contenus (paragraphes, c
 
 Son .red[modèle de contenu arborescent] est précisément conforme au modèle OHCO.
 
-S’il offre une grammaire lisible par la machine, il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.
+Le modèle OHCO offre une grammaire lisible par la machine (succession de balises décrivant les objets du texte), mais il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.
 
-XML propose simplement .red[une solution rigoureuse, compréhensible par les machines, pour définir un langage de balisage descriptif].
+XML ne fournit pas en soi la sémantique. Il propose par contre .red[une solution rigoureuse, compréhensible par les machines, pour définir une sémantique de balisage descriptif].
 
-La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML. « La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées. »
+La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML.
+
+> « La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées. »
 Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947. [http://xml.coverpages.org/coombs.html](http://xml.coverpages.org/coombs.html)
 
 ---
-
+template: inverse
+class: center middle
 
 # e.red[X]tensible .red[M]arkup .red[L]anguage – historique
 
 ---
+# Un métalangage informatique pour le balisage du texte
+
+- 1986 : Définition du SGML (Standard Generalized Markup Language)
+  (norme ISO 8879:1986).
+
+- 1989 : Défintion du HTML, dérivé du SGML
+
+- 1998 : XML 1.0, publication par le W3C des spécifications d'un métalangage de balisage du texte
+  [(norme ISO 8879:1986)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=16387)
+
+- 2004 : [XML 1.1](http://www.w3.org/TR/xml11)
+
+- 2011 : HTML5
 
 
-# héritier de SGML (Standard Generalized Markup Language)
-
-#### métalangage informatique pour le balisage du texte
-
-#### [norme ISO (ISO 8879:1986)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=16387)
-
-#### publication par le W3C en février 1998
-
-#### des spécifications du métalangage XML 1.0
-
-* maîtres mots : simplicité, clarté, universalité
-
-* [version 1.1](http://www.w3.org/TR/xml11) en 2004
 
 ???
 
@@ -220,6 +235,8 @@ cf. Ministre du Budget, des Comptes publics, Référentiel Général d’Interop
 
 
 # Principes de conception de .red[XML]
+
+&nbsp;
 
 * applicable à tout type de texte
 
@@ -261,11 +278,13 @@ cf. Ministre du Budget, des Comptes publics, Référentiel Général d’Interop
 
 ### .red[XML] en 4 points
 
+&nbsp;
+
 1. .red[XML ne sert pas à afficher les données mais à les décrire]. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure
 
 1. .red[Le nom des balises n’est pas prédéfini] : on peut librement créer son propre vocabulaire
 
-1. .red[On peut utiliser une "grammaire" de balises], pour définir des contraintes ou s’assurer de la consistance de l’encodage
+1. .red[On peut utiliser une "grammaire" de balises (un schéma)], pour définir des contraintes ou s’assurer de la consistance de l’encodage
 
 1. .red[XML est auto-descriptif et lisible par l’homme]. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
 
@@ -277,7 +296,7 @@ cf. Ministre du Budget, des Comptes publics, Référentiel Général d’Interop
 
 1. .red[Le nom des balises n’est pas prédéfini] : on peut librement créer son propre vocabulaire
 
-1. .red[On peut utiliser une "grammaire" de balises], pour définir des contraintes ou s’assurer de la consistance de l’encodage
+1. .red[On peut utiliser une "grammaire" de balises (un schéma)], pour définir des contraintes ou s’assurer de la consistance de l’encodage
 
 1. .red[XML est auto-descriptif et lisible par l’homme]. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
 
@@ -291,16 +310,19 @@ class: center middle
 ---
 
 # Élément .red[XML]
+
 ![](../images/xml01.svg)
 
 ---
 
 
 # Attribut .red[XML]
+
 ![](../images/xml02.svg)
 ---
 
 # Exemple de balisage .red[XML]
+
 ![](../images/xml00.svg)
 
 ---
@@ -476,11 +498,12 @@ servant à donner un nom à des expressions ou phrases souvent répétées
 
 Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (&amp;), suivi du nom donné à l’entité, suivi du signe ;.
 
-* &amp;amp;&nbsp;: &amp;
+appel|entité
+:--|:--
+`&` `amp` `;` &nbsp; | &amp;
+`&` `gt` `;` &nbsp; | &gt;
+`&` `lt` `;` &nbsp; | &lt;
 
-* &amp;gt;&nbsp;: &gt;
-
-* …
 
 ---
 
