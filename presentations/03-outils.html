@@ -461,22 +461,19 @@ Par exemple, depuis le nœud <lg> au milieu de la diapositive qui nous sert de c
 - etc.
 
 ---
-.left-column[
-## Axes XPath
-]
-
-.right-column[
 ## Les axes de type .red[forward axes]
 
-- `child` : nœuds de type `element`, `text`, `comment`, `processing instruction`, fils du nœud contexte
-- `descendant` : nœuds de type `element`, `text`, `comment`, `processing instruction` fils, petits-fils et tous les descendants du nœud contexte
-- `descendant-or-self` : nœuds de type `element`, `text`, `comment`, processing-instruction` qui descendent du nœud contexte ainsi que le nœud contexte lui-même
-- `following-sibling` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction`, frères droits du nœud contexte.
-- `following` : tous les nœuds de type `element`, `texte`, `comment` ou `processing instruction` situés après le nœud contexte (à l’exception des descendants)
-- `attribute` : les nœuds de type `attribute` du nœud contexte
-- `namespace` : les nœuds de type `namespace`
-- `processing instruction`, qui descendent du nœud contexte
-]
+axe | signification | types de noeud
+:--|:--|:--
+`child`                 | fils du nœud contexte| `element`, `text`, `comment`, `processing instruction`
+`descendant`            | fils, petits-fils et tous les descendants du nœud contexte| `element`, `text`, `comment`, `processing instruction`
+`descendant-or-self`    | qui descendent du nœud contexte ainsi que le nœud contexte lui-même| `element`, `text`, `comment`, `processing-instruction`
+`following-sibling`     | frères droits du nœud contexte.| `element`, `text`, `comment`, `processing instruction`
+`following`             | situés après le nœud contexte (à l’exception des descendants)| `element`, `texte`, `comment`, `processing instruction`
+`attribute`             | attribut du nœud contexte|
+`namespace`             | espace de nom du noeud contexte|
+`processing instruction`| qui descendent du nœud contexte|
+
 
 ???
 XPath distingue ainsi plusieurs catégories d’axes de déplacement dans l’abre XML.
@@ -504,20 +501,18 @@ Sinon, il ne sélectionne rien.
 - `namespace` : si le nœud d’origine est un élément, cet axe sélectionne tous les nœuds d’espace de nom qui sont dans la portée de cet élément dans un ordre arbitraire.
 
 ---
-.left-column[
-## Axes XPath
-]
+## Les axes de type .red[reverse axes]
 
-.right-column[
-## XPath distingue également une catégorie d’axe .red[reverse axes]
-- `parent` : nœuds de type `element` ou `document`, père du nœud contexte
-- `ancestor` : nœuds de type `element` ou `document`, ancêtres du nœud contexte (parent du nœud contexte, ou parent du partent, etc.)
-- `ancestor-or-self` : nœuds de type `element` ou `document`, ancêtres du nœud contexte ainsi que le nœud contexte lui-même
-- `preceding` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction` situés avant le nœud contexte (à l’exclusion des nœuds ancêtres)
-- `preceding-sibling` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction` frères gauches du nœud contexte
+axe | signification | types de noeud
+:--|:--|:--
+`parent`            | père du nœud contexte | `element`, `document`
+`ancestor`          | ancêtres du nœud contexte (parent du nœud contexte, ou parent du partent, etc.) | `element`, `document`
+`ancestor-or-self`  | ancêtres du nœud contexte ainsi que le nœud contexte lui-même | `element`, `document`
+`preceding`         | situés avant le nœud contexte (à l’exclusion des nœuds ancêtres) |  `element`, `text`, `comment`, `processing instruction`
+`preceding-sibling` | frères gauches du nœud contexte |  `element`, `text`, `comment`, `processing instruction`
 
 XPath fournit enfin un axe particulier nommé `self` qui permet de sélectionner le nœud servant de contexte lui-même.
-]
+
 
 ???
 ## Les axes de type .red[forward axes]
