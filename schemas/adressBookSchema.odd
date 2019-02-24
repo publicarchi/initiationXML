@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Adress book</title>
+        <author>Emmanuel Château-Dutier</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Publicarchitectura</publisher>
+        <date when="2019-02">february 2019</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Fichier nativement numérique</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div>
+        <head>Presentation</head>
+        <p>This simple customisation file shows how to define a simple adress book with ODD</p>
+      </div>
+    </front>
+    <body>
+      <schemaSpec ident="adressBookSchema" start="adressBook">
+        <elementSpec ident="adressBook">
+          <desc>This element contains all the entries of the adressBook</desc>
+          <content>
+              <elementRef minOccurs="1" maxOccurs="unbounded" key="entry"/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="entry">
+          <desc>This element contains one entry in the adressBook</desc>
+          <content>
+            <alternate maxOccurs="unbounded">
+              <elementRef key="firstName"/>
+              <elementRef key="familyName"/>
+              <elementRef key="telephone"/>
+              <elementRef key="adress"/>
+              <elementRef key="email"/>
+            </alternate>
+          </content>
+        </elementSpec>
+        <elementSpec ident="firstName">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="familyName">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="telephone">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="adress">
+          <desc>This element contains adress components</desc>
+          <content>
+            <alternate maxOccurs="unbounded">
+              <elementRef key="adressline"/>
+              <elementRef key="city"/>
+              <elementRef key="postcode"/>
+              <elementRef key="country"/>
+            </alternate>
+          </content>
+        </elementSpec>
+        <elementSpec ident="adressline">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="city">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="postcode">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="country">
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

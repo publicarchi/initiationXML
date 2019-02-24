@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.tei-c.org/ns/1.0"><!--
+Schema generated from ODD source 2019-02-24T12:36:33Z. .
+TEI Edition: Version 3.3.0. Last updated on
+	31st January 2018, revision f4d8439
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
+  
+--><!---->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <define name="adressBook">
+      <element name="adressBook">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element contains all the entries of the adressBook</a:documentation>
+         <oneOrMore>
+            <ref name="entry"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="entry">
+      <element name="entry">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element contains one entry in the adressBook</a:documentation>
+         <oneOrMore>
+            <choice>
+               <ref name="firstName"/>
+               <ref name="familyName"/>
+               <ref name="telephone"/>
+               <ref name="adress"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="firstName">
+      <element name="firstName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="familyName">
+      <element name="familyName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="telephone">
+      <element name="telephone">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="adress">
+      <element name="adress">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element contains adress components</a:documentation>
+         <oneOrMore>
+            <choice>
+               <ref name="adressline"/>
+               <ref name="city"/>
+               <ref name="postcode"/>
+               <ref name="country"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="adressline">
+      <element name="adressline">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="city">
+      <element name="city">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="postcode">
+      <element name="postcode">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="country">
+      <element name="country">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <start>
+      <choice>
+         <ref name="adressBook"/>
+      </choice>
+   </start>
+</grammar>
