@@ -27,7 +27,7 @@
          <p>A simple ODD for encoding slides, reflecting 20 or so years of inconsistencies.</p>
          <schemaSpec ident="teiSlides">
             <moduleRef key="tei"/>
-        <!-- limited number of header elements -->
+             <!-- limited number of header elements -->
             <moduleRef key="header" include="teiHeader fileDesc titleStmt 
                publicationStmt sourceDesc revisionDesc change editionStmt edition  distributor availability licence"/>
             <moduleRef key="textstructure" include="TEI text body front back div titlePage titlePart docImprint docAuthor"/>
