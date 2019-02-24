@@ -180,7 +180,7 @@
               <item><hi rend="bold"
                 >XML ne sert pas à afficher les données mais à les décrire</hi>. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure (livre, chapitre, paragraphe, phrase, mot, etc.)</item>
               <item><hi rend="bold"
-                >Le nom des balises n’est pas prédéfini</hi> : on peut librement créer son propre vocabulaire</item>
+                >Le nom des balises n’est pas prédéfini</hi> : on peut librement créer son propre vocabulaire</item>
               <item><hi rend="bold"
                 >On peut utiliser une "grammaire" de balises</hi>, pour définir des contraintes ou s’assurer de la consistance de l’encodage</item>
               <item><hi rend="bold"

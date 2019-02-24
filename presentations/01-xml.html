@@ -80,6 +80,7 @@ On vient de voir qu’un balisage descriptif permettait de .red[se concentrer su
 Dans une démarche qui privilégie avant tout l’édition du texte, il convient en premier lieu de .red[rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles]. La présence du balisage détermine par la suite la possibilité de traiter les éléments pour une transformation.
 
 Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.
+
 cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau, François, Extensible Markup Language (XML) 1.0, Recommandation du W3C, 2008. [https://www.w3.org/TR/REC-xml/](https://www.w3.org/TR/REC-xml/)
 
 ---
@@ -88,7 +89,7 @@ cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau
 
 Identifier explicitement la structure sémantique sous-jacente d’un document, indépendamment de tout traitement déterminé à l’avance.
 
-* Distinguer à l'intérieur du texte différents objets éditoriaux
+* Distinguer à l’intérieur du texte différents objets éditoriaux
 
 * Fournir une information sémantique
 
@@ -109,8 +110,6 @@ Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] 
 
 ## Procédure mise en œuvre lors du .red[balisage]
 
-&nbsp;
-
 * Reconnaissance des éléments
 
 * Sélection des balises
@@ -128,21 +127,20 @@ Les trois opérations qui interviennent au cours du balisage sont donc les suiva
   - reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
 2. la sélection des balises,
   - déterminer le balisage qui s’applique au type d’élément reconnu
-  - déterminer le balisage qui s’applique au type d’élément reconnu
 3. la réalisation du balisage,
-  - marquage de l’élément à l'intérieur du flux textuel
   - marquage de l’élément à l'intérieur du flux textuel
 
 cf. Coombs, James, et al., .red[op. cit.]
+
 ---
 
 
-## .red[OHCO], Ordered Hierarchical Content Objects
+## .red[OHCO], Ordered Hierarchy of Content Objects
 
 Une certaine modélisation du texte :
 
-  - .red[éléments de contenus hiérarchiquement imbriqués]
-    (OHCO, _Ordered Hierarchical Content Objects_, en anglais).
+  - .red[hiérarchie ordonnée d’objets contenus]
+    (OHCO, _Ordered Hierarchy of Content Objects_, en anglais).
 
 * structure hiérarchique
 
@@ -150,11 +148,16 @@ Une certaine modélisation du texte :
 
 ???
 
-## .red[OHCO], Ordered Hierarchical Content Objects
+## .red[OHCO], Ordered Hierarchy of Content Objects
 
 L’idée d’un balisage descriptif qui repose sur le fait de marquer le contenu d’un texte par des éléments suggère une représentation du texte qui correspond à ce qu’on a appelé un modèle d’.red[]éléments contenus hiérarchiquement imbriqués.red[] (OHCO, Ordered Hierarchical Content Objects, en anglais).
 
 Dans une telle représentation du texte, les éléments contenus (paragraphes, citations, phrases, notes, etc.) sont présentés à l’intérieur d’une structure hiérarchique. La structure du texte est hiérarchique parce qu’ils résident les uns à l’intérieur des autres. Les objets reçoivent donc des relations linéaires.
+
+>The essential parts of any document form what we call ‘content objects,’ and are of many types, such as paragraphs, quotations, emphatic phrases, and attributions. Each type of content object usually has its own appearance when a document is printed or displayed, but that appearance is superficial and transient rather than essential — it is the content elements themselves, along with their content, which form the essence of a document. When mnemonic names for these objects are specified, a document is said to include ‘descriptive markup.’
+>Most content objects are contained in larger content objects, such as subsections, sections, and chapters. […] Generally, smaller content objects do not cross the boundaries of larger ones; thus a paragraph will not begin in one chapter and end in the next. For this reason, the structure of a document is a hierarchical one, like a tree or taxonomy.
+>Smaller content objects that occur within a larger one, such as the sections within a chapter, or the paragraphs, block quotes, and other objects within a section, occur in a certain order. This ordering is essential information, and must be part of any model of text structure.
+>Combining these essential elements, we can describe a text as an “ordered hierarchy of content objects,” or “OHCO” (DeRose et al. 1990, 3-4).
 
 
 ---
@@ -179,6 +182,7 @@ XML ne fournit pas en soi la sémantique. Il propose par contre .red[une solutio
 La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML.
 
 > « La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées. »
+
 Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947. [http://xml.coverpages.org/coombs.html](http://xml.coverpages.org/coombs.html)
 
 ---
@@ -193,7 +197,7 @@ class: center middle
 - 1986 : Définition du SGML (Standard Generalized Markup Language)
   (norme ISO 8879:1986).
 
-- 1989 : Défintion du HTML, dérivé du SGML
+- 1989 : Définition du HTML, dérivé du SGML
 
 - 1998 : XML 1.0, publication par le W3C des spécifications d'un métalangage de balisage du texte
   [(norme ISO 8879:1986)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=16387)
