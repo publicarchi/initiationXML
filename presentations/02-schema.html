@@ -317,6 +317,134 @@ Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’ope�
 
 #### Valeurs typées
 
+---
+
+# Définition d’éléments
+
+On souhaite avoir un élément racine `addressBook` qui contient un élément `entry`
+
+```xml
+<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name="entry">
+        <text/>
+    </element>
+  </oneOrMore>
+</elezeroOrMorement>
+```
+
+---
+
+# Un ou plusieurs
+
+On souhaite avoir un élément racine `addressBook` qui contient **au moins** un élément `entry`
+
+```xml
+<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="entry">
+        <text/>
+    </element>
+  </oneOrMore>
+</element>
+```
+
+---
+
+# Éléments optionnels
+
+Chaque élément `entry` doit comporter au moins un nom, les autres éléments sont optionnels
+
+```xml
+<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="entry">
+      <element name="name">
+        <text/>
+      </element>
+    </element>
+    <optional
+      <element name="adress">
+        <text/>
+      </element>
+      <element name="email">
+        <text/>
+      </element>
+    </optional>
+  </oneOrMore>
+</element>
+```
+
+---
+
+# Choix
+
+Chaque élément `entry` doit comporter au moins un nom, et une adresse ou un courriel
+
+```xml
+<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="entry">
+      <element name="name">
+        <text/>
+      </element>
+    </element>
+    <choice>
+      <element name="adress">
+        <text/>
+      </element>
+      <element name="email">
+        <text/>
+      </element>
+    </choice>
+  </oneOrMore>
+</element>
+```
+
+---
+
+# Définition des attributs
+
+```xml
+<element name="email">
+  <zeroOrMore>
+    <optional>
+      <attribute name="type"
+        <text/>
+      </attribute>
+    </optional>
+    <text/>
+  </zeroOrMore>
+</element>
+```
+
+---
+
+# Énumération
+
+```xml
+<element name="email">
+  <zeroOrMore>
+    <optional>
+      <attribute name="type"
+        <choice>
+          <value>travail</value>
+          <value>domicile</value>
+        </choice>
+      </attribute>
+    </optional>
+    <text/>
+  </zeroOrMore>
+</element>
+```
+
+---
+
+# Pour aller plus loin
+
+- Spécification RelaxNG https://relaxng.org/spec-20011203.html
+- Tutoriel https://relaxng.org/tutorial-20011203.html
+
 
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
