@@ -22,6 +22,142 @@ class: center middle
 
 .footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
 
+???
+
+Le domaine des éditions critiques numériques est un secteur en évolution rapide pour lequel il n’existe pas vraiment de norme ou de références uniques. Pour autant, certaines réalisation constituent des références fortes de même que certains standards techniques qui favorisent la convergence à l’instar de la Text Encoding Initiative que nous allons aborder au cours de cette formation.
+
+On pourra se référer à la bibliographie ecdotique traditionnelle, mais aussi à une abondante littérature en langue anglaise sur l’édition numérique.
+
+Cette première présentation s’intéressera plus particulièrement aux caractéristiques attendues d’une édition critique et à la manière dont on peut y répondre en utilisant un balisage descriptif.
+
+1. Caractéristiques attendues d’une édition critique
+
+2. La prise en charge de l’édition critique par un balisage descriptif
+
+---
+template: inverse
+class: center middle
+
+# Éléments d’introduction sur les éditions critiques
+
+---
+layout: false
+
+# Qu’est-ce qu’une édition critique ?
+
+--
+
+### Caractère savant
+
+- Un essai de reconstitution d’un texte
+
+- Objectivité / parti-pris
+
+???
+
+Caractéristiques attendues d’une édition critique
+
+## Un essai de reconstitution d’un texte
+
+On parle d’édition critique, ou d’édition scientifique –&nbsp;l’adjectif dans appellation venant en désigner le caractère savant&nbsp;–, au sens où il s’agit de produire .red[une reproduction contrôlée] d’un texte dont sont procurés les états, versions, variantes et leçons.
+
+De ce point de vue, l’édition critique constitue, selon la définition du manuel de l’École nationale des chartes sur l’édition des textes médiévaux, un Essai de reconstitution d’un texte, pour lequel l’éditeur pèse chacun des mots du texte en se servant de tous les moyens de jugement dont il dispose. Pascale Bourgain et Françoise Vielliard. .red[Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques] / École nationale des chartes, 2002 (Documents d’archives, n° Fascicule III, Textes littéraires).
+
+## Plusieurs genres d’édition critique
+Cas particuliers&nbsp;:
+* l’édition imitative ou diplomatique qui reproduit très exactement un document unique, jusqu’en ses particularités graphiques et mêmes ses erreurs, commentées à part mais pas corrigées dans le texte&nbsp;;
+
+* l’édition synthétique, intégrant différents états du texte suffisamment peu différents, moyennant un artifice typographique, avec comme variante l’édition génétique, qui rend compte par des artifices typographiques des différentes couches ou états successifs du texte&nbsp;;
+
+* l’édition variorum, qui donne le texte accompagné, outre l’apparat normal des variantes, de toutes les solutions des éditeurs précédents.
+Pascale Bourgain, et Françoise Vielliard. Conseils pour l’édition des textes médiévaux. Paris&nbsp;: Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d’archives, n° Fascicule III, Textes littéraires).
+
+--
+
+### Critères de scientificité
+
+* Fiable
+
+* Consistante
+
+* Justification des partis-pris
+
+???
+
+Il s’agit toujours de fournir un texte, et dans le domaine historique de savoir comment rendre compte le plus fidèlement possible de la source.
+
+Critères de scientificités
+
+Même si le domaine de l’édition scientifique a connu de profonds changements au cours de ces dernières années avec l’irruption du numérique, les opérations à la base de toute édition critique sont toutefois restées pour l’essentiel identiques.
+
+La tâche principale de l’éditeur est de produire un texte fiable et consistant, avec des partis-pris éditoriaux explicites et appropriés.
+
+La production d’une telle édition peut mobiliser des savoirs relativement étendus. Elle implique que l’éditeur dispose non seulement des savoirs traditionnellement associés à l’édition des sources primaires&nbsp;:
+* Il doit en effet être en mesure d’identifier comment le texte a été construit, à la fois comme document et comme instance de l’œuvre.
+
+* Il doit également savoir comment celui-ci a été transmis, altéré ou transformé au cours du temps, etc.
+
+* Mais l’éditeur doit encore être en mesure de connaître son lectorat, et d’identifier la meilleure manière de communiquer les textes, et ce qu’il en sait.
+
+
+Ainsi&nbsp;:
+Une édition critique n’est pas une reproduction photographique. Elle résulte d’un compromis raisonnable entre, d’une part, le respect du texte à publier (dont on ne doit en aucun cas moderniser la graphie) et, d’autre part, le souci de le rendre aussi intelligible que possible pour un lecteur d’aujourd’hui.Bernard Barbiche, Monique Châtenet, Jean Delmas, Olivier Guyotjeannin, et Jean-François Belhoste. .red[L’Édition des textes anciens : XVI]&lt;sup&gt;.red[e]&lt;/sup&gt;.red[-XVIII]&lt;sup&gt;.red[e]&lt;/sup&gt;.red[  siècle]. Paris&nbsp;: Association Études, loisirs, patrimoine, 1993 (Documents &amp; méthodes / Inventaire général des monuments et des richesses artistiques de la France, n° 1).
+La production d’une édition critique de qualité exige de ce fait d’avoir bien défini son public de destination. Cette question est déterminante même si l’on ne renonce généralement pas à toucher un public un tant soit peu élargi.
+
+Par exemple, dans le cas des Cours d’Antoine Desgodets à l’Académie d’architecture, s’agissant de mettre à disposition un corpus de textes inédits, établi d’après une tradition abondante de témoins manuscrits, l’édition des cours de Desgodets offrait un intérêt tout particulier pour l’historien de l’art et l’historien du droit. Elle devait présenter toutes les qualités habituellement requises par une édition de haute tenue scientifique en termes de fiabilité, de solidité et de justification des parti-pris. S’agissant d’un matériau entièrement neuf pour la recherche, il s’agissait également de faciliter son étude et de prendre en compte certaines particularités propres à des manuscrits architecturaux pour la consultation.
+
+---
+
+# Un investissement important
+
+* Méthode de travail adaptée (temps long, travail en équipe)
+
+* Enjeux d’interopérabilité
+
+* Problèmes de pérennité
+
+???
+
+# Un investissement important
+
+Dès lors, la production d’une édition numérique constitue souvent un travail long et fastidieux qui nécessite un investissement important. Parce que celui-ci peut s’étaler sur plusieurs années ou être mené en équipe, son élaboration requiert habituellement la mise au point de méthodes de travail adaptées (temps long, travail en équipe).
+
+Compte tenu de l’investissement engagé, il est aussi nécessaire de se préoccuper de questions d’interopérabilité. Par exemple, il peut s’avérer judicieux de prévoir la réutilisation et le partage de l’édition dans des bases textuelles collectives (Frantext, etc.). Cela suppose d’une part la production de métadonnées normalisées, mais aussi l’utilisation d’un schéma d’encodage bien documentés pour le partage et l’échange des fichiers.
+
+À cela s’ajoute encore des problèmes de pérennité. Bien souvent, une édition critique est fournie pour plusieurs dizaines d’années, avant que l’on ressente le besoin, ou que l’on dispose des moyens d’en produire une nouvelle. Quoiqu’il en soit, il y a fort à parier que vous ne souhaitiez pas que tout votre travail soit perdu à la première évolution technique. Il convient donc de prévoir la conservation de son édition et de formuler des choix pour sa pérennisation. Les formats informatiques posent parfois des problèmes d’obsolescence technique, et en la matière, certains choix s’avèrent plus judicieux que d’autres de ce point de vue.
+
+---
+
+# Peut-on .red[(sérieusement)] utiliser un traitement de texte&nbsp;?
+
+--
+
+### Plusieurs questions à se poser…
+
+* La forme / le contenu
+
+* L’expressivité
+
+* Documentation de l’édition
+
+* Contrôle de la production
+
+* Obsolescence et interopérabilité
+
+???
+
+# Peut-on .red[(sérieusement)] utiliser un traitement de texte&nbsp;?
+
+Ici, les critères de qualité d’une édition critique peuvent guider certains choix&nbsp;:
+
+* Les traitements de texte sont souvent centrés sur la présentation. Question des formats de sorties, maintenance.
+
+* Dans bien des cas, l’expressivité d’un logiciel de traitement de texte s’avère insuffisante pour documenter certains aspects de la source, en particulier lorsqu’il s’agit de manuscrit.
+
+* Dans le contexte d’un travail collectif, il est souvent utile de disposer d’une méthode de travail qui assure un contrôle de la consistance de l’édition.
+
+* Dans un objectif de pérennisation, envisager le statut des formats informatiques (ouverts vs propriétaires), les risques d’obsolescence technique, les problèmes de maintenance.
+
 ---
 template: inverse
 class: center middle
@@ -29,24 +165,25 @@ class: center middle
 
 # La notion d’encodage
 
+---
+
+# Encodage descriptif
+
+# .red[vs]
+
+# encodage présentationnel
+
 ???
 
-### La vogue de XML
+## Encodage descriptif vs encodage présentationnel
 
-Vogue de XML dans les années 2000, en particulier dans le milieu culturel.
-
-Très employé pour les métadonnées culturelles, et dans l’industrie.
-
-Important stock de données encodées en XML, sans doute encore aujourd’hui, le format informatique le plus courant en terme de masse.
-
-Le texte comme principal cas d’application de XML. Domaine dans lequel XML n’a toujours pas été remplacé. Modèle de contenu qui permet notamment de prendre en charge de manière efficace ce qu’on appelle du Contenu mixte.
+Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages&nbsp;: procédural, présentationnel, ou encore descriptif.
+cf. James H. Coombs, Allen H Renear, et Steven J DeRose. [« Markup Systems and the Future of Scholarly Text Processing »](http:/.html.coverpages.org/coombs.html). .red[Communications of the ACM], n° 11, t. 30, 1987, p. 933-947.
+La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.
 
 ---
-layout: false
 
 # La notion d’encodage descriptif
-
-&nbsp;
 
 - distinction entre le contenu et la forme
 
@@ -63,25 +200,6 @@ Très tôt dans l’histoire de l’informatique, on s’est intéressé au prob
 Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages&nbsp;: procédural, présentationnel, ou encore descriptif.
 cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, [« Markup Systems and the Future of Scholarly Text Processing »](http://xml.coverpages.org/coombs.html), Communications of the ACM, n° 11, t. 30, 1987, p.933-947.
 La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.
-
-
----
-template: inverse
-class: center middle
-
-
-# Le métalangage .red[XML]
-
-???
-
-
-On vient de voir qu’un balisage descriptif permettait de .red[se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document].
-
-Dans une démarche qui privilégie avant tout l’édition du texte, il convient en premier lieu de .red[rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles]. La présence du balisage détermine par la suite la possibilité de traiter les éléments pour une transformation.
-
-Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.
-
-cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau, François, Extensible Markup Language (XML) 1.0, Recommandation du W3C, 2008. [https://www.w3.org/TR/REC-xml/](https://www.w3.org/TR/REC-xml/)
 
 ---
 
@@ -106,7 +224,6 @@ Il s’agit de .red[distinguer explicitement à l’intérieur du texte différe
 Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.
 
 ---
-
 
 ## Procédure mise en œuvre lors du .red[balisage]
 
@@ -134,7 +251,6 @@ cf. Coombs, James, et al., .red[op. cit.]
 
 ---
 
-
 ## .red[OHCO], Ordered Hierarchy of Content Objects
 
 Une certaine modélisation du texte :
@@ -154,61 +270,126 @@ L’idée d’un balisage descriptif qui repose sur le fait de marquer le conten
 
 Dans une telle représentation du texte, les éléments contenus (paragraphes, citations, phrases, notes, etc.) sont présentés à l’intérieur d’une structure hiérarchique. La structure du texte est hiérarchique parce qu’ils résident les uns à l’intérieur des autres. Les objets reçoivent donc des relations linéaires.
 
->The essential parts of any document form what we call ‘content objects,’ and are of many types, such as paragraphs, quotations, emphatic phrases, and attributions. Each type of content object usually has its own appearance when a document is printed or displayed, but that appearance is superficial and transient rather than essential — it is the content elements themselves, along with their content, which form the essence of a document. When mnemonic names for these objects are specified, a document is said to include ‘descriptive markup.’
+>The essential parts of any document form what we call ‘content objects’, and are of many types, such as paragraphs, quotations, emphatic phrases, and attributions. Each type of content object usually has its own appearance when a document is printed or displayed, but that appearance is superficial and transient rather than essential — it is the content elements themselves, along with their content, which form the essence of a document. When mnemonic names for these objects are specified, a document is said to include ‘descriptive markup.’
 >Most content objects are contained in larger content objects, such as subsections, sections, and chapters. […] Generally, smaller content objects do not cross the boundaries of larger ones; thus a paragraph will not begin in one chapter and end in the next. For this reason, the structure of a document is a hierarchical one, like a tree or taxonomy.
 >Smaller content objects that occur within a larger one, such as the sections within a chapter, or the paragraphs, block quotes, and other objects within a section, occur in a certain order. This ordering is essential information, and must be part of any model of text structure.
 >Combining these essential elements, we can describe a text as an “ordered hierarchy of content objects,” or “OHCO” (DeRose et al. 1990, 3-4).
 
-
 ---
 
-# Une large utilisation dans le domaine culturel
+# Avantages sur un balisage présentationnel
 
-### Grammaire lisible par la machine
+1. Processus d’établissement du texte simplifié
 
-### Pas de réelle sémantique
+1. Réduction des problèmes de maintenance
 
+1. Meilleure portabilité
 
 ???
 
-# Un modèle de contenu arborescent
+# Avantages sur un balisage présentationnel
 
-Son .red[modèle de contenu arborescent] est précisément conforme au modèle OHCO.
+Contrairement aux apparences, les logiciels de traitement de texte qui mettent en forme les documents ne simplifient pas la production de documents en éliminant le besoin du balisage. D’une certaine manière cela est devenu plus clair aujourd’hui avec l’adoption des formats XML par Microsoft Word et Open Office. Mais, le balisage requis pour ces formats, tout en étant plus consommateur de ressources, n’atteint pas la même expressivité qu’un simple balisage descriptif. Par ailleurs, les dispositifs d’édition fondés sur un balisage descriptif présentent plusieurs avantages sur le balisage fondé sur la présentation comme LaTex&nbsp;:
 
-Le modèle OHCO offre une grammaire lisible par la machine (succession de balises décrivant les objets du texte), mais il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.
+1. Le .red[processus d’établissement du texte se trouve simplifié] par la focalisation sur le contenu plutôt que sur le contrôle du programme (dans le cas d’un balisage procédural) ou de la présentation typographique de la copie (comme avec LaTex)
 
-XML ne fournit pas en soi la sémantique. Il propose par contre .red[une solution rigoureuse, compréhensible par les machines, pour définir une sémantique de balisage descriptif].
+2. Les .red[questions de maintenance sont réduites] à un nombre limité de problèmes indépendants du fichier proprement dit. L’actualisation des styles et la mise à jour s’en trouvent facilitées sans risque de corruption des documents.
 
-La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML.
+3. Enfin, ils fournissent de meilleurs standards dans le domaine patrimonial et culturel, ou pour l’industrie, du point de vue de la .red[portabilité]. Ils permettent en effet le partage aisé des fichiers et réduisent, à terme, les coûts de publication.
 
-> « La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées. »
+Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il .red[permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités], il offre un .red[gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier]. De surcroît, ce balisage permet le plus souvent la .red[génération automatique de l’information bibliographique] directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.
 
-Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947. [http://xml.coverpages.org/coombs.html](http://xml.coverpages.org/coombs.html)
+Dans la perspective de produire une édition critique de qualité, privilégier le marquage sémantique plutôt que présentationnel présente plusieurs avantages notables tels que&nbsp;:
+
+* Ne pas se contraindre du point de vue logiciel
+
+* Profiter pleinement des possibilités offertes par le numérique
+
+* Disposer d’un cadre de travail qui contrôle la qualité des documents
+
+Même si la mise en place d’un balisage descriptif du texte, implique le déploiement d’une infrastructure technique sans-doute moins confortable pour travailler que l’utilisation de logiciels de traitement de texte, il faut relever qu’il permet de se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document. Bien entendu, concernant l’édition de manuscrits historiques, ou de sources primaires, il pourra être nécessaire de traiter la matérialité physique du document. Néanmoins c’est avant tout l’édition du texte qui est ici privilégiée. Dans une telle démarche, il convient en premier lieu de rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles. Et la présence du balisage détermine la possibilité de traiter les éléments pour une transformation.
 
 ---
 template: inverse
 class: center middle
 
-# e.red[X]tensible .red[M]arkup .red[L]anguage – historique
+
+# Le métalangage .red[XML]
+
+???
+
+
+On vient de voir qu’un balisage descriptif permettait de .red[se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document].
+
+Dans une démarche qui privilégie avant tout l’édition du texte, il convient en premier lieu de .red[rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles]. La présence du balisage détermine par la suite la possibilité de traiter les éléments pour une transformation.
 
 ---
-# Un métalangage informatique pour le balisage du texte
 
-- 1986 : Définition du SGML (Standard Generalized Markup Language)
-  (norme ISO 8879:1986).
+# e.red[X]tensible .red[M]arkup .red[L]anguage (XML)
 
-- 1989 : Définition du HTML, dérivé du SGML
+Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.
 
-- 1998 : XML 1.0, publication par le W3C des spécifications d'un métalangage de balisage du texte
-  [(norme ISO 8879:1986)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=16387)
+### Un modèle de contenu arborescent
 
-- 2004 : [XML 1.1](http://www.w3.org/TR/xml11)
+### Grammaire lisible par la machine
 
-- 2011 : HTML5
+### Pas de réelle sémantique
 
+### Une large utilisation dans le domaine culturel
 
 
 ???
+
+Le métalangage informatique XML (Extensible Markup Language) permet le développement de vocabulaires descriptifs de balisages interopérables spécifiques à certains domaines.
+
+cf. Bray, Tim, Paoli, Jean, Sperberg-McQueen, C. Michael, Maler, Eve, et Yergeau, François, Extensible Markup Language (XML) 1.0, Recommandation du W3C, 2008. [https://www.w3.org/TR/REC-xml/](https://www.w3.org/TR/REC-xml/)
+
+
+## Un modèle de contenu arborescent
+
+Son .red[modèle de contenu arborescent] est précisément conforme au modèle OHCO.
+
+## Une grammaire lisible par la machine
+
+S’il offre une grammaire lisible par la machine, il ne présente pas une réelle sémantique et ne peut donc à lui seul spécifier formellement une sémantique.
+
+## Pas de réelle sémantique
+
+XML ne fournit pas en soi la sémantique. XML propose simplement .red[une solution rigoureuse, compréhensible par les machines, pour définir un langage de balisage descriptif].
+
+### Une large utilisation dans le domaine culturel
+
+Vogue de XML dans les années 2000, en particulier dans le milieu culturel. Très employé pour les métadonnées culturelles, et dans l’industrie.
+
+La plupart des contenus des bibliothèques numériques aujourd’hui mis à disposition sur le web sont encodés en utilisant un balisage XML.
+
+>La large adoption de vocabulaires XML spécialisés comme la TEI rendent disponible une importante information sémantique, mais seulement sous la forme d’une documentation en prose et de pratiques partagées.
+
+Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947. [http://xml.coverpages.org/coombs.html](http://xml.coverpages.org/coombs.html)
+
+Important stock de données encodées en XML, sans doute encore aujourd’hui, le format informatique le plus courant en terme de masse.
+
+*Le texte comme principal cas d’application de XML.* Domaine dans lequel XML n’a toujours pas été remplacé. Modèle de contenu qui permet notamment de prendre en charge de manière efficace ce qu’on appelle du Contenu mixte.
+
+---
+
+# e.red[X]tensible .red[M]arkup .red[L]anguage – historique
+
+- 1986 : Définition du SGML (Standard Generalized Markup Language)
+  (norme [ISO 8879:1986](https://www.iso.org/fr/standard/16387.html)).
+
+- 1989 : Définition du HTML, dérivé du SGML
+
+- 1998 : XML 1.0, publication par le W3C des spécifications d’un métalangage de balisage du texte
+
+- 2004 : [XML 1.1](http://www.w3.org/TR/xml11)
+
+- (pour mémoire, la spécification de HTML5 en 2011 renonce à XML)
+
+
+???
+
+Un métalangage informatique pour le balisage du texte
 
 #### Un héritier de SGML
 
@@ -221,8 +402,6 @@ SGML : puissant et générique mais aussi trop souple et complexe en même temps
 
 En février 1998 : publication en février 1998 par le W3C Consortium des spécifications du métalangage XML 1.0 =&gt; maîtres mots : simplicité, clarté, universalité.
 
-Dans son Référentiel général d’interopérabilité publié en 2009, la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (Extensible Markup Language) à des fins d’interopérabilité et de pérennisation de l’information.
-
 Depuis 1998, la norme XML a peu évolué → dernière édition en date : 5e édition, mise à jour en 2008. Version 1.0 =&gt; véritable témoignage de sa stabilité.
 
 [Version 1.1](http://www.w3.org/TR/xml11) publiée en février 2004 et mise à jour en 2006, notamment pour intégrer les évolution d’Unicode, mais XML 1.1 reste très peu utilisé.
@@ -233,14 +412,16 @@ Depuis 1998, la norme XML a peu évolué → dernière édition en date : 5e éd
 Les langages et outils permettant de produire, contrôler, échanger, transformer et exploiter des fichiers XML se sont multipliés, souvent associés à des normes du W3C : modèles de documents et de (méta)données, langages de modélisation, de présentation, de programmation, protocoles, …
 
 Métalangage désormais utilisé partout en informatique qu’il s’agisse de structurer des informations dont la durée de vie est importante ou d’échanger des informations entre applications, qu’on ait à s’occuper essentiellement de données, de documents ou d’une combinaison des deux.
+
+Dans son Référentiel général d’interopérabilité publié en 2009, en France la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (Extensible Markup Language) à des fins d’interopérabilité et de pérennisation de l’information.
+
+Largement adopté également au Canada et aux États-Unis pour les Systèmes d’information gouvernementaux ou la gestion des textes législatifs et réglementaires.
+
 cf. Ministre du Budget, des Comptes publics, Référentiel Général d’Interopérabilité (RGI), 2009. [http://references.modernisation.gouv.fr/rgi-interoperabilite](http://references.modernisation.gouv.fr/rgi-interoperabilite)
 
 ---
 
-
 # Principes de conception de .red[XML]
-
-&nbsp;
 
 * applicable à tout type de texte
 
@@ -331,7 +512,7 @@ class: center middle
 
 ---
 
-# Exemple de document XML
+# Exemple de document XML avec son .red[prologue]
 
 ```xml
 <?xml version="1.0"?>
@@ -349,11 +530,11 @@ Un document XML consiste en une séquence de caractères lisibles par l’homme.
 
 Seulement, vous pouvez constater que ce document comporte certaines séquences de caractères régulières (ici mises en valeur par la coloration).
 
-La première ligne de ce documents s’appelle une déclaration XML elle appartient au prologue du document. C’est une instruction qui permet d’indiquer qu’il s’agit d’un document XML et la version du langage.
+La première ligne de ce documents s’appelle une déclaration XML elle appartient au **prologue du document**. C’est une instruction qui permet d’indiquer qu’il s’agit d’un document XML et la version du langage.
 
 ---
 
-# Exemple de document XML
+# Spécification de l’.red[encodage]
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -362,6 +543,15 @@ La première ligne de ce documents s’appelle une déclaration XML elle apparti
   <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
 </doc>
 ```
+
+On peut également préciser l’encodage des caractères (par défaut en XML mais une bonne pratique).
+
+Ici on déclare l’utilisation de l’encodage de caractère UTF-8 (pour Universal Character Set) qui permet de représenter la plupart des caractères du «&nbsp;répertoire universel de caractères codés&nbsp;» initialement développé par l’[ISO (ISO/CEI 10646)](http://www.iso.org/iso/fr/catalogue_detail.htm?csnumber=51273), aujourd’hui entièrement compatible avec le standard Unicode.
+
+Le répertoire Unicode peut contenir plus d’un million de caractères.
+* cf. [https://fr.wikipedia.org/wiki/UTF-8](https://fr.wikipedia.org/wiki/UTF-8)
+
+* cf. [Jukka Korpela. "Guide to the Unicode standard"](http://www.cs.tut.fi/~jkorpela/unicode/guide.html)
 
 ???
 
@@ -387,7 +577,7 @@ Le répertoire Unicode peut contenir plus d’un million de caractères.
 
 Les caractères `&lt;` et `&gt;` sont utilisés pour marquer le début et la fin de balises à l’intérieur de ce flux textuel. Ces éléments possèdent un nom.
 
-Vous remarquez que ces balises, ou markup, ou encore étiquettes (tag), sont appariées&nbsp;: à chaque balise ouvrante correspond une balise fermante qui se distingue en débutant par la séquence `&lt;/`.
+Vous remarquez que ces balises, ou markup, ou encore étiquettes (tag), sont **appariées&nbsp;**: à chaque balise ouvrante correspond une balise fermante qui se distingue en débutant par la séquence `&lt;/`.
 
 Les balises et leur contenu forment un élement XML.
 
@@ -397,19 +587,25 @@ Notez la syntaxe particulière des éléments vides.
 
 ---
 
-# Le corps du document XML : un .red[arbre d’éléments]
+## Le corps du document XML : un .red[arbre d’éléments]
 
-- Les éléments : permettent de décomposer le texte en unités d’information
+- Les éléments : permettent de décomposer le texte en unités d’information
 
 ```xml
- <titre>Le corps du document XML : un arbre d’éléments</titre>
+ <titre>Le corps du document XML : un arbre d’éléments</titre>
 ```
 
-- **Tout élément a un nom** (parfois appelé identificateur générique), ici c’est titre.
+- **Tout élément a un nom** (parfois appelé identificateur générique), ici c’est titre. Ces noms d’éléments obéissent aux contraintes syntaxiques des noms XML
 
-- **Un élément peut contenir du texte et/ou d’autres éléments, ou être vide**.
+- **Un élément peut contenir du texte et/ou d’autres éléments (contenu mixte), ou être vide**.
 
-- Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est **l’élément racine**.
+```xml
+<p >Exemple de contenu mixte avec
+  une <name>entité-nommée</name> et un élément vide<pb/>
+</p>
+```
+
+- Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est **l’élément racine**.
 
 
 ???
@@ -420,7 +616,7 @@ Les éléments permettent de décomposer le texte en unités d’information
 
 La portion de texte ainsi isolée est marquée par une balise de début (balise ouvrante) et par une balise de fin (balise fermante)
 
-Tout élément a un nom (parfois appelé identificateur générique), ici c’est titre.
+Tout élément a un nom (parfois appelé identificateur générique), ici c’est titre. Ces noms d’éléments obéissent aux contraintes syntaxiques des noms XML
 
 Un élément peut contenir du texte et/ou d’autres éléments (contenu mixte), ou être vide.
 
@@ -463,25 +659,43 @@ En principe ne sont pas destinés à ajouter du contenu à l’élément, donc l
 
 Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques)&nbsp;:
 
-* la chaîne de caractères formant le nom peut contenir les caractères alphanumériques (lettres de `a` à `z`, et de `A` à `Z`, chiffres de `0` à `9`, caractères non latins), le trait sous la ligne `_`, le trait d’union `-` et le point `.` (à l’exclusion de tout autre signe de ponctuation ou espace)&nbsp;;
+* la chaîne de caractères formant le nom **peut contenir**
+  - les caractères alphanumériques (lettres de `a` à `z`, et de `A` à `Z`, chiffres de `0` à `9`, caractères non latins),
+  - le trait sous la ligne `_`,
+  - le trait d’union `-`
+  - et le point `.` (à l’exclusion de tout autre signe de ponctuation ou espace)&nbsp;;
 
-* un nom ne peut pas commencer par un nombre, ni par un point, ni par un trait d’union&nbsp;;
+* un nom **ne peut pas commencer** par un nombre, ni par un point, ni par un trait d’union&nbsp;;
 
 * le nom ne peut pas commencer par `xml` (quelle que soit la casse utilisée).
 
-* Attention, XML est sensible à la casse&nbsp;!
+* Attention, XML est **sensible à la casse&nbsp;**!
 
 ---
 
-# Les entités
+### Entités internes
 
-## Entités internes :
+entités caractères prédéfinies pour saisir certains caractères que l’on doit obligatoirement coder ( `<`, `>`, `&`, `"`, `’` : caractères codés au moyen des entités `lt`, `gt`, `amp`, `quot`, `apos`)
 
-- entités caractères prédéfinies ou non, pour saisir certains caractères que l’on doit obligatoirement coder ( <, >, &, ", ’ : caractères codés au moyen des entités lt, gt, amp, quot, apos) ou difficiles à composer au clavier
+### Entités externes
 
-## Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (.red[&]), suivi du nom donné à l’entité, suivi du signe .red[;]
+XML propose des mécanismes pour donner un nom à des expressions ou phrases souvent répétées ou pour taper des caractères difficiles à composer au clavier.
+
+* texte : fragments XML formant chacun un fichier
+
+* non parsées (fichiers non XML tels qu’images, enregistrements sonores…)
+
+**Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (`&`), suivi du nom donné à l’entité, suivi du signe `;`.**
+
+appel|entité
+:--|:--
+`&` `amp` `;` &nbsp; | &amp;
+`&` `gt` `;` &nbsp; | &gt;
+`&` `lt` `;` &nbsp; | &lt;
+
 
 ???
+
 Les entités : des réserves de contenu, la plupart du temps à déclarer (dans la DTD) et utilisables n’importe où dans le document
 
 
@@ -498,19 +712,6 @@ servant à donner un nom à des expressions ou phrases souvent répétées
 
 ---
 
-# Appel d’entité
-
-Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (&amp;), suivi du nom donné à l’entité, suivi du signe ;.
-
-appel|entité
-:--|:--
-`&` `amp` `;` &nbsp; | &amp;
-`&` `gt` `;` &nbsp; | &gt;
-`&` `lt` `;` &nbsp; | &lt;
-
-
----
-
 # Les commentaires
 
 Commencent par `&lt;!--` et se terminent par `--&gt;`
@@ -518,6 +719,11 @@ Commencent par `&lt;!--` et se terminent par `--&gt;`
 Le double trait d’union «&nbsp;--&nbsp;» ne doit pas apparaître au sein d’un commentaire
 
 Servent à… commenter, utiles pour documenter ce qu’on fait ou consigner des notes. Ne sont pas destinés aux programmes informatiques, qui les ignorent par défaut.
+
+```xml
+<!-- exemple de commentaire -->
+<p>du texte <!-- un autre commentaire --> suite du texte</p>
+```
 
 ---
 
@@ -527,11 +733,30 @@ Commencent par `&lt;?` et se terminent par `?&gt;`.
 
 Définissent une cible (fournissent le nom de l’application à qui elles sont destinées, par ex.), et des arguments
 
+```xml
+<!-- exemple d’instruction de traitement -->
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<p>...</p>
+```
+
 ---
 
 # Sections CDATA
 
-sections de caractères non parsées. Commencent par `&lt;![CDATA[` et se terminent par `]]&gt;`.
+sections de caractères non parsées. Commencent par `<![CDATA[` et se terminent par `]]>`.
+
+```xml
+<html>
+...
+  <![CDATA[
+    //code Javascript
+    ...
+  ]]>
+</html>
+```
+???
+
+CDATA signifie `Character Data` et que les données comprises entre ces balises ne doivent pas être interprétées comme du XML.
 
 ---
 
@@ -569,7 +794,7 @@ exemple Ici l’espace de noms par défaut est défini par l’URI http://www.te
 
 ## Document .red[bien formé]
 
-On dit d’un document XML qu’il est bien formé quand celui-ci répond à un certain nombre de contraintes
+**On dit d’un document XML qu’il est bien formé quand celui-ci répond à un certain nombre de contraintes**
 
 * concordance entre l’encodage du document et sa déclaration XML&nbsp;;
 
@@ -619,18 +844,48 @@ template: inverse
 class: center middle
 
 
-### Sources et bibliographie
+# Sources et bibliographie
 
 ---
 
+### Édition critique
 
-### Orientations bibliographiques
+* Guyotjeannin, Olivier, et Olivier Poncet. [L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions](https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf). mars, 2010.
+
+* Bourgain, Pascale, et Françoise Vieillard (dir.), Conseils Pour L’édition Des Textes Médiévaux. Conseils généraux, Fascicule I. Documents d’archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.
+
+* Barbiche, Bernard. .red[["Conseils Pour L’édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition]epoque.red[moderne/edition]des.red[textes)]. Theleme (Techniques pour l’Historien en Ligne&nbsp;: Études, Manuels, Exercices).
+
+* Christine Nougaret et Élisabeth Parinet (dir.), L’édition critique des textes contemporains, XIXe-XXIe siècle, Paris, Ecole nationale des chartes, 2015. (avec un chapitre de Florence Clavaud consacré à l’édition électronique) !!.
+
+---
+
+### Édition numérique
+
+* Burnard, Lou, O’Brien O’Keeffe, Katherine et Unsworth, John. [Electronic Textual Editing. Modern Language Association](http://www.tei-c.org/About/Archive_new/ETE/Preview/index.html), 2006.
+
+* Schillingsburg, Peter L., [From Gutenberg to Google](http://books.google.fr/books/about/From_Gutenberg_to_Google.html?id=rd57F8IjyF0C), 2006.
+
+* Hayles, Katherine. ["Print Is Flat, Code Is Deep: The Importance of Media-Specific Analysis."](http://www.lab404.com/242/hayles_print_is_flat.pdf) Poetics Today 25, no. 1 (2004): 67-90.
+
+* Barney, Brett. ["Digital Editing with the TEI Yesterday, Today, and Tomorrow."](http://www.jstor.org/stable/10.2979/textcult.7.1.29) Textual Cultures: Texts, Contexts, Interpretation 7, no. 1 (2012): 29-41.
+
+* Boot, Peter. ["Some Digital Editions and Some Remaining Challenges."](http://www.janusdigital.es/articulo.htm?id=7) Janus, Estudios sobre el siglo de oro , no. 1 (2012).
+
+---
+
+### XML
 
 * A gentle introduction to XML&nbsp;: [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html)
 
 * XML en concentré&nbsp;: manuel de référence / Elliotte Rusty Harold &amp; W. Scott Means&nbsp;; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris&nbsp;: O'Reilly, 2005. ISBN 2-84177-353-1 EAN 9782841773534&nbsp;;
 
 * L’espace XML francophone&nbsp;: actualités, discussions, articles et billets, sur le site Web [http://xmlfr.org/](http://xmlfr.org/)
+
+* Coombs, James H, Renear, Allen H, et DeRose, Steven J. ["Markup Systems and the Future of Scholarly Text Processing."](http:/.html.coverpages.org/coombs.html) Communications of the ACM 30, no. 11 (1987): 933-947.
+
+* DeRose, Steven J., et al. “What Is Text, Really?” Journal of Computing in Higher Education, vol. 1, no. 2, Dec. 1990, pp. 3–26. Crossref, [doi:10.1007/BF02941632](https://doi.org/10.1007/BF02941632)
+
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
