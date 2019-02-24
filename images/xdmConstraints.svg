@@ -5,19 +5,19 @@
 	 width="640px" height="480px" viewBox="0 0 640 480" enable-background="new 0 0 640 480" xml:space="preserve">
 <polygon fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" points="403.116,51.897 473.105,74.547 
 	403.116,101.067 333.129,74.547 "/>
-<text transform="matrix(1 0 0 1 369.1826 78.9336)" font-family="'TheMix-Bold'" font-size="14.846">document</text>
+<text transform="matrix(1 0 0 1 369.1826 78.9336)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">document</text>
 <g>
 	<g>
 		<text transform="matrix(1 0 0 1 256.8398 165.418)" font-family="'TheMix-Regular'" font-size="14.846">ou</text>
 		<text transform="matrix(1 0 0 1 329.6562 165.418)" font-family="'TheMix-Regular'" font-size="14.846">ou</text>
 		<text transform="matrix(1 0 0 1 461.1484 165.418)" font-family="'TheMix-Regular'" font-size="14.846">ou</text>
 		<g>
-			<text transform="matrix(1 0 0 1 192.877 165.418)" font-family="'TheMix-Bold'" font-size="14.846">element</text>
+			<text transform="matrix(1 0 0 1 192.877 165.418)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">element</text>
 			
 				<rect x="188.5" y="149.753" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="63.625" height="21.209"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 284.6597 165.418)" font-family="'TheMix-Bold'" font-size="14.846">texte</text>
+			<text transform="matrix(1 0 0 1 284.6597 165.418)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">texte</text>
 			<g id="id1270_Graphic">
 				<path fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" d="M279.508,149.753h44.493v22.185
 					c-13.349-2.772-31.145,8.318-44.493,2.771V149.753L279.508,149.753z"/>
@@ -26,14 +26,14 @@
 			</g>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 492.1992 155.418)" font-family="'TheMix-Bold'" font-size="14.846">instruction </text>
-			<text transform="matrix(1 0 0 1 492.1992 173.2324)" font-family="'TheMix-Bold'" font-size="14.846">de traitement</text>
+			<text transform="matrix(1 0 0 1 492.1992 155.418)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">instruction </text>
+			<text transform="matrix(1 0 0 1 492.1992 173.2324)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">de traitement</text>
 			<path fill="none" stroke="#999393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M499.361,139.563h77.695
 				c9.188,0,16.646,8.712,16.646,19.445c0,10.733-7.458,19.445-16.646,19.445h-77.695c-9.19,0-16.65-8.712-16.65-19.445
 				C482.711,148.273,490.171,139.563,499.361,139.563"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 359.4492 165.418)" font-family="'TheMix-Bold'" font-size="14.846">commentaire</text>
+			<text transform="matrix(1 0 0 1 359.4492 165.418)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">commentaire</text>
 			<g>
 				<g>
 					<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="454.08,164.962 454.08,170.962 
@@ -72,7 +72,7 @@
 				<line fill="none" stroke="#F95F9D" stroke-width="2" stroke-linejoin="round" stroke-dasharray="11.017,11.017" x1="607.5" y1="143.432" x2="607.5" y2="181.992"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 485.4492 216.418)" fill="#F95F9D" font-family="'TheMix-Bold'" font-size="14.846">0, 1 ou plusieurs</text>
+	<text transform="matrix(1 0 0 1 485.4492 216.418)" fill="#F95F9D" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">0, 1 ou plusieurs</text>
 </g>
 <g>
 	<g>
@@ -82,11 +82,11 @@
 				C86.454,276.855,91.353,272.062,97.387,272.062"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 95.877 287.8232)" font-family="'TheMix-Bold'" font-size="14.846">attribut</text>
+			<text transform="matrix(1 0 0 1 95.877 287.8232)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">attribut</text>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 12.877 287.8232)" font-family="'TheMix-Bold'" font-size="14.846">espace </text>
-			<text transform="matrix(1 0 0 1 12.877 305.6367)" font-family="'TheMix-Bold'" font-size="14.846">de nom</text>
+			<text transform="matrix(1 0 0 1 12.877 287.8232)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">espace </text>
+			<text transform="matrix(1 0 0 1 12.877 305.6367)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">de nom</text>
 		</g>
 	</g>
 </g>
@@ -96,12 +96,12 @@
 		<text transform="matrix(1 0 0 1 329.6562 292.0029)" font-family="'TheMix-Regular'" font-size="14.846">ou</text>
 		<text transform="matrix(1 0 0 1 461.1484 292.0029)" font-family="'TheMix-Regular'" font-size="14.846">ou</text>
 		<g>
-			<text transform="matrix(1 0 0 1 192.877 292.0029)" font-family="'TheMix-Bold'" font-size="14.846">element</text>
+			<text transform="matrix(1 0 0 1 192.877 292.0029)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">element</text>
 			
 				<rect x="188.5" y="276.338" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="63.625" height="21.209"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 284.6597 292.0029)" font-family="'TheMix-Bold'" font-size="14.846">texte</text>
+			<text transform="matrix(1 0 0 1 284.6597 292.0029)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">texte</text>
 			<g id="id1270_Graphic_1_">
 				<path fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" d="M279.508,276.338h44.493v22.186
 					c-13.349-2.773-31.145,8.317-44.493,2.771V276.338L279.508,276.338z"/>
@@ -110,14 +110,14 @@
 			</g>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 492.1992 282.0029)" font-family="'TheMix-Bold'" font-size="14.846">instruction </text>
-			<text transform="matrix(1 0 0 1 492.1992 299.8164)" font-family="'TheMix-Bold'" font-size="14.846">de traitement</text>
+			<text transform="matrix(1 0 0 1 492.1992 282.0029)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">instruction </text>
+			<text transform="matrix(1 0 0 1 492.1992 299.8164)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">de traitement</text>
 			<path fill="none" stroke="#999393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M499.361,266.147h77.695
 				c9.188,0,16.646,8.713,16.646,19.444c0,10.733-7.458,19.445-16.646,19.445h-77.695c-9.19,0-16.65-8.712-16.65-19.445
 				S490.171,266.147,499.361,266.147"/>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 359.4492 292.0029)" font-family="'TheMix-Bold'" font-size="14.846">commentaire</text>
+			<text transform="matrix(1 0 0 1 359.4492 292.0029)" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">commentaire</text>
 			<g>
 				<g>
 					<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="454.08,291.547 454.08,297.547 
@@ -154,9 +154,9 @@
 				<line fill="none" stroke="#F95F9D" stroke-width="2" stroke-linejoin="round" stroke-dasharray="11.017,11.017" x1="607.5" y1="270.017" x2="607.5" y2="308.577"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 485.4492 343.0029)" fill="#F95F9D" font-family="'TheMix-Bold'" font-size="14.846">0, 1 ou plusieurs</text>
-	<text transform="matrix(1 0 0 1 345.001 343.0029)" fill="#F95F9D" font-family="'TheMix-Bold'" font-size="14.846">enfants</text>
-	<text transform="matrix(1 0 0 1 31.4492 343.0029)" fill="#F95F9D" font-family="'TheMix-Bold'" font-size="14.846">0, 1 ou plusieurs</text>
+	<text transform="matrix(1 0 0 1 485.4492 343.0029)" fill="#F95F9D" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">0, 1 ou plusieurs</text>
+	<text transform="matrix(1 0 0 1 345.001 343.0029)" fill="#F95F9D" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">enfants</text>
+	<text transform="matrix(1 0 0 1 31.4492 343.0029)" fill="#F95F9D" font-family="'TheMix-Bold', 'sans-serif'" font-size="14.846">0, 1 ou plusieurs</text>
 </g>
 <line fill="none" stroke="#F95F9D" stroke-width="2" x1="403.533" y1="126.415" x2="403.533" y2="100.964"/>
 <line fill="none" stroke="#F95F9D" stroke-width="2" x1="124.815" y1="269.296" x2="215.138" y2="171.962"/>
