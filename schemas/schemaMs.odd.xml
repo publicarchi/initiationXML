@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      xml:lang="fr">
+      <teiHeader>
+            <fileDesc>
+                  <titleStmt>
+                        <title>TEI schema for editing mss</title>
+                        <author>Sebastian Rahtz</author>
+                  </titleStmt>
+                  <publicationStmt>
+                        <availability status="free">
+                              <p>This template file is freely available and you are
+             hereby authorised to copy, modify, and redistribute it in
+             any way without further reference or permissions.</p>
+                              <p>When making such modifications, you are strongly
+             recommended to change the present text to include an
+             accurate statement of the licencing conditions applicable
+             to your modified text.</p>
+                        </availability>
+                  </publicationStmt>
+                  <notesStmt>
+                        <note type="ns">http://www.example.org/ns/nonTEI</note>
+                  </notesStmt>
+                  <sourceDesc>
+                        <p>Written from scratch.</p>
+                  </sourceDesc>
+            </fileDesc>
+      </teiHeader>
+      <text>
+            <body>
+                  <head>TEI Complete</head>
+                  <p> of the TEI (P5) modules. This is a very useful
+       starting place for manually creating your own customizations
+       — it is much easier to delete the modules you do not
+       want than to add the modules you do. Furthermore this
+       customization often proves helpful for testing TEI
+       software.Schema générique pour l'édition critique de manuscrits, généré avec Roma pour la formation sur TEI organisée par l'Ecole des chartes en mars 2011all of the TEI (P5) modules. This is a very useful&#13;
+       starting place for manually creating your own customizations&#13;
+       — it is much easier to delete the modules you do not&#13;
+       want than to add the modules you do. Furthermore this&#13;
+       customization often proves helpful for testing TEI&#13;
+       software.Schema générique pour l'édition critique de manuscrits, généré avec Roma pour la formation sur TEI organisée par l'Ecole des chartes en mars 2011</p>
+                  <p>However, this particular TEI customization is <emph>not
+      recommended</emph> for actual use for encoding documents. It
+      produces schemas and reference documentation that will be much
+      larger, and include many more elements, than almost anyone could
+      conceivably ever need. Tempting though it may be simply to have
+      absolutely everything, and <q>just ignore</q> elements not
+      required, experience has shown that their presence makes the
+      documentation harder to read and use, and makes a schema that is
+      far more lax than desired.</p>
+                  <schemaSpec ident="TEI_schema_mss" start="TEI teiCorpus" prefix="" docLang="fr">
+                        <moduleRef key="tei"/>
+                        <!-- required -->
+                        <moduleRef key="core"/>
+                        <!-- required -->
+                        <moduleRef key="analysis"/>
+                        <moduleRef key="certainty"/>
+                        <moduleRef key="figures"/>
+                        <moduleRef key="gaiji"/>
+                        <moduleRef key="header"/>
+                        <!-- required -->
+                        <moduleRef key="linking"/>
+                        <moduleRef key="msdescription"/>
+                        <moduleRef key="namesdates"/>
+                        <moduleRef key="textcrit"/>
+                        <moduleRef key="textstructure"/>
+                        <!-- required -->
+                        <moduleRef key="transcr"/>
+                        <moduleRef key="verse"/>
+                  </schemaSpec>
+            </body>
+      </text>
+</TEI>
