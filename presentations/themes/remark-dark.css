@@ -33,9 +33,9 @@ ul, ol {
 .footnote {
     position: absolute;
     bottom: 3em;
-    background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+    // background-color: #ffffff;
+    // opacity: 0.5;
+    // filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .menu > ul > li {

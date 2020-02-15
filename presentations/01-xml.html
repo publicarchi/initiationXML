@@ -17,7 +17,7 @@ class: center middle
 
 # 01 – eXtensible Markup Language
 
-## EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
+#### EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
 
 .footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
 
@@ -255,6 +255,7 @@ cf. Coombs, James, et al., .red[op. cit.]
 Une certaine modélisation du texte :
 
   - .red[hiérarchie ordonnée d’objets contenus]
+    
     (OHCO, _Ordered Hierarchy of Content Objects_, en anglais).
 
 * structure hiérarchique
@@ -511,15 +512,20 @@ class: center middle
 
 ---
 
-# Exemple de document XML avec son .red[prologue]
+# Document XML avec son .red[prologue]
 
 ```xml
 <?xml version="1.0"?>
 <doc>
   <p n="1">This is a paragraph.</p>
-  <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+  <p>This paragraph mentions <placeName>Bristol</placeName>.</p>
 </doc>
 ```
+
+- un simple fichier texte
+- un élément qui contient tous les autres
+- la coloration syntaxique est fournie par l’éditeur
+- en première ligne : la **déclaration XML** qui fait partie du **prologue** du document
 
 ???
 
@@ -539,7 +545,7 @@ La première ligne de ce documents s’appelle une déclaration XML elle apparti
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
   <p n="1">This is a paragraph.</p>
-  <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+  <p>This paragraph mentions <placeName>Bristol</placeName>.</p>
 </doc>
 ```
 
@@ -565,11 +571,15 @@ Le répertoire Unicode peut contenir plus d’un million de caractères.
 
 ---
 
-### Les séquences `<`, `>` et `</` délimitent les balises : `<div></div>`
+# Constructions syntaxiques
 
-### Les paires nom-valeur des attributs ont la forme `nom='valeur'` équivalente à `nom="valeur"`
+- Les séquences `<`, `>` et `</` délimitent les balises : `<div></div>`
 
-### Syntaxte des éléments vides : `<div></div>` = `<div/>`
+- Les paires nom-valeur des attributs ont la forme `nom='valeur'` équivalente à `nom="valeur"`
+
+--
+
+- Syntaxte des éléments vides : `<div></div>` = `<div/>`
 
 
 ???
@@ -588,18 +598,18 @@ Notez la syntaxe particulière des éléments vides.
 
 ## Le corps du document XML : un .red[arbre d’éléments]
 
-- Les éléments : permettent de décomposer le texte en unités d’information
+- Les éléments : permettent de décomposer le texte en unités d’information
 
 ```xml
  <titre>Le corps du document XML : un arbre d’éléments</titre>
 ```
 
-- **Tout élément a un nom** (parfois appelé identificateur générique), ici c’est titre. Ces noms d’éléments obéissent aux contraintes syntaxiques des noms XML
+- **Tout élément a un nom** (parfois appelé *identificateur générique*), ici c’est titre. Ces noms d’éléments obéissent aux contraintes syntaxiques des noms XML
 
 - **Un élément peut contenir du texte et/ou d’autres éléments (contenu mixte), ou être vide**.
 
 ```xml
-<p >Exemple de contenu mixte avec
+<p>Exemple de contenu mixte avec
   une <name>entité-nommée</name> et un élément vide<pb/>
 </p>
 ```
@@ -631,19 +641,7 @@ Les attributs précisent la signification des éléments, leur ajoutent des cara
 <date when="2011-03-09">9 mars 2011</date>
 ```
 
-* toujours saisis à l’intérieur de la balise ouvrante de l’élément
-
-* syntaxe&nbsp;: `nomAttribut="valeur"`
-
-* le nom de l’attribut obéit aux contraintes syntaxiques des noms XML
-
-* la valeur est encadrée par des guillemets simples ou doubles
-
-* L’ordre des attributs n’est pas prescrit pour un élément donné
-
-* Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle `attribut=""`
-
-* Pour un même élément, il ne peut y avoir deux attributs de même nom `rend="bold center"`
+* toujours saisi **à l’intérieur** de la balise ouvrante de l’élément
 
 ???
 
@@ -651,12 +649,36 @@ Les attributs ne contiennent que du texte, ils ne peuvent donc pas servir pour s
 
 En principe ne sont pas destinés à ajouter du contenu à l’élément, donc leur valeur n’est pas destinée à être affichée telle quelle dans un format de sortie. Mais ils pourront être exploités par des applications informatiques pour faire par exemple des index, ils peuvent servir à identifier les éléments (attributs de type ID), à établir des renvois (attributs de type IDREF).
 
+--
+
+* syntaxe&nbsp;: `nomAttribut="valeur"` ou `nomAttribut='valeur'`
+
+--
+
+* la valeur est encadrée par des guillemets simples ou doubles
+
+--
+
+* le nom de l’attribut obéit aux **contraintes syntaxiques des noms XML**
+
+--
+
+* L’ordre des attributs n’est pas prescrit pour un élément donné
+
+--
+
+* Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle `attribut=""`
+
+--
+
+* Pour un même élément, il ne peut y avoir deux attributs de même nom `rend="bold center"`
+
 ---
 
 
 # .red[Contraintes syntaxiques] des noms XML
 
-Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques)&nbsp;:
+Règles pour l’écriture de ces noms (identificateurs génériques)&nbsp;:
 
 * la chaîne de caractères formant le nom **peut contenir**
   - les caractères alphanumériques (lettres de `a` à `z`, et de `A` à `Z`, chiffres de `0` à `9`, caractères non latins),
@@ -668,13 +690,13 @@ Règles pour l’écriture de ces noms (parfois appelés identificateurs génér
 
 * le nom ne peut pas commencer par `xml` (quelle que soit la casse utilisée).
 
-* Attention, XML est **sensible à la casse&nbsp;**!
+* Attention, XML est .hightlight[**sensible à la casse&nbsp;**!]
 
 ---
 
 ### Entités internes
 
-entités caractères prédéfinies pour saisir certains caractères que l’on doit obligatoirement coder ( `<`, `>`, `&`, `"`, `’` : caractères codés au moyen des entités `lt`, `gt`, `amp`, `quot`, `apos`)
+entités caractères prédéfinies pour saisir certains caractères que l’on doit obligatoirement coder ( `<`, `>`, `&`, `"`, `’` : caractères codés au moyen des entités `lt`, `gt`, `amp`, `quot`, `apos`)
 
 ### Entités externes
 
@@ -684,7 +706,7 @@ XML propose des mécanismes pour donner un nom à des expressions ou phrases sou
 
 * non parsées (fichiers non XML tels qu’images, enregistrements sonores…)
 
-**Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (`&`), suivi du nom donné à l’entité, suivi du signe `;`.**
+.red[**Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (`&`), suivi du nom donné à l’entité, suivi du signe `;`.**]
 
 appel|entité
 :--|:--
@@ -741,7 +763,7 @@ Définissent une cible (fournissent le nom de l’application à qui elles sont 
 
 # Sections CDATA
 
-sections de caractères non parsées. Commencent par `<![CDATA[` et se terminent par `]]>`.
+sections de caractères non parsées.
 
 ```xml
 <html>
@@ -752,9 +774,15 @@ sections de caractères non parsées. Commencent par `<![CDATA[` et se terminent
   ]]>
 </html>
 ```
+- commencent par `<![CDATA[` 
+- se terminent par `]]>`
+
 ???
 
 CDATA signifie `Character Data` et que les données comprises entre ces balises ne doivent pas être interprétées comme du XML.
+
+- commencent par `<![CDATA[` 
+- se terminent par `]]>`
 
 ---
 
@@ -768,7 +796,7 @@ CDATA signifie `Character Data` et que les données comprises entre ces balises 
 ```
 
 - formellement défini par son namespace-uri
-- déclaré avec l’attribut .red[xmlns]
+- déclaré avec .red[xmlns] pour *XML namespace*
 - déclaration par défaut
 
 
@@ -787,6 +815,68 @@ De plus en plus souvent, afin de faciliter les échanges en évitant toute ambig
 * Un code peut en effet représenter l’espace de noms, il est alors utilisé à la place de l’URI pour préfixer attributs et éléments&nbsp;; ce code est appelé préfixe (namespace- prefix).
 
 exemple Ici l’espace de noms par défaut est défini par l’URI http://www.tei-c.org/ns/1.0, c’est l’espace de noms TEI. Tous les éléments du fichier XML qui sont descendants de l’élément racine et qui ne sont pas préfixés sont dans cet espace de noms.
+
+---
+
+# Espaces de nom (préfixe)
+
+```xml
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <tei:teiHeader><!-- autres éléments --></tei:teiHeader>
+  <tei:text><!-- autres éléments --></tei:text>
+</tei:TEI>
+```
+
+- un raccourci pour les espaces de noms
+- déclarer un préfixe avec .red[xmlns:prefix]
+- le préfixe précède le nom de l’élément avec `:` ex. .red[tei:text]
+- permet de mélanger plusieurs vocabulaires
+- notion d’héritage
+
+--
+
+```xml
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+     xmlns:math="http://www.w3.org/1998/Math/MathML">
+  <teiHeader><!-- autres éléments --></teiHeader>
+  <text>
+    <!-- autres éléments -->
+    <math:matrix><!-- ... --></math:matrix>
+  </text>
+</TEI>
+```
+
+???
+
+outre la déclaration par défaut, on peut également déclarer un préfixe avec .red[xmlns:prefix]
+
+---
+
+## Attributs par défaut
+
+Le standard XML définit plusieurs attributs par défaut
+
+- `xml:id`
+- `xml:lang`
+- ...
+
+L’espace de nom pour le préfixe `xml` n’a pas besoin d’être déclaré.
+
+La valeur de l’attribut `xml:id` doit être unique dans le contexte du document.
+
+```xml
+<div>
+  <p xml:id="n0001">...</p>
+  <list>
+  	<item>...</item>
+	  <item target="#n0001">...</item>
+	</list>
+</div>
+```
+
+On peut pointer vers sa valeur avec `#`
+
+
 
 ---
 
@@ -848,12 +938,9 @@ class: center middle
 ### Édition critique
 
 * Guyotjeannin, Olivier, et Olivier Poncet. [L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions](https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf). mars, 2010.
-
-* Bourgain, Pascale, et Françoise Vieillard (dir.), Conseils Pour L’édition Des Textes Médiévaux. Conseils généraux, Fascicule I. Documents d’archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.
-
-* Barbiche, Bernard. .red[["Conseils Pour L’édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition]epoque.red[moderne/edition]des.red[textes)]. Theleme (Techniques pour l’Historien en Ligne&nbsp;: Études, Manuels, Exercices).
-
-* Christine Nougaret et Élisabeth Parinet (dir.), L’édition critique des textes contemporains, XIXe-XXIe siècle, Paris, Ecole nationale des chartes, 2015. (avec un chapitre de Florence Clavaud consacré à l’édition électronique) !!.
+* Bourgain, Pascale, et Françoise Vieillard (dir.), Conseils Pour L’édition Des Textes Médiévaux. Conseils généraux, Fascicule I. Documents d’archives, Fascicule II. Textes littéraires, Fascicule III. Paris : Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.
+* Barbiche, Bernard. .red[["Conseils Pour L’Édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition]epoque.red[moderne/edition]des.red[textes)]. Theleme (Techniques pour l’Historien en Ligne&nbsp;: Études, Manuels, Exercices).
+* Christine Nougaret et Élisabeth Parinet (dir.), L’édition critique des textes contemporains, XIXe-XXIe siÈcle. Paris : École nationale des chartes, 2015. (avec un chapitre de Florence Clavaud consacré à l’édition électronique) !!!
 
 ---
 
@@ -874,14 +961,20 @@ class: center middle
 ### XML
 
 * A gentle introduction to XML&nbsp;: [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html)
-
 * XML en concentré&nbsp;: manuel de référence / Elliotte Rusty Harold &amp; W. Scott Means&nbsp;; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris&nbsp;: O'Reilly, 2005. ISBN 2-84177-353-1 EAN 9782841773534&nbsp;;
-
 * L’espace XML francophone&nbsp;: actualités, discussions, articles et billets, sur le site Web [http://xmlfr.org/](http://xmlfr.org/)
-
 * Coombs, James H, Renear, Allen H, et DeRose, Steven J. ["Markup Systems and the Future of Scholarly Text Processing."](http:/.html.coverpages.org/coombs.html) Communications of the ACM 30, no. 11 (1987): 933-947.
-
 * DeRose, Steven J., et al. “What Is Text, Really?” Journal of Computing in Higher Education, vol. 1, no. 2, Dec. 1990, pp. 3–26. Crossref, [doi:10.1007/BF02941632](https://doi.org/10.1007/BF02941632)
+
+---
+
+ [02-schema.html](02-schema.html) template:inverse
+
+ [03-outils.html](03-outils.html) 
+
+.footnote[[Programme](00-programme.html) | [02-schema.html](02-schema.html) | [03-outils.html](03-outils.html) | [tp01.html](tp01.html) | [tp02.html](tp02.html) | [tp04.html](tp04.html)]
+
+ 
 
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;

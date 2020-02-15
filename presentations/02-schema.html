@@ -19,7 +19,7 @@ class: center middle
 
 # 02 – Notion de Schéma
 
-## EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
+### EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
 
 .footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
 
@@ -28,23 +28,20 @@ template: inverse
 class: center middle
 
 
-# Le modèle de données de XML
+# Le .red[modèle de données] de XML
 
----
-template: inverse
-class: middle center
+???
 
-# Les nœuds dans le modèle XDM
+La syntaxe XML correspond en réalité à un modèle abstrait désigné XDM XML Data Model
+
+http://www.w3.org/TR/xpath-datamodel/
 
 ---
 layout: false
-.left-column[
-# Les nœuds dans le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
-####(rappel)
-]
 
-.right-column[
-XDM considère un document XML comme une structure d’arbre pouvant être composée de sept types de nœuds.
+# Les .red[nœuds] dans le modèle XDM
+
+XDM considère un document XML comme une structure d’arbre pouvant être composée de **sept types de nœuds**.
 
 - `document node` (nœud document)
 - `element node` (nœud élément)
@@ -53,7 +50,8 @@ XDM considère un document XML comme une structure d’arbre pouvant être compo
 - `processing instruction node` (nœud instruction de traitement)
 - `text node` (nœud texte)
 - `namespace node` (nœud espace de nom)
-]
+
+http://www.w3.org/TR/xpath-datamodel/
 
 ???
 ## les nœuds dans le modèle XDM
@@ -65,34 +63,21 @@ Ici, on monte en abstraction par rapport à ce que vous savez déjà peut-être 
 Ces **nœud** sont les sept types de nœuds définis dans le modèle de données XPath 1.0, à l’exception du nœud racine rebaptisé `document node` au lieu de `root node` :
 
 - `document node` (nœud document)
-
 - `element node` (nœud élément)
-
 - `attribute node` (nœud attribut)
-
 - `comment node` (nœud commentaire)
-
 - `processing instruction node` (nœud instruction de traitement)
-
 - `text node` (nœud texte)
-
 - `namespace node` (nœud espace de nom)
 
----
-layout: false
-.left-column[
-# Les nœuds dans le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
-####(rappel)
-]
-.right-column[
+http://www.w3.org/TR/xpath-datamodel/
 
-## Contraintes des nœuds
+---
+# .red[Contraintes] des nœuds
 
 Les éléments d’un document XML bien formé répondent à plusieurs contraintes
 
 ![diagramme UML](../images/contraintes.png)
-
-]
 
 ???
 ### Contraintes des nœuds (rappel)
@@ -108,12 +93,7 @@ Les éléments d’un document XML bien formé répondent à plusieurs contraint
 - un nœud texte, commentaire ou instruction de traitement peut avoir un nœud père qui doit être un nœud élément ou document
 
 ---
-.left-column[
-# Les nœuds dans le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
-]
-.right-column[
-
-## Ordre du document
+# .red[Ordre] du document
 
 - le nœud racine est le premier nœud après le nœud document
 
@@ -126,7 +106,6 @@ Les éléments d’un document XML bien formé répondent à plusieurs contraint
 - les nœuds `namespace` précèdent les nœuds `attribute`
 
 - l’ordre des nœuds `namespace` et `attributs` dépend de l’implantation
-]
 
 ???
 ###Ordre du document
@@ -154,9 +133,7 @@ class: middle center
 # Exercice 01
 
 ---
-## Exercice
-
-Produire la représentation arborescente de [phares.tei.xml](./exemplesTEI/phares.tei.xml) suivant :
+### Exercice : Produire la représentation arborescente de [phares.tei.xml](./exemplesTEI/phares.tei.xml)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -167,14 +144,14 @@ Produire la représentation arborescente de [phares.tei.xml](./exemplesTEI/phare
 <l n="1">Rubens, fleuve d’oubli, jardin de la paresse,</l>
 <l n="2">Oreiller de chair fraîche où l’on ne peut aimer,</l>
 <l n="3">Mais où la vie afflue et s’agite sans cesse,</l>
-<l n="4">Comme l’air dans le ciel et la mer dans la mer ;</l>
+<l n="4">Comme l’air dans le ciel et la mer dans la mer ;</l>
 <!-- nœud commentaire -->
     </lg>
     <lg type="stanza">
 <l n="5">Léonard de Vinci, miroir profond et sombre,</l>
 <l n="6">Où des anges charmants, avec un doux souris</l>
 <l n="7">Tout chargé de mystère, apparaissent à l’ombre</l>
-<l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
+<l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
     </lg>
     <gap reason="sampling" quantity="9" unit="stanza"/>
   </div>
@@ -216,54 +193,51 @@ Les siblings d’un nœuds sont les autres enfants de son parent. Les attributs 
 
 ---
 
-.left-column[
-## Le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
-### (suite)
-]
+background-image: url(../images/composants.svg)
 
-.right-column[
-## Les composants du modèle de données de XML
-![composants](../images/composants.svg)
-]
+# Les .red[composants] du modèle de données XML
 
 ???
 Une autre manière possible de visualiser les différentes composantes définies par le modèle de données XML.
 
-### identité d’un nœud
+détailler séquence, item, etc.
+
+---
+
+# Le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/) (suite)
+### Les nœuds ont une .red[identité] :
+
 Chaque nœud possède une identité unique. On peut avoir deux nœuds avec le même nom et le même contenu dans le document source, mais cela ne signifie pas qu’ils auront la même identité. L’identité est unique pour chaque nœud, elle est affectée par le processeur.
 
+### Aux nœuds sont attachées différentes propriétés :
+
+- Les éléments et les attributs possèdent un nom. 
+  Ces noms sont accessibles à l’aide des fonctions `node-name()`, `name()`, `local-name()`
+- Pour chaque type de nœud, il est possible de déterminer ce que l’on appelle sa .red[valeur de chaîne] (`string value`) qui correspond schématiquement à son contenu textuel. 
+  On peut accéder à la valeur textuelle d’un élément avec la fonction `string()`
+- On peut encore extraire d’un nœud sa .red[valeur typée] (`typed value`), son nom qualifié, etc.
+
+???
+
+### identité d’un nœud
+
+Les nœuds ont une identité. Deux nœuds créés par deux expressions différentes sont distincts même s’ils ont le même nom, les mêmes fils, etc.
+
+Chaque nœud possède une identité unique. On peut avoir deux nœuds avec le même nom et le même contenu dans le document source, mais cela ne signifie pas qu’ils auront la même identité. L’identité est unique pour chaque nœud, elle est affectée par le processeur.
+
+### Aux nœuds sont attachées différentes propriétés :
+
 ### nom
+
 En outre, les éléments et les attributs possèdent un nom. Ces noms sont accessibles à l’aide des fonctions `node-name()`, `name()`, `local-name()`
 
 ### Valeur textuelle
+
+Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l’on appelle sa valeur de chaîne (`string value`) qui correspond schématiquement à son contenu textuel.
+
 Les nœuds peuvent avoir deux types de valeur, une valeur de chaîne et une valeur typée. Tous les nœuds ont un contenu textuel (string value). La valeur textuelle d’un élément est la concaténation des données caractères de cet élément et de ses descendants.
 
 On peut accéder à la valeur textuelle d’un élément avec la fonction `string()`
-
----
-.left-column[
-## Le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
-### (suite)
-]
-
-.right-column[
-## Les nœuds ont une .red[identité] :
-
-Deux nœuds créés par deux expressions différentes sont distincts même s’ils ont le même nom, les mêmes fils, etc.
-
-## Aux nœuds sont attachées différentes propriétés :
-
-Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l’on appelle sa .red[valeur de chaîne] (`string value`) qui correspond schématiquement à son contenu textuel.
-
-On peut encore extraire d’un nœud sa .red[valeur typée] (`typed value`), son nom qualifié, etc.
-]
-
-???
-Les nœuds ont une identité. Deux nœuds créés par deux expressions différentes sont distincts même s’ils ont le même nom, les mêmes fils, etc.
-
-Aux nœuds sont attachées différentes propriétés :
-
-Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l’on appelle sa valeur de chaîne (`string value`) qui correspond schématiquement à son contenu textuel.
 
 On peut encore extraire d’un nœud sa valeur typée (`typed value`), son nom qualifié, etc.
 
@@ -279,16 +253,19 @@ class: center middle
 
 # Modèles de documents
 
-Rappel : définissent les contraintes que doit respecter une certaine classe de documents
-Diverses syntaxes peuvent être utilisées pour écrire de tels modèles :
+**Définissent les contraintes que doit respecter une certaine classe de documents**
 
-- celle des DTD (partie intégrante de la norme XML 1.0), la plus utilisée encore aujourd’hui ;
+#### Syntaxes
 
-- celle, exprimée en XML, des schémas XML (norme du W3C publiée en mai 2001 ; 2e édition octobre 2004 ; voir <http://www.w3.org/XML/Schema> ) ;
+Diverses syntaxes peuvent être utilisées pour écrire de tels modèles
 
-- celle des schémas RelaxNG (norme ISO/IEC 19757-2 depuis 2003, amendée en 2008 ; voir <http://www.relaxng.org/>).
+- DTD (partie intégrante de la norme XML 1.0), la plus utilisée encore aujourd’hui ;
+- [schémas XML](<http://www.w3.org/XML/Schema>), norme du W3C publiée en mai 2001 ; 2e édition octobre 2004 ;
+- [schémas RelaxNG](<http://www.relaxng.org/>), norme ISO/IEC 19757-2, depuis 2003, amendée en 2008.
 
-Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.
+#### Validation
+
+Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.
 
 ???
 
@@ -322,13 +299,14 @@ Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’ope�
 On souhaite avoir un élément racine `addressBook` qui contient un élément `entry`
 
 ```xml
-<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+<element name="addressBook" 
+         xmlns="http://relaxng.org/ns/structure/1.0">
   <zeroOrMore>
-    <element name="entry">
-        <text/>
+  	<element name="record">
+    	<text/>
     </element>
-  </oneOrMore>
-</elezeroOrMorement>
+  </zeroOrMore>
+</element>
 ```
 
 ---
@@ -338,9 +316,10 @@ On souhaite avoir un élément racine `addressBook` qui contient un élément `e
 On souhaite avoir un élément racine `addressBook` qui contient **au moins** un élément `entry`
 
 ```xml
-<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+<element name="addressBook" 
+         xmlns="http://relaxng.org/ns/structure/1.0">
   <oneOrMore>
-    <element name="entry">
+    <element name="record">
         <text/>
     </element>
   </oneOrMore>
@@ -349,26 +328,49 @@ On souhaite avoir un élément racine `addressBook` qui contient **au moins** un
 
 ---
 
-# Éléments optionnels
-
-Chaque élément `entry` doit comporter au moins un nom, les autres éléments sont optionnels
+# Création des sous-éléments
 
 ```xml
-<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
-  <oneOrMore>
-    <element name="entry">
+<element name="addressBook" 
+         xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name="record">
       <element name="name">
-        <text/>
-      </element>
-    </element>
-    <optional
-      <element name="adress">
         <text/>
       </element>
       <element name="email">
         <text/>
       </element>
-    </optional>
+    </element>
+  </zeroOrMore>
+</element>
+```
+
+
+
+---
+
+# Éléments optionnels
+
+Chaque élément `entry` doit comporter au moins un nom, les autres éléments sont optionnels
+
+```xml
+<element name="addressBook" 
+         xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="record">
+      <element name="name">
+        <text/>
+      </element>
+      <optional>
+      	<element name="adress">
+        	<text/>
+        </element>
+        <element name="email">
+        	<text/>
+        </element>
+      </optional>
+    </element>
   </oneOrMore>
 </element>
 ```
@@ -380,21 +382,22 @@ Chaque élément `entry` doit comporter au moins un nom, les autres éléments s
 Chaque élément `entry` doit comporter au moins un nom, et une adresse ou un courriel
 
 ```xml
-<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+<element name="addressBook" 
+         xmlns="http://relaxng.org/ns/structure/1.0">
   <oneOrMore>
-    <element name="entry">
+    <element name="record">
       <element name="name">
         <text/>
       </element>
+      <choice>
+      	<element name="adress">
+          <text/>
+        </element>
+        <element name="email">
+          <text/>
+        </element>
+      </choice>
     </element>
-    <choice>
-      <element name="adress">
-        <text/>
-      </element>
-      <element name="email">
-        <text/>
-      </element>
-    </choice>
   </oneOrMore>
 </element>
 ```
@@ -424,7 +427,7 @@ Chaque élément `entry` doit comporter au moins un nom, et une adresse ou un co
 <element name="email">
   <zeroOrMore>
     <optional>
-      <attribute name="type"
+      <attribute name="type">
         <choice>
           <value>travail</value>
           <value>domicile</value>
@@ -438,11 +441,77 @@ Chaque élément `entry` doit comporter au moins un nom, et une adresse ou un co
 
 ---
 
+# Motifs nommés
+
+```xml
+<grammar>
+  <start>
+    <element name="addressBook">
+      <zeroOrMore>
+        <element name="record">
+          <ref name="recordContent"/>
+        </element>
+      </zeroOrMore>
+    </element>
+  </start>
+  <define name="recordContent">
+    <element name="name">
+      <text/>
+    </element>
+    <element name="email">
+      <text/>
+    </element>
+  </define>
+</grammar>
+```
+
+---
+
+# Typage
+
+```xml
+<element name="number">
+  <data type="integer" 
+        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+</element>
+```
+
+On peut ici tirer profit de nombreux types définis par le standard
+
+- `xs:date`
+- `xs:integer`
+- `xs:double`
+- `xs:decimal`
+- `xs:string`
+- ...
+
+---
+
+background-image: url(../images/type-hierarchy.png)
+.left-column[
+
+## Types XML
+
+### [XML Data Model](http://www.w3.org/TR/xpath-datamodel/)
+
+### [XML Schema](http://www.w3.org/TR/xmlschema-2/)
+
+]
+
+.right-column[]
+
+---
+
 # Pour aller plus loin
 
 - Spécification RelaxNG https://relaxng.org/spec-20011203.html
 - Tutoriel https://relaxng.org/tutorial-20011203.html
 
+---
+
+template:inverse
+
+.footnote[[Programme](00-programme.html) | [01-xml.html](01-xml.html) | [03-outils.html](03-outils.html) | [tp01.html](tp01.html) | [tp02.html](tp02.html) | [tp04.html](tp04.html)]
 
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;

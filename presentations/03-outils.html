@@ -16,9 +16,11 @@ class: inverse
 ---
 class: middle center
 
-# Outils
+# 03 - L’outillage XML
 
-## EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
+### EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
+
+.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationXML) | [Programme](00-programme.html)]
 
 ---
 template: inverse
@@ -318,9 +320,34 @@ background-image: url(../images/type-hierarchy.png)
 ### [XML Schema](http://www.w3.org/TR/xmlschema-2/)
 ]
 
-.right-column[
-]
+.right-column[]
+
 ---
+
+## Les types définis par le XML Data Model (XDM)
+
+```xquery
+'string' (: chaîne de caractères :)
+```
+
+```xquery
+1 (: entier :)
+```
+
+```xquery
+1 + 1 + 1 (: somme :)
+```
+
+```xquery
+<p/> (: constructeur direct :)
+```
+
+```xquery
+1, 2, 3 (: séquence :)
+```
+
+---
+
 .left-column[
 ## Le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
 ]
@@ -361,13 +388,14 @@ Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu’a
 ]
 
 .right-column[
-## Les expressions de chemins
 
 Comme nous venons de le voir, XPath permet d’écrire différents types d’expressions
 
 - arithmétiques ex. `1+2`
 - booléennes ex. `true()`
 - etc.
+
+### Les expressions de chemins
 
 Parmi ces expressions, celles de chemins (`path expressions`) représentent le cœur de ce langage dans la mesure où elles permettent de .red[sélectionner une séquence de nœuds] en spécifiant un chemin à suivre à partir d’un point de départ.
 ]
@@ -391,18 +419,19 @@ Parmi ces expressions, les expressions de chemins (`path expressions`) représen
 Chemin absolu
 
 ```bash
-/Users/emmanuelchateau/formENC2014/xpath01.tei.xml
+	/Users/emmanuelchateau/formENC2014/xpath01.tei.xml
 ```
-
 
 Chemin relatif
 
 ```bash
-formENC2014/xpath01.tei.xml
-​```]
+	formENC2014/xpath01.tei.xml
+```
 
 ???
+
 Pour comprendre cette notion de chemin, on peut faire l’analogie avec d’autres structures hiérarchiques comme les systèmes de fichiers Unix où il est nécessaire de pouvoir noter le chemin menant à un fichier ou un groupe de fichiers spécifiques.
+
 Par exemple, le système de fichiers, dont la racine a pour nom /.
 
 Dans ce système, un fichier est désigné par un nom qui correspond au chemin (`path`) que l’on doit suivre dans la structure pour atteindre ce fichier.
@@ -564,11 +593,6 @@ class: middle center
 # Notation XPath
 
 ---
-.left-column[
-## Notation XPath
-]
-
-.right-column[
 ## Notation des étapes d’un chemin XPath
 
 Un chemin peut se composer de plusieurs étapes, ou pas (.red[location steps]).
@@ -577,18 +601,18 @@ Un chemin peut se composer de plusieurs étapes, ou pas (.red[location steps]).
 
 - Par convention, on désigne le nœud document avec le caractère `/`.
 
-- On distingue aussi les chemins absolus, partant de cette racine, des chemins relatifs.
+- On distingue ainsi les chemins absolus, partant de cette racine, des chemins relatifs.
 
 #### un chemin XPath sera de la forme :
 
 pour un chemin absolu
-​```xpath
-/étape1/étape2/.../étapeN
+```xpath
+  /étape1/étape2/.../étapeN
 ```
 
 pour un chemin relatif
 ```xpath
-étape1/étape2/.../étapeN
+  étape1/étape2/.../étapeN
 ```
 ]
 
@@ -1067,6 +1091,31 @@ Bases de données XML natives
 - ...
 
 XQuery (Standard W3C)
+
+---
+
+## Spécifications XPath
+
+* [XPath 1.0](https://www.w3.org/TR/xpath/)
+* [XPath 2.0 Data Model (XDM)](https://www.w3.org/TR/xpath-datamodel/), [XPath 2.0](https://www.w3.org/TR/xpath20/), [XPath 2.0 Functions and Operators](https://www.w3.org/TR/xpath-functions/) and [XPath 2.0 Formal Semantics](https://www.w3.org/TR/xquery-semantics/)
+* [XPath 3.0 Data Model (XDM)](https://www.w3.org/TR/xpath-datamodel-30/), [XPath 3.0](https://www.w3.org/TR/xpath-30/) and [XPath 3.0 Functions and Operators](https://www.w3.org/TR/xpath-functions-30/)
+* [XPath 3.1 Data Model (XDM)](https://www.w3.org/TR/xpath-datamodel-31/), [XPath 3.1](https://www.w3.org/TR/xpath-31/) and [XPath 3.1 Functions and Operators](https://www.w3.org/TR/xpath-functions-31/)
+
+## Languages hôtes
+
+* XSLT: [XSLT 1.0](https://www.w3.org/TR/xslt), [XSLT 2.0](https://www.w3.org/TR/xslt20/), [XSLT 3.0](https://www.w3.org/TR/xslt-30/)
+* XPointer: [XPointer](https://www.w3.org/TR/xptr/)
+* XQuery: [XQuery 1.0](https://www.w3.org/TR/xquery/), [XQuery 1.1](https://www.w3.org/TR/xquery-11/), [XQuery 3.0](https://www.w3.org/TR/xquery-30/)
+* XForms: [XForms 1.0](https://www.w3.org/TR/2003/REC-xforms-20031014/), [XForms 1.1](https://www.w3.org/TR/xforms/), [XForms 2.0](https://www.w3.org/TR/xforms20/)
+* XProc: [XProc 1.0](https://www.w3.org/TR/xproc/), [XProc 1.1](http://spec.xproc.org/master/head/xproc11/), [XProc 2.0](https://www.w3.org/TR/xproc20/)
+* Schematron: [ISO Schematron 2006](http://schematron.com), [ISO Schematron 2016](http://schematron.com)
+* EXPath: [EXPath](https://www.w3.org/community/expath/)
+
+---
+
+template:inverse
+
+.footnote[[Programme](00-programme.html) | [01-xml.html](01-xml.html) | [02-schema.html](03-schema.html) | [tp01.html](tp01.html) | [tp02.html](tp02.html) | [tp04.html](tp04.html)]
 
 
 </textarea>
