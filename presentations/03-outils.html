@@ -13,13 +13,12 @@ theme: theme/remark-dark.css
 name: inverse
 layout: true
 class: inverse
-
 ---
 class: middle center
 
 # Outils
 
-## EDN6101 - Édition critique avec la TEI&nbsp;| 24 février 2019
+## EDN6101 - Édition critique avec la TEI&nbsp;| 15 février 2020
 
 ---
 template: inverse
@@ -98,7 +97,6 @@ Les données XML peuvent être stockées dans des bases de données relationnell
 Conçus spécialement pour gérer des données XML, les systèmes natifs ont l’avantage de ne pas nécessiter d’opérations de conversion. Les techniques de stockage et de traitement des requêtes adoptées par les bases de données XML sont habituellement plus efficientes que celles basées sur le stockage de fichiers à plats et les bases de données relationnelles.
 
 Plusieurs langages de requêtes ont été proposés pour manipuler des données XML (XML-QL, XML-GL, Quilt, XPath et XQuery). Le principal langage de requête pour XML qui ait été standardisé est XQuery. Il repose sur l’utilisation d’expressions de chemins XPath qui adressent des ensembles des parties spécifiques des documents XML.
-
 
 ---
 
@@ -226,7 +224,6 @@ Une des caractéristiques essentielles du langage XPath, est qu’il s’appuie 
 Il s’agit d’un véritable langage fonctionnel typé. Ainsi, l’utilisateur manipule des expressions et non des instructions, et l’évaluation de ces expressions produit des valeurs appartenant à des types définis dans un système de types. La version 2.0 langage intègre le riche système de types de XML Schema.
 
 Au cours de cette première présentation, nous commencerons par examiner le modèle de données XML, puis nous aborderons les diverses expressions XPath et de leur types, avant de nous concentrer sur des expressions servant à décrire des chemins pour sélectionner des ensembles de nœuds dans un arbre XML.
-
 
 ---
 
@@ -402,7 +399,7 @@ Chemin relatif
 
 ```bash
 formENC2014/xpath01.tei.xml
-```]
+​```]
 
 ???
 Pour comprendre cette notion de chemin, on peut faire l’analogie avec d’autres structures hiérarchiques comme les systèmes de fichiers Unix où il est nécessaire de pouvoir noter le chemin menant à un fichier ou un groupe de fichiers spécifiques.
@@ -585,7 +582,7 @@ Un chemin peut se composer de plusieurs étapes, ou pas (.red[location steps]).
 #### un chemin XPath sera de la forme :
 
 pour un chemin absolu
-```xpath
+​```xpath
 /étape1/étape2/.../étapeN
 ```
 
@@ -638,7 +635,7 @@ Pour chaque étape, on peut préciser :
 
 ```xpath
 axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
-```]
+​```]
 
 ???
 ## Structure d’une étape de chemin XPath
@@ -655,7 +652,7 @@ Ces prédicats prennent la forme d’une expression booléenne
 
 ### Forme d’une expression XPath :
 
-```xpath
+​```xpath
 axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
 ```
 
@@ -912,7 +909,6 @@ Liste complète des fonctions XPath dans la spécification XPath (http://www.w3.
 Vous permet de compter le nombre de noeuds dans le paramètre que vous spécifiez. En règle générale, le paramètre est une expression de chemin XPath qui identifie plusieurs noeuds, par exemple, tous les noeuds Item qui sont des enfants de PODetail. Par exemple :
 count({expressionXPath})
 
-
 ---
 name: part2
 template: inverse
@@ -982,7 +978,6 @@ Cela donne un langage déclaratif basé sur des instructions (on dit des règles
 ### = XSLT 2.0 est langage fonctionnel, turing complet
 
 On peut dire que c’est un langage fonctionnel car il est sans effets de bords (il n’y a pas de modifications de l’environnement ou du document source au cours du traitement)
-
 
 ---
 .left-column[
