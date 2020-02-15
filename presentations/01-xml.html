@@ -675,6 +675,42 @@ En principe ne sont pas destinés à ajouter du contenu à l’élément, donc l
 
 ---
 
+## JSON .red[vs] XML
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<anvil reference="acme-5103">
+    <weight unit="pound">9.5</weight>
+    <composition>best wrought iron</composition>
+    <price currency="USD">.15</price>
+</anvil>
+```
+
+```json
+[
+  "anvil": {
+    "reference": "acme-5103",
+    "weight": {
+      "unit": "pound",
+      "value": 9.5
+    },
+    "composition": "best wrought iron",
+    "price": {
+      "currency": "USD",
+      "value": .15
+    }
+  }
+]
+```
+
+???
+
+Décrivent le même objet.
+
+Paraissent similaires car décrivent le même objet.
+
+---
+
 
 # .red[Contraintes syntaxiques] des noms XML
 
@@ -968,9 +1004,7 @@ class: center middle
 
 ---
 
- [02-schema.html](02-schema.html) template:inverse
-
- [03-outils.html](03-outils.html) 
+template:inverse
 
 .footnote[[Programme](00-programme.html) | [02-schema.html](02-schema.html) | [03-outils.html](03-outils.html) | [tp01.html](tp01.html) | [tp02.html](tp02.html) | [tp04.html](tp04.html)]
 

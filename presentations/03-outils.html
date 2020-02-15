@@ -119,14 +119,8 @@ Si XSLT constitue une solution très efficace pour passer d’un format XML donn
 
 ---
 
-.left-column[
 ## Processus de transformation .red[XSLT]
-]
-
-.right-column[
-
-![xsltProcessing](../images/xsltProcessing.svg)
-]
+![xsltProcessing](../images/xsltProcessingOrig.svg)
 ???
 
 Ce schéma présente le processus à l’œuvre lorsque l’on associe une feuille de style et un document source.
@@ -312,39 +306,11 @@ XPath 2.0 reconnaît comme types atomiques les types atomiques primitifs de XML
 La valeur d’une expression XPath 2.0 est toute séquence autorisée par le modèle de données.
 
 ---
-background-image: url(../images/type-hierarchy.png)
-.left-column[
+background-image:url(../images/XPathTypeHierarchy-1-items-3.1.png)
 
-## Types XPath
-### [XML Data Model](http://www.w3.org/TR/xpath-datamodel/)
-### [XML Schema](http://www.w3.org/TR/xmlschema-2/)
-]
+# XPath Datamodel 3.1
 
-.right-column[]
-
----
-
-## Les types définis par le XML Data Model (XDM)
-
-```xquery
-'string' (: chaîne de caractères :)
-```
-
-```xquery
-1 (: entier :)
-```
-
-```xquery
-1 + 1 + 1 (: somme :)
-```
-
-```xquery
-<p/> (: constructeur direct :)
-```
-
-```xquery
-1, 2, 3 (: séquence :)
-```
+.footnote[https://www.w3.org/TR/xpath-datamodel-31/]
 
 ---
 
@@ -383,6 +349,28 @@ Il offre notamment la possibilité de détecter des erreurs lors d’une phase d
 Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu’ayant été conçu pour être compatible, les modèles de données présentent plusieurs différences notables.
 
 ---
+
+## Les types définis par le XML Data Model (XDM)
+
+```xquery
+'string' (: chaîne de caractères :)
+```
+
+```xquery
+1 (: entier :)
+```
+
+```xquery
+1 + 1 + 1 (: somme :)
+```
+
+```xquery
+1, 2, 3 (: séquence :)
+```
+
+
+
+---
 .left-column[
 ## Expressions XPath
 ]
@@ -391,7 +379,7 @@ Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu’a
 
 Comme nous venons de le voir, XPath permet d’écrire différents types d’expressions
 
-- arithmétiques ex. `1+2`
+- arithmétiques ex. `1 + 2`
 - booléennes ex. `true()`
 - etc.
 
@@ -640,12 +628,7 @@ pour un chemin relatif
 ```
 
 ---
-.left-column[
-## Notation XPath
-]
-
-.right-column[
-## Structure d’une étape de chemin XPath
+# Structure d’une étape de chemin XPath
 
 Pour chaque étape, on peut préciser :
 
@@ -659,9 +642,10 @@ Pour chaque étape, on peut préciser :
 
 ```xpath
 axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
-​```]
+```
 
 ???
+
 ## Structure d’une étape de chemin XPath
 
 Pour chaque étape, on peut préciser :
@@ -676,31 +660,25 @@ Ces prédicats prennent la forme d’une expression booléenne
 
 ### Forme d’une expression XPath :
 
-​```xpath
+```xpath
 axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
 ```
 
 ---
 
-.left-column[
-## Notation XPath
-]
-
-.right-column[
 ## Notation des axes (.red[axis specifier])
 
 Ces axes sont introduits en écrivant le nom de l’axe suivi du délimiteur `::`
-```xpath
+​```xpath
 child::
 ```
 sert par exemple à noter l’axe fils
 
-```xpath
+​```xpath
 ancestor::
 ```
 sert par exemple à noter l’axe des ancêtres
 
-]
 
 ???
 ## Notation des axes (.red[axis specifier])
@@ -718,12 +696,7 @@ sert par exemple à noter l’axe des ancêtres
 
 ---
 
-.left-column[
-## Notation XPath
-]
-
-.right-column[
-## Test du type de nœuds à sélectionner (.red[node test])
+# Test du type de nœuds à sélectionner (.red[node test])
 
 Composante qui précise quels nœuds ou type de nœuds on veut sélectionner :
 
@@ -737,7 +710,6 @@ Ou être plus générique au moyen des expressions suivantes :
 - `processing-instruction()` sélectionne n’importe quel nœud de type instruction de traitement
 
 - `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type attribut sur l’axe attribute, ou de type espace de nom sur l’axe namespace
-]
 
 ???
 Cette composante d’une étape sert à préciser quels nœuds ou types de nœuds particuliers on souhaite identifier sur un axe.
@@ -751,12 +723,7 @@ Cette composante d’une étape sert à préciser quels nœuds ou types de nœud
 
 ---
 
-.left-column[
-## Notation XPath
-]
-
-.right-column[
-### Exemples
+# Exemples
 
 En conséquence que signifient les expressions suivantes ?
 
@@ -767,7 +734,7 @@ child::l
 
 div/attribute::type
 ```
-]
+
 ???
 ### Exemples
 
@@ -780,12 +747,7 @@ div/attribute::type
 ```
 ---
 
-.left-column[
-## Notation XPath
-]
-
-.right-column[
-### Raccourcis
+# Raccourcis
 
 En pratique, on peut utiliser une notation abrégée qui permet d’alléger l’écriture des chemins.
 
@@ -798,7 +760,6 @@ En pratique, on peut utiliser une notation abrégée qui permet d’alléger l�
 -`/`, désigne le nœud document au début d’une expression
 - `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type `attribut` sur l’axe `attribute`, ou de type espace de nom sur l’axe `namespace`
 
-]
 ???
 ### Raccourcis
 
@@ -814,12 +775,8 @@ En pratique, on peut utiliser une notation abrégée qui permet d’alléger l�
 - `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type `attribut` sur l’axe `attribute`, ou de type `espace de nom` sur l’axe `namespace`
 
 ---
-.left-column[
-## Notation XPath
-]
 
-.right-column[
-### Exercices
+# Exercices
 
 En conséquence, que signifient les expressions suivantes ?
 
@@ -1010,7 +967,7 @@ On peut dire que c’est un langage fonctionnel car il est sans effets de bords 
 
 .right-column[
 
-![xsltProcessing](../images/xsltProcessing.svg)
+![xsltProcessing](../images/xsltProcessingOrig.svg)
 ]
 ???
 
