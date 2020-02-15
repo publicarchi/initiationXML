@@ -709,6 +709,43 @@ Décrivent le même objet.
 
 Paraissent similaires car décrivent le même objet.
 
+L’un plus orienté sérialisation, l’autre orienté document.
+
+Cas du contenu mixte
+
+Pas sur le même niveau (c’est comme comparer l’assembleur à C, JavaScript à XForms ou RDF et les Topics maps).
+
+JSON de plus bas niveau
+
+---
+
+# Exemple de contenu mixte en JSON
+
+```json
+[{
+    "name": "p",
+    "attributes": {},
+    "children": [
+        "I can support ",
+        {
+            "name": "a",
+            "attributes": {"href": "http://en.wikipedia.org/wiki/PCDATA"},
+            "children": [
+                {
+                    "name": "b",
+                    "attributes": {},
+                    "children": ["mixed"]
+                },
+                " content"
+            ]
+        },
+        "!"
+    ]
+}]
+```
+
+
+
 ---
 
 
