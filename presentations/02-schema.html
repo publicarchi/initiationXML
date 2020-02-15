@@ -310,7 +310,7 @@ On souhaite avoir un élément racine `addressBook` qui contient un élément `e
 <element name="addressBook" 
          xmlns="http://relaxng.org/ns/structure/1.0">
   <zeroOrMore>
-  	<element name="record">
+  	<element name="entry">
     	<text/>
     </element>
   </zeroOrMore>
@@ -327,7 +327,7 @@ On souhaite avoir un élément racine `addressBook` qui contient **au moins** un
 <element name="addressBook" 
          xmlns="http://relaxng.org/ns/structure/1.0">
   <oneOrMore>
-    <element name="record">
+    <element name="entry">
         <text/>
     </element>
   </oneOrMore>
@@ -342,7 +342,7 @@ On souhaite avoir un élément racine `addressBook` qui contient **au moins** un
 <element name="addressBook" 
          xmlns="http://relaxng.org/ns/structure/1.0">
   <zeroOrMore>
-    <element name="record">
+    <element name="entry">
       <element name="name">
         <text/>
       </element>
@@ -366,7 +366,7 @@ Chaque élément `entry` doit comporter au moins un nom, les autres éléments s
 <element name="addressBook" 
          xmlns="http://relaxng.org/ns/structure/1.0">
   <oneOrMore>
-    <element name="record">
+    <element name="entry">
       <element name="name">
         <text/>
       </element>
@@ -393,7 +393,7 @@ Chaque élément `entry` doit comporter au moins un nom, et une adresse ou un co
 <element name="addressBook" 
          xmlns="http://relaxng.org/ns/structure/1.0">
   <oneOrMore>
-    <element name="record">
+    <element name="entry">
       <element name="name">
         <text/>
       </element>
@@ -456,13 +456,13 @@ Chaque élément `entry` doit comporter au moins un nom, et une adresse ou un co
   <start>
     <element name="addressBook">
       <zeroOrMore>
-        <element name="record">
-          <ref name="recordContent"/>
+        <element name="entry">
+          <ref name="entryContent"/>
         </element>
       </zeroOrMore>
     </element>
   </start>
-  <define name="recordContent">
+  <define name="entryContent">
     <element name="name">
       <text/>
     </element>
